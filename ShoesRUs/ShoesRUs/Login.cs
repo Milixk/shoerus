@@ -34,6 +34,8 @@ namespace ShoesRUs
         //Check the user email and password on the system and return a true or false customer ID
         public int loggingIn(string email, string password)
         {
+            Encryption enc = new Encryption();
+
             int customerID = -999;
 
             OleDbConnection dbCon = new OleDbConnection(DatabaseConnection.dbconnect);
@@ -43,7 +45,7 @@ namespace ShoesRUs
 
             dbCmd.CommandText = "SELECT CustomerID FROM Customer WHERE CustomerEmail = @CustomerEmail AND CustomerPassword = @CustomerPassword";
             dbCmd.Parameters.AddWithValue("CustomerEmail", email);
-            dbCmd.Parameters.AddWithValue("CustomerPassword", password);
+            dbCmd.Parameters.AddWithValue("CustomerPassword", enc.Encrypt(password));
 
             dbCon.Open();
             OleDbDataReader reader = dbCmd.ExecuteReader();
@@ -61,6 +63,11 @@ namespace ShoesRUs
         public bool checkLoggedIn()
         {
             return loggedIn;
+        }
+
+        public bool checkAdmin()
+        {
+            return user.admin;
         }
     }
 }
