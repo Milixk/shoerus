@@ -17,6 +17,9 @@ namespace ShoesRUs
     {
         Login login = new Login();
         Register register = new Register();
+
+        List<int> basket = new List<int>();
+        
         public MainForm()
         {
             InitializeComponent();
@@ -446,7 +449,11 @@ namespace ShoesRUs
         private void listViewMain_Click(object sender, EventArgs e)
         {
             if (listViewMain.SelectedItems.Count > 0)
+            {
                 MessageBox.Show("You clicked " + listViewMain.SelectedItems[0].ImageIndex);  // debug
+                grpViewProduct.Visible = true;
+                Populate(listViewMain.SelectedItems[0].ImageIndex);
+            }
         }
 
         private void txtBoxMainSearch_TextChanged(object sender, EventArgs e)
@@ -905,5 +912,109 @@ namespace ShoesRUs
                 }
             }
         }
+
+        private void btnBasketAdd_Click(object sender, EventArgs e)
+        {
+            lstBasket.Items.Add(this.txtShoeName.Text +", £" + this.txtPrice.Text);
+
+            basket.Add(listViewDisplayProduct.Items[0].ImageIndex);
+
+        }
+
+        private void btnClearItem_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = lstBasket.SelectedIndex;
+            if (selectedIndex >= 0)
+            {
+                basket.RemoveAt(selectedIndex);
+
+                listViewDisplayBasket.Clear();
+                lstBasket.Items.RemoveAt(selectedIndex);
+            }
+
+        }
+
+        private void btnClearBasket_Click(object sender, EventArgs e)
+        {
+            //clears all the items in the list box
+            DialogResult clearAll = MessageBox.Show("Are you sure you want to clear your basket", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (clearAll == DialogResult.Yes)
+            {
+                basket.Clear();
+                lstBasket.Items.Clear();
+                listViewDisplayBasket.Clear();
+            }
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            //clears all the items in the list box
+            DialogResult checkOUt = MessageBox.Show("proceeds to checkout", "Warning!", MessageBoxButtons.OKCancel);
+        }
+
+        public void Populate(int shoeID)
+        {
+            try
+            {
+
+                clearViewProduct();
+                using (OleDbConnection dbCon = new OleDbConnection(DatabaseConnection.dbconnect))
+                {
+
+
+                    dbCon.ConnectionString = DatabaseConnection.dbconnect;
+                    OleDbCommand dbCmd = dbCon.CreateCommand();
+
+                    dbCmd.CommandText = "SELECT * FROM Shoe WHERE ShoeID = @shoeid";
+                    dbCmd.Parameters.AddWithValue("shoeid", shoeID);
+
+                    dbCon.Open();
+                    OleDbDataReader reader = dbCmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        txtShoeName.Text = (reader["ShoeName"].ToString());
+                        txtBrand.Text = (reader["ShoeBrand"].ToString());
+                        txtShoeType.Text = (reader["ShoeSize"].ToString());
+                        txtGender.Text = (reader["ShoeGender"].ToString());
+                        txtColour.Text = (reader["ShoeColour"].ToString());
+                        txtMaterial.Text = (reader["ShoeMaterial"].ToString());
+                        txtPrice.Text = (reader["ShoePrice"].ToString());
+                        listViewDisplayProduct.Items.Add("", reader.GetInt32(0));                
+                    }
+
+                    dbCon.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to connect to data source" + ex);
+            }
+        }
+
+        private void clearViewProduct()
+        {
+
+            txtShoeName.Clear();
+            txtBrand.Clear();
+            txtShoeType.Clear();
+            txtGender.Clear();
+            txtColour.Clear();
+            txtMaterial.Clear();
+            txtPrice.Clear();
+            listViewDisplayProduct.Clear();
+
+        }
+
+        private void lstBasket_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lstBasket.SelectedItems.Count > 0)
+            {
+                listViewDisplayBasket.Clear();
+                listViewDisplayBasket.Items.Add("", basket[lstBasket.SelectedIndex]);
+            }
+        }
+
+        
     }
 }

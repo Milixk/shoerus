@@ -95,8 +95,6 @@
             this.cmbMainOrder = new System.Windows.Forms.ComboBox();
             this.listViewMain = new System.Windows.Forms.ListView();
             this.imageListMain = new System.Windows.Forms.ImageList(this.components);
-            this.grpBasket = new System.Windows.Forms.GroupBox();
-            this.grpViewProduct = new System.Windows.Forms.GroupBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.grpContact = new System.Windows.Forms.GroupBox();
             this.lblContactUs = new System.Windows.Forms.Label();
@@ -184,6 +182,31 @@
             this.btnShowUpdateAddress = new System.Windows.Forms.Button();
             this.btnViewProfileDetails = new System.Windows.Forms.Button();
             this.picProfile = new System.Windows.Forms.PictureBox();
+            this.grpBasket = new System.Windows.Forms.GroupBox();
+            this.btnAddBasket = new System.Windows.Forms.Button();
+            this.listViewDisplayBasket = new System.Windows.Forms.ListView();
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.btnClearBasket = new System.Windows.Forms.Button();
+            this.btnClearItem = new System.Windows.Forms.Button();
+            this.lstBasket = new System.Windows.Forms.ListBox();
+            this.grpViewProduct = new System.Windows.Forms.GroupBox();
+            this.btnBasketAdd = new System.Windows.Forms.Button();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtGender = new System.Windows.Forms.TextBox();
+            this.txtMaterial = new System.Windows.Forms.TextBox();
+            this.txtColour = new System.Windows.Forms.TextBox();
+            this.txtShoeType = new System.Windows.Forms.TextBox();
+            this.txtBrand = new System.Windows.Forms.TextBox();
+            this.txtShoeName = new System.Windows.Forms.TextBox();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblMaterial = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblShoeType = new System.Windows.Forms.Label();
+            this.lblShoeColour = new System.Windows.Forms.Label();
+            this.lblBrand = new System.Windows.Forms.Label();
+            this.lblShoeName = new System.Windows.Forms.Label();
+            this.listViewDisplayProduct = new System.Windows.Forms.ListView();
+            this.imageListDisplay = new System.Windows.Forms.ImageList(this.components);
             this.grpLogin.SuspendLayout();
             this.grpRegister.SuspendLayout();
             this.grpRegCardDetails.SuspendLayout();
@@ -202,6 +225,8 @@
             this.grpProfileDetails.SuspendLayout();
             this.grpGeneralInfoProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
+            this.grpBasket.SuspendLayout();
+            this.grpViewProduct.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnShowLoginGrp
@@ -264,7 +289,6 @@
             this.btnBasket.TabIndex = 5;
             this.btnBasket.Text = "button1";
             this.btnBasket.UseVisualStyleBackColor = true;
-            this.btnBasket.Visible = false;
             this.btnBasket.Click += new System.EventHandler(this.btnBasket_Click);
             // 
             // btnSearch
@@ -889,26 +913,6 @@
             this.imageListMain.Images.SetKeyName(13, "0013.jpg");
             this.imageListMain.Images.SetKeyName(14, "0014.jpg");
             this.imageListMain.Images.SetKeyName(15, "0015.jpg");
-            // 
-            // grpBasket
-            // 
-            this.grpBasket.Location = new System.Drawing.Point(895, 661);
-            this.grpBasket.Name = "grpBasket";
-            this.grpBasket.Size = new System.Drawing.Size(141, 83);
-            this.grpBasket.TabIndex = 12;
-            this.grpBasket.TabStop = false;
-            this.grpBasket.Text = "groupBox1";
-            this.grpBasket.Visible = false;
-            // 
-            // grpViewProduct
-            // 
-            this.grpViewProduct.Location = new System.Drawing.Point(472, 644);
-            this.grpViewProduct.Name = "grpViewProduct";
-            this.grpViewProduct.Size = new System.Drawing.Size(200, 100);
-            this.grpViewProduct.TabIndex = 13;
-            this.grpViewProduct.TabStop = false;
-            this.grpViewProduct.Text = "groupBox1";
-            this.grpViewProduct.Visible = false;
             // 
             // btnLogout
             // 
@@ -1745,16 +1749,271 @@
             this.picProfile.TabIndex = 0;
             this.picProfile.TabStop = false;
             // 
+            // grpBasket
+            // 
+            this.grpBasket.Controls.Add(this.btnAddBasket);
+            this.grpBasket.Controls.Add(this.listViewDisplayBasket);
+            this.grpBasket.Controls.Add(this.btnCheckout);
+            this.grpBasket.Controls.Add(this.btnClearBasket);
+            this.grpBasket.Controls.Add(this.btnClearItem);
+            this.grpBasket.Controls.Add(this.lstBasket);
+            this.grpBasket.Location = new System.Drawing.Point(600, 500);
+            this.grpBasket.Name = "grpBasket";
+            this.grpBasket.Size = new System.Drawing.Size(528, 267);
+            this.grpBasket.TabIndex = 18;
+            this.grpBasket.TabStop = false;
+            this.grpBasket.Text = "groupBox1";
+            this.grpBasket.Visible = false;
+            // 
+            // btnAddBasket
+            // 
+            this.btnAddBasket.Location = new System.Drawing.Point(433, 198);
+            this.btnAddBasket.Name = "btnAddBasket";
+            this.btnAddBasket.Size = new System.Drawing.Size(77, 35);
+            this.btnAddBasket.TabIndex = 21;
+            this.btnAddBasket.Text = "Add to basket";
+            this.btnAddBasket.UseVisualStyleBackColor = true;
+            // 
+            // listViewDisplayBasket
+            // 
+            this.listViewDisplayBasket.LargeImageList = this.imageListMain;
+            this.listViewDisplayBasket.Location = new System.Drawing.Point(6, 19);
+            this.listViewDisplayBasket.Name = "listViewDisplayBasket";
+            this.listViewDisplayBasket.Size = new System.Drawing.Size(195, 121);
+            this.listViewDisplayBasket.SmallImageList = this.imageListMain;
+            this.listViewDisplayBasket.TabIndex = 20;
+            this.listViewDisplayBasket.UseCompatibleStateImageBehavior = false;
+            this.listViewDisplayBasket.View = System.Windows.Forms.View.Tile;
+            // 
+            // btnCheckout
+            // 
+            this.btnCheckout.Location = new System.Drawing.Point(268, 164);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(92, 55);
+            this.btnCheckout.TabIndex = 18;
+            this.btnCheckout.Text = "Proceed to Checkout";
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
+            // 
+            // btnClearBasket
+            // 
+            this.btnClearBasket.Location = new System.Drawing.Point(18, 164);
+            this.btnClearBasket.Name = "btnClearBasket";
+            this.btnClearBasket.Size = new System.Drawing.Size(98, 55);
+            this.btnClearBasket.TabIndex = 18;
+            this.btnClearBasket.Text = "Clear Basket";
+            this.btnClearBasket.UseVisualStyleBackColor = true;
+            this.btnClearBasket.Click += new System.EventHandler(this.btnClearBasket_Click);
+            // 
+            // btnClearItem
+            // 
+            this.btnClearItem.Location = new System.Drawing.Point(122, 164);
+            this.btnClearItem.Name = "btnClearItem";
+            this.btnClearItem.Size = new System.Drawing.Size(92, 55);
+            this.btnClearItem.TabIndex = 17;
+            this.btnClearItem.Text = "Clear Item";
+            this.btnClearItem.UseVisualStyleBackColor = true;
+            this.btnClearItem.Click += new System.EventHandler(this.btnClearItem_Click);
+            // 
+            // lstBasket
+            // 
+            this.lstBasket.FormattingEnabled = true;
+            this.lstBasket.Location = new System.Drawing.Point(244, 19);
+            this.lstBasket.Name = "lstBasket";
+            this.lstBasket.Size = new System.Drawing.Size(171, 121);
+            this.lstBasket.TabIndex = 15;
+            this.lstBasket.SelectedIndexChanged += new System.EventHandler(this.lstBasket_SelectedIndexChanged);
+            // 
+            // grpViewProduct
+            // 
+            this.grpViewProduct.Controls.Add(this.btnBasketAdd);
+            this.grpViewProduct.Controls.Add(this.txtPrice);
+            this.grpViewProduct.Controls.Add(this.txtGender);
+            this.grpViewProduct.Controls.Add(this.txtMaterial);
+            this.grpViewProduct.Controls.Add(this.txtColour);
+            this.grpViewProduct.Controls.Add(this.txtShoeType);
+            this.grpViewProduct.Controls.Add(this.txtBrand);
+            this.grpViewProduct.Controls.Add(this.txtShoeName);
+            this.grpViewProduct.Controls.Add(this.lblPrice);
+            this.grpViewProduct.Controls.Add(this.lblMaterial);
+            this.grpViewProduct.Controls.Add(this.label5);
+            this.grpViewProduct.Controls.Add(this.lblShoeType);
+            this.grpViewProduct.Controls.Add(this.lblShoeColour);
+            this.grpViewProduct.Controls.Add(this.lblBrand);
+            this.grpViewProduct.Controls.Add(this.lblShoeName);
+            this.grpViewProduct.Controls.Add(this.listViewDisplayProduct);
+            this.grpViewProduct.Location = new System.Drawing.Point(0, 151);
+            this.grpViewProduct.Name = "grpViewProduct";
+            this.grpViewProduct.Size = new System.Drawing.Size(592, 455);
+            this.grpViewProduct.TabIndex = 19;
+            this.grpViewProduct.TabStop = false;
+            this.grpViewProduct.Text = "groupBox1";
+            this.grpViewProduct.Visible = false;
+            // 
+            // btnBasketAdd
+            // 
+            this.btnBasketAdd.Location = new System.Drawing.Point(386, 322);
+            this.btnBasketAdd.Name = "btnBasketAdd";
+            this.btnBasketAdd.Size = new System.Drawing.Size(98, 55);
+            this.btnBasketAdd.TabIndex = 22;
+            this.btnBasketAdd.Text = "Add to Basket";
+            this.btnBasketAdd.UseVisualStyleBackColor = true;
+            this.btnBasketAdd.Click += new System.EventHandler(this.btnBasketAdd_Click);
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(348, 257);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtPrice.TabIndex = 35;
+            // 
+            // txtGender
+            // 
+            this.txtGender.Location = new System.Drawing.Point(348, 151);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(100, 20);
+            this.txtGender.TabIndex = 34;
+            // 
+            // txtMaterial
+            // 
+            this.txtMaterial.Location = new System.Drawing.Point(348, 191);
+            this.txtMaterial.Name = "txtMaterial";
+            this.txtMaterial.Size = new System.Drawing.Size(100, 20);
+            this.txtMaterial.TabIndex = 33;
+            // 
+            // txtColour
+            // 
+            this.txtColour.Location = new System.Drawing.Point(348, 226);
+            this.txtColour.Name = "txtColour";
+            this.txtColour.Size = new System.Drawing.Size(100, 20);
+            this.txtColour.TabIndex = 32;
+            // 
+            // txtShoeType
+            // 
+            this.txtShoeType.Location = new System.Drawing.Point(348, 120);
+            this.txtShoeType.Name = "txtShoeType";
+            this.txtShoeType.Size = new System.Drawing.Size(100, 20);
+            this.txtShoeType.TabIndex = 31;
+            // 
+            // txtBrand
+            // 
+            this.txtBrand.Location = new System.Drawing.Point(348, 81);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.Size = new System.Drawing.Size(100, 20);
+            this.txtBrand.TabIndex = 30;
+            // 
+            // txtShoeName
+            // 
+            this.txtShoeName.Location = new System.Drawing.Point(348, 45);
+            this.txtShoeName.Name = "txtShoeName";
+            this.txtShoeName.Size = new System.Drawing.Size(100, 20);
+            this.txtShoeName.TabIndex = 29;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Location = new System.Drawing.Point(268, 264);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(31, 13);
+            this.lblPrice.TabIndex = 28;
+            this.lblPrice.Text = "Price";
+            // 
+            // lblMaterial
+            // 
+            this.lblMaterial.AutoSize = true;
+            this.lblMaterial.Location = new System.Drawing.Point(265, 198);
+            this.lblMaterial.Name = "lblMaterial";
+            this.lblMaterial.Size = new System.Drawing.Size(44, 13);
+            this.lblMaterial.TabIndex = 27;
+            this.lblMaterial.Text = "Material";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(265, 151);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Gender";
+            // 
+            // lblShoeType
+            // 
+            this.lblShoeType.AutoSize = true;
+            this.lblShoeType.Location = new System.Drawing.Point(265, 117);
+            this.lblShoeType.Name = "lblShoeType";
+            this.lblShoeType.Size = new System.Drawing.Size(59, 13);
+            this.lblShoeType.TabIndex = 25;
+            this.lblShoeType.Text = "Shoe Type";
+            // 
+            // lblShoeColour
+            // 
+            this.lblShoeColour.AutoSize = true;
+            this.lblShoeColour.Location = new System.Drawing.Point(265, 229);
+            this.lblShoeColour.Name = "lblShoeColour";
+            this.lblShoeColour.Size = new System.Drawing.Size(37, 13);
+            this.lblShoeColour.TabIndex = 24;
+            this.lblShoeColour.Text = "Colour";
+            // 
+            // lblBrand
+            // 
+            this.lblBrand.AutoSize = true;
+            this.lblBrand.Location = new System.Drawing.Point(265, 81);
+            this.lblBrand.Name = "lblBrand";
+            this.lblBrand.Size = new System.Drawing.Size(35, 13);
+            this.lblBrand.TabIndex = 23;
+            this.lblBrand.Text = "Brand";
+            // 
+            // lblShoeName
+            // 
+            this.lblShoeName.AutoSize = true;
+            this.lblShoeName.Location = new System.Drawing.Point(265, 45);
+            this.lblShoeName.Name = "lblShoeName";
+            this.lblShoeName.Size = new System.Drawing.Size(63, 13);
+            this.lblShoeName.TabIndex = 22;
+            this.lblShoeName.Text = "Shoe Name";
+            // 
+            // listViewDisplayProduct
+            // 
+            this.listViewDisplayProduct.LargeImageList = this.imageListDisplay;
+            this.listViewDisplayProduct.Location = new System.Drawing.Point(23, 34);
+            this.listViewDisplayProduct.Name = "listViewDisplayProduct";
+            this.listViewDisplayProduct.Size = new System.Drawing.Size(223, 243);
+            this.listViewDisplayProduct.SmallImageList = this.imageListDisplay;
+            this.listViewDisplayProduct.TabIndex = 21;
+            this.listViewDisplayProduct.UseCompatibleStateImageBehavior = false;
+            this.listViewDisplayProduct.View = System.Windows.Forms.View.Tile;
+            // 
+            // imageListDisplay
+            // 
+            this.imageListDisplay.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListDisplay.ImageStream")));
+            this.imageListDisplay.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListDisplay.Images.SetKeyName(0, "0000.jpg");
+            this.imageListDisplay.Images.SetKeyName(1, "0001.jpg");
+            this.imageListDisplay.Images.SetKeyName(2, "0002.jpg");
+            this.imageListDisplay.Images.SetKeyName(3, "0003.jpg");
+            this.imageListDisplay.Images.SetKeyName(4, "0004.png");
+            this.imageListDisplay.Images.SetKeyName(5, "0005.jpg");
+            this.imageListDisplay.Images.SetKeyName(6, "0006.jpg");
+            this.imageListDisplay.Images.SetKeyName(7, "0007.jpg");
+            this.imageListDisplay.Images.SetKeyName(8, "0008.jpg");
+            this.imageListDisplay.Images.SetKeyName(9, "0009.jpg");
+            this.imageListDisplay.Images.SetKeyName(10, "0010.jpg");
+            this.imageListDisplay.Images.SetKeyName(11, "0011.jpeg");
+            this.imageListDisplay.Images.SetKeyName(12, "0012.jpg");
+            this.imageListDisplay.Images.SetKeyName(13, "0013.jpg");
+            this.imageListDisplay.Images.SetKeyName(14, "0014.jpg");
+            this.imageListDisplay.Images.SetKeyName(15, "0015.jpg");
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1286, 757);
+            this.Controls.Add(this.grpViewProduct);
+            this.Controls.Add(this.grpBasket);
             this.Controls.Add(this.grpProfile);
             this.Controls.Add(this.grpContact);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.grpViewProduct);
-            this.Controls.Add(this.grpBasket);
             this.Controls.Add(this.grpRegister);
             this.Controls.Add(this.grpLogin);
             this.Controls.Add(this.btnSearch);
@@ -1798,6 +2057,9 @@
             this.grpGeneralInfoProfile.ResumeLayout(false);
             this.grpGeneralInfoProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
+            this.grpBasket.ResumeLayout(false);
+            this.grpViewProduct.ResumeLayout(false);
+            this.grpViewProduct.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1814,8 +2076,6 @@
         private System.Windows.Forms.GroupBox grpLogin;
         private System.Windows.Forms.GroupBox grpRegister;
         private System.Windows.Forms.GroupBox grpMain;
-        private System.Windows.Forms.GroupBox grpBasket;
-        private System.Windows.Forms.GroupBox grpViewProduct;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.TextBox txtLoginPassword;
         private System.Windows.Forms.TextBox txtLoginEmail;
@@ -1958,6 +2218,31 @@
         private System.Windows.Forms.Button btnShowUpdateAddress;
         private System.Windows.Forms.Button btnViewProfileDetails;
         private System.Windows.Forms.PictureBox picProfile;
+        private System.Windows.Forms.GroupBox grpBasket;
+        private System.Windows.Forms.Button btnAddBasket;
+        private System.Windows.Forms.ListView listViewDisplayBasket;
+        private System.Windows.Forms.Button btnCheckout;
+        private System.Windows.Forms.Button btnClearBasket;
+        private System.Windows.Forms.Button btnClearItem;
+        private System.Windows.Forms.ListBox lstBasket;
+        private System.Windows.Forms.GroupBox grpViewProduct;
+        private System.Windows.Forms.Button btnBasketAdd;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtGender;
+        private System.Windows.Forms.TextBox txtMaterial;
+        private System.Windows.Forms.TextBox txtColour;
+        private System.Windows.Forms.TextBox txtShoeType;
+        private System.Windows.Forms.TextBox txtBrand;
+        private System.Windows.Forms.TextBox txtShoeName;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblMaterial;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblShoeType;
+        private System.Windows.Forms.Label lblShoeColour;
+        private System.Windows.Forms.Label lblBrand;
+        private System.Windows.Forms.Label lblShoeName;
+        private System.Windows.Forms.ListView listViewDisplayProduct;
+        private System.Windows.Forms.ImageList imageListDisplay;
 
     }
 }
