@@ -168,7 +168,8 @@ namespace ShoesRUs
                                     dbCon.Close();
 
                                     MessageBox.Show("Registration Successful!");
-                                    register.clearFields();
+                                    //register.clearFields();
+                                    clearRegFields();
                                     hideGrp();
                                     grpMain.Visible = true;
                                 }
@@ -194,7 +195,8 @@ namespace ShoesRUs
         //Cancel the registration by clearing the form
         private void btnCancelRegister_Click(object sender, EventArgs e)
         {
-            register.clearFields();
+            //register.clearFields();
+            clearRegFields();
             hideGrp();
             grpMain.Visible = true;
         }
@@ -928,9 +930,6 @@ namespace ShoesRUs
                 //orders and orders dates for the logged in customer
                 myCmd.CommandText = "SELECT Orders.OrderID, Orders.OrderDate FROM  Orders, Invoice WHERE  Invoice.OrderID=Orders.OrderID AND Invoice.CustomerID = " + login.user.custID;
 
-                MessageBox.Show(myCmd.CommandText);
-
-
                 myConn.Open();
                 OleDbDataReader myDR = myCmd.ExecuteReader();
 
@@ -1002,6 +1001,15 @@ namespace ShoesRUs
         {
             //clears all the items in the list box
             DialogResult checkOUt = MessageBox.Show("proceeds to checkout", "Warning!", MessageBoxButtons.OKCancel);
+            if (checkOUt == DialogResult.OK)
+            {
+                MessageBox.Show("Moved to checkout! Items cleared from Basket. Navigating back to Main");
+                lstBasket.Items.Clear();
+                basket.Clear();
+                listViewDisplayBasket.Items.Clear();
+                hideGrp();
+                grpMain.Visible = true;
+            }
         }
 
         //Populate the view product group
@@ -1089,6 +1097,29 @@ namespace ShoesRUs
             grpMain.Visible = true;
         }
 
+        //Clear the Registration fields
+        public void clearRegFields()
+        {
+            cmbRegTitle.SelectedIndex = -1;
+            cmbRegGender.SelectedIndex = -1;
+            cmbRegCaType.SelectedIndex = -1;
 
+            txtRegName.Clear();
+            txtRegEmail.Clear();
+            txtRegPassword.Clear();
+            txtRegPasswordConfirm.Clear();
+            txtRegPhoneNo.Clear();
+            txtRegAddNo.Clear();
+            txtRegAddStreet.Clear();
+            txtRegAddCity.Clear();
+            txtRedAddCountry.Clear();
+            txtRegPostCode.Clear();
+            txtRegCaName.Clear();
+            txtRegCaNo.Clear();
+            txtRegCaCVV.Clear();
+
+            txtRegDOB.Text = "DD/MM/YYYY";
+            txtRegCaExpiry.Text = "MM/YY";
+        }
     }
 }

@@ -1081,7 +1081,6 @@
             // 
             // grpProfile
             // 
-            this.grpProfile.Controls.Add(this.grpPurchases);
             this.grpProfile.Controls.Add(this.grpCardUpdate);
             this.grpProfile.Controls.Add(this.grpAddressUpdate);
             this.grpProfile.Controls.Add(this.grpProfileDetails);
@@ -1090,6 +1089,7 @@
             this.grpProfile.Controls.Add(this.btnShowUpdateAddress);
             this.grpProfile.Controls.Add(this.btnViewProfileDetails);
             this.grpProfile.Controls.Add(this.picProfile);
+            this.grpProfile.Controls.Add(this.grpPurchases);
             this.grpProfile.Location = new System.Drawing.Point(12, 52);
             this.grpProfile.Name = "grpProfile";
             this.grpProfile.Size = new System.Drawing.Size(700, 700);
@@ -1184,7 +1184,7 @@
             this.txtExpDateProfile.Name = "txtExpDateProfile";
             this.txtExpDateProfile.Size = new System.Drawing.Size(110, 20);
             this.txtExpDateProfile.TabIndex = 14;
-            this.txtExpDateProfile.Text = "dd/mm/yyyy";
+            this.txtExpDateProfile.Text = "MM/YY";
             // 
             // label26
             // 
@@ -1584,6 +1584,7 @@
             this.listViewDisplayBasket.LargeImageList = this.imageListMain;
             this.listViewDisplayBasket.Location = new System.Drawing.Point(6, 19);
             this.listViewDisplayBasket.Name = "listViewDisplayBasket";
+            this.listViewDisplayBasket.Scrollable = false;
             this.listViewDisplayBasket.Size = new System.Drawing.Size(231, 193);
             this.listViewDisplayBasket.SmallImageList = this.imageListMain;
             this.listViewDisplayBasket.TabIndex = 20;
@@ -1796,7 +1797,8 @@
             this.listViewDisplayProduct.LargeImageList = this.imageListDisplay;
             this.listViewDisplayProduct.Location = new System.Drawing.Point(23, 34);
             this.listViewDisplayProduct.Name = "listViewDisplayProduct";
-            this.listViewDisplayProduct.Size = new System.Drawing.Size(223, 243);
+            this.listViewDisplayProduct.Scrollable = false;
+            this.listViewDisplayProduct.Size = new System.Drawing.Size(223, 150);
             this.listViewDisplayProduct.SmallImageList = this.imageListDisplay;
             this.listViewDisplayProduct.TabIndex = 21;
             this.listViewDisplayProduct.UseCompatibleStateImageBehavior = false;
@@ -1835,13 +1837,13 @@
             this.Controls.Add(this.btnContact);
             this.Controls.Add(this.btnShowRegisterGrp);
             this.Controls.Add(this.btnShowLoginGrp);
+            this.Controls.Add(this.grpBasket);
+            this.Controls.Add(this.grpProfile);
             this.Controls.Add(this.grpContact);
             this.Controls.Add(this.grpRegister);
             this.Controls.Add(this.grpLogin);
             this.Controls.Add(this.grpMain);
             this.Controls.Add(this.grpViewProduct);
-            this.Controls.Add(this.grpBasket);
-            this.Controls.Add(this.grpProfile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";

@@ -86,7 +86,7 @@ namespace ShoesRUs
                                     dbCon.Close();
 
                                     MessageBox.Show("Registration Successful!");
-                                    clearFields();
+                                    //clearFields();
                                 }
                             }
                             else
@@ -108,7 +108,7 @@ namespace ShoesRUs
         }
 
         //Clear the Registration fields
-        public void clearFields()
+        public void clearRegFields()
         {
             mForm.cmbRegTitle.SelectedIndex = -1;
             mForm.cmbRegGender.SelectedIndex = -1;
