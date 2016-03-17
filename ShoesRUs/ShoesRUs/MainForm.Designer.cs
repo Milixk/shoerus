@@ -115,10 +115,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.grpProfile = new System.Windows.Forms.GroupBox();
-            this.grpPurchases = new System.Windows.Forms.GroupBox();
-            this.lstView = new System.Windows.Forms.ListView();
-            this.OrderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.OrderDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpCardUpdate = new System.Windows.Forms.GroupBox();
             this.btnClearCard = new System.Windows.Forms.Button();
             this.txtCardTypeProfile = new System.Windows.Forms.TextBox();
@@ -165,6 +161,10 @@
             this.btnShowUpdateAddress = new System.Windows.Forms.Button();
             this.btnViewProfileDetails = new System.Windows.Forms.Button();
             this.picProfile = new System.Windows.Forms.PictureBox();
+            this.grpPurchases = new System.Windows.Forms.GroupBox();
+            this.lstView = new System.Windows.Forms.ListView();
+            this.OrderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OrderDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpBasket = new System.Windows.Forms.GroupBox();
             this.listViewDisplayBasket = new System.Windows.Forms.ListView();
             this.btnCheckout = new System.Windows.Forms.Button();
@@ -198,11 +198,11 @@
             this.grpContact.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctQuestionMark)).BeginInit();
             this.grpProfile.SuspendLayout();
-            this.grpPurchases.SuspendLayout();
             this.grpCardUpdate.SuspendLayout();
             this.grpAddressUpdate.SuspendLayout();
             this.grpProfileDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
+            this.grpPurchases.SuspendLayout();
             this.grpBasket.SuspendLayout();
             this.grpViewProduct.SuspendLayout();
             this.SuspendLayout();
@@ -994,6 +994,7 @@
             this.txtOrdNo.Name = "txtOrdNo";
             this.txtOrdNo.Size = new System.Drawing.Size(190, 20);
             this.txtOrdNo.TabIndex = 12;
+            this.txtOrdNo.Text = "0";
             // 
             // txtCustNo
             // 
@@ -1001,6 +1002,7 @@
             this.txtCustNo.Name = "txtCustNo";
             this.txtCustNo.Size = new System.Drawing.Size(190, 20);
             this.txtCustNo.TabIndex = 11;
+            this.txtCustNo.Text = "0";
             // 
             // txtEmail
             // 
@@ -1096,39 +1098,6 @@
             this.grpProfile.TabIndex = 17;
             this.grpProfile.TabStop = false;
             this.grpProfile.Visible = false;
-            // 
-            // grpPurchases
-            // 
-            this.grpPurchases.Controls.Add(this.lstView);
-            this.grpPurchases.Location = new System.Drawing.Point(191, 34);
-            this.grpPurchases.Name = "grpPurchases";
-            this.grpPurchases.Size = new System.Drawing.Size(459, 279);
-            this.grpPurchases.TabIndex = 9;
-            this.grpPurchases.TabStop = false;
-            this.grpPurchases.Visible = false;
-            // 
-            // lstView
-            // 
-            this.lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.OrderID,
-            this.OrderDate});
-            this.lstView.GridLines = true;
-            this.lstView.Location = new System.Drawing.Point(25, 42);
-            this.lstView.Name = "lstView";
-            this.lstView.Size = new System.Drawing.Size(416, 199);
-            this.lstView.TabIndex = 0;
-            this.lstView.UseCompatibleStateImageBehavior = false;
-            this.lstView.View = System.Windows.Forms.View.Details;
-            // 
-            // OrderID
-            // 
-            this.OrderID.Text = "OrderID";
-            this.OrderID.Width = 206;
-            // 
-            // OrderDate
-            // 
-            this.OrderDate.Text = "OrderDate";
-            this.OrderDate.Width = 209;
             // 
             // grpCardUpdate
             // 
@@ -1564,6 +1533,39 @@
             this.picProfile.TabIndex = 0;
             this.picProfile.TabStop = false;
             // 
+            // grpPurchases
+            // 
+            this.grpPurchases.Controls.Add(this.lstView);
+            this.grpPurchases.Location = new System.Drawing.Point(191, 34);
+            this.grpPurchases.Name = "grpPurchases";
+            this.grpPurchases.Size = new System.Drawing.Size(459, 279);
+            this.grpPurchases.TabIndex = 9;
+            this.grpPurchases.TabStop = false;
+            this.grpPurchases.Visible = false;
+            // 
+            // lstView
+            // 
+            this.lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.OrderID,
+            this.OrderDate});
+            this.lstView.GridLines = true;
+            this.lstView.Location = new System.Drawing.Point(25, 42);
+            this.lstView.Name = "lstView";
+            this.lstView.Size = new System.Drawing.Size(416, 199);
+            this.lstView.TabIndex = 0;
+            this.lstView.UseCompatibleStateImageBehavior = false;
+            this.lstView.View = System.Windows.Forms.View.Details;
+            // 
+            // OrderID
+            // 
+            this.OrderID.Text = "OrderID";
+            this.OrderID.Width = 206;
+            // 
+            // OrderDate
+            // 
+            this.OrderDate.Text = "OrderDate";
+            this.OrderDate.Width = 209;
+            // 
             // grpBasket
             // 
             this.grpBasket.Controls.Add(this.listViewDisplayBasket);
@@ -1837,13 +1839,13 @@
             this.Controls.Add(this.btnContact);
             this.Controls.Add(this.btnShowRegisterGrp);
             this.Controls.Add(this.btnShowLoginGrp);
-            this.Controls.Add(this.grpBasket);
-            this.Controls.Add(this.grpProfile);
             this.Controls.Add(this.grpContact);
             this.Controls.Add(this.grpRegister);
             this.Controls.Add(this.grpLogin);
             this.Controls.Add(this.grpMain);
             this.Controls.Add(this.grpViewProduct);
+            this.Controls.Add(this.grpBasket);
+            this.Controls.Add(this.grpProfile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
@@ -1864,7 +1866,6 @@
             this.grpContact.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctQuestionMark)).EndInit();
             this.grpProfile.ResumeLayout(false);
-            this.grpPurchases.ResumeLayout(false);
             this.grpCardUpdate.ResumeLayout(false);
             this.grpCardUpdate.PerformLayout();
             this.grpAddressUpdate.ResumeLayout(false);
@@ -1872,6 +1873,7 @@
             this.grpProfileDetails.ResumeLayout(false);
             this.grpProfileDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
+            this.grpPurchases.ResumeLayout(false);
             this.grpBasket.ResumeLayout(false);
             this.grpViewProduct.ResumeLayout(false);
             this.grpViewProduct.PerformLayout();
