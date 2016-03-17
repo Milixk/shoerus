@@ -15,50 +15,54 @@ namespace ShoesRUs
 {
     public partial class MainForm : Form
     {
-        Login login = new Login();
-        Register register = new Register();
+        Login login = new Login();              //Login Object holding customer details
+        Register register = new Register();     //Register Object used to register a customer
 
-        List<int> basket = new List<int>();
+        List<int> basket = new List<int>();     //Stores the ID of shoes in the basket
         
         public MainForm()
         {
-            InitializeComponent();
-            Startup su = new Startup();
-            startupLoad();
+            InitializeComponent();          //Initialise components on the screen
+            Startup su = new Startup();     //Run the startup functionality
+            startupLoad();                  //Show items in the Main view
         }
 
-        //Shows the LoginForm
+        //Shows the Login Group
         private void btnShowLoginGrp_Click(object sender, EventArgs e)
         {
             hideGrp();
             grpLogin.Visible = true;
         }
 
+        //Shows the Register Group
         private void btnShowRegisterGrp_Click(object sender, EventArgs e)
         {
             hideGrp();
             grpRegister.Visible = true;
         }
 
-
+        //Shows Contact Group
         private void btnContact_Click(object sender, EventArgs e)
         {
             hideGrp();
             grpContact.Visible = true;
         }
 
+        //Shows Profile Group
         private void btnProfile_Click(object sender, EventArgs e)
         {
             hideGrp();
             grpProfile.Visible = true;
         }
 
+        //Shows Basket Group
         private void btnBasket_Click(object sender, EventArgs e)
         {
             hideGrp();
             grpBasket.Visible = true;
         }
 
+        //Logs the user out of the system, hide any content required by a logged in user
         private void btnLogout_Click(object sender, EventArgs e)
         {
             login.logOut();
@@ -69,6 +73,7 @@ namespace ShoesRUs
             btnLogout.Visible = false;
         }
 
+        //If the user details are correct, store user details in the Login Object, clear the login form and navigate back to Main
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             if (login.loggingIn(txtLoginEmail.Text, txtLoginPassword.Text) != -999)
@@ -90,11 +95,10 @@ namespace ShoesRUs
                 MessageBox.Show("Login details incorrect!");
             }
         }
-
+        
+        //Start checking if user input is correct when Registering
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //register.register();
-
             //Check if any of the input boxes are empty or not selected
             if (cmbRegTitle.SelectedItem == null || cmbRegGender.SelectedItem == null || string.IsNullOrEmpty(txtRegName.Text) ||
                 cmbRegCaType.SelectedItem == null || string.IsNullOrEmpty(txtRegEmail.Text) || string.IsNullOrEmpty(txtRegPassword.Text) ||
@@ -187,17 +191,21 @@ namespace ShoesRUs
             }
         }
 
+        //Cancel the registration by clearing the form
         private void btnCancelRegister_Click(object sender, EventArgs e)
         {
             register.clearFields();
+            hideGrp();
+            grpMain.Visible = true;
         }
 
+        //Update the items on Main
         private void btnMainFilter_Click(object sender, EventArgs e)
         {
             updateListView();
         }
 
-
+        //Load all items into the Main view
         public void startupLoad()  // PETRs strartup function
         {
             for (int i = 0; i < chckListBoxMainGender.Items.Count; i++)  // this loop checks all the boxes in gender filter
@@ -205,20 +213,17 @@ namespace ShoesRUs
                 chckListBoxMainGender.SetItemChecked(i, true);
             }
 
-
-            /////////////////// NEW START ///////////////////////////////////////////////////////////////////////////////////////////////////////////
             updateBrands();
             for (int i = 0; i < chckListBoxMainBrand.Items.Count; i++)  // this loop checks all the boxes in brand filter
             {
                 chckListBoxMainBrand.SetItemChecked(i, true);
             }
-            ////////////////// NEW END //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
             string queryString = "SELECT * FROM Shoe";
             listViewQuery(queryString);  
         }
 
+        //Update the listView with the provided query
         public void listViewQuery(string queryString)
         {
             try
@@ -248,13 +253,14 @@ namespace ShoesRUs
 
             }
 
+        //Clear the listview
         public void ListClear()
         {
             listViewMain.Items.Clear();
         }
 
         // public function for adding shoes into listview
-        public void ListInsert(int ID, string price, string name, string brand) //   TODO add name functonality
+        public void ListInsert(int ID, string price, string name, string brand)
         {
             if (imageListMain.Images.Count > ID) //checks if we have picture
                 listViewMain.Items.Add(brand + " " + name + ", £" + price, ID); //add item with name "" and picture id
@@ -262,6 +268,7 @@ namespace ShoesRUs
                 listViewMain.Items.Add(brand + " " + name + ", £" + price, 0); //add item with name "" and placeholder picture
         }
 
+        //Update the order of items based on combo box selection
         private void cmbMainOrder_SelectedIndexChanged(object sender, EventArgs e)
         {
             updateListView();
@@ -353,6 +360,7 @@ namespace ShoesRUs
             return ret;
         }
 
+        //Filter gender on Main
         private string filterGender()
         {
             string ret = "";
@@ -396,7 +404,7 @@ namespace ShoesRUs
             return ret;
         }
 
-
+        //Filter items on Main by Price
         private string filterPrice()
         {
             string min;
@@ -440,6 +448,7 @@ namespace ShoesRUs
                 return "";
         }
 
+        //Sort items on Main by selections
         private string cmbMainOrderCaseFunction()
         {
             switch (cmbMainOrder.SelectedIndex)
@@ -452,6 +461,7 @@ namespace ShoesRUs
             }
         }
 
+        //Click on item and show more details of item in the View Product group
         private void listViewMain_Click(object sender, EventArgs e)
         {
             if (listViewMain.SelectedItems.Count > 0)
@@ -462,11 +472,13 @@ namespace ShoesRUs
             }
         }
 
+        //Update items on Main according to Search
         private void txtBoxMainSearch_TextChanged(object sender, EventArgs e)
         {
             updateListView();
         }
 
+        //Only allow numbers to be inserted into textbox
         private void txtBoxMainPriceMin_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -475,6 +487,7 @@ namespace ShoesRUs
             }
         }
 
+        //Only allow numbers to be inserted into textbox
         private void txtBoxMainPriceMax_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -483,6 +496,7 @@ namespace ShoesRUs
             }
         }
 
+        //Get Brands from database and display as checkboxes
         private void updateBrands()
         {
             string queryString = "SELECT DISTINCT  ShoeBrand FROM Shoe";
@@ -511,10 +525,7 @@ namespace ShoesRUs
 
         }
 
-
-
-
-
+        //FIlter items on Main by Brand
         private string filterBrands()
         {
             string ret = "";
@@ -550,6 +561,7 @@ namespace ShoesRUs
             ret += ")";
             return ret;
         }
+
 
         private void btnSend_Click(object sender, EventArgs e)
         {
@@ -912,6 +924,7 @@ namespace ShoesRUs
             }
         }
 
+        //Add viewed item to the Basket
         private void btnBasketAdd_Click(object sender, EventArgs e)
         {
             lstBasket.Items.Add(this.txtShoeName.Text +", £" + this.txtPrice.Text);
@@ -921,6 +934,7 @@ namespace ShoesRUs
             MessageBox.Show("Added item to basket.");
         }
 
+        //Remove selected item from the basket
         private void btnClearItem_Click(object sender, EventArgs e)
         {
             int selectedIndex = lstBasket.SelectedIndex;
@@ -934,6 +948,7 @@ namespace ShoesRUs
 
         }
 
+        //Remove all items from basket
         private void btnClearBasket_Click(object sender, EventArgs e)
         {
             //clears all the items in the list box
@@ -946,12 +961,14 @@ namespace ShoesRUs
             }
         }
 
+        //Notify the user that they are going to the chekout
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             //clears all the items in the list box
             DialogResult checkOUt = MessageBox.Show("proceeds to checkout", "Warning!", MessageBoxButtons.OKCancel);
         }
 
+        //Populate the view product group
         public void Populate(int shoeID)
         {
             try
@@ -992,6 +1009,7 @@ namespace ShoesRUs
             }
         }
 
+        //Clear the data in View Product
         private void clearViewProduct()
         {
 
@@ -1006,6 +1024,7 @@ namespace ShoesRUs
 
         }
 
+        //Show selected items image in Basket
         private void lstBasket_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(lstBasket.SelectedItems.Count > 0)
@@ -1015,6 +1034,7 @@ namespace ShoesRUs
             }
         }
 
+        //Hide all groups on the form
         private void hideGrp()
         {
             grpMain.Visible = false;
@@ -1026,6 +1046,7 @@ namespace ShoesRUs
             grpViewProduct.Visible = false;
         }
 
+        //Navigate to the Main group
         private void btnHome_Click(object sender, EventArgs e)
         {
             hideGrp();
