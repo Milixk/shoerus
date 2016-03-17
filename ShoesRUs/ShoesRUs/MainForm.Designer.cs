@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnShowLoginGrp = new System.Windows.Forms.Button();
             this.btnShowRegisterGrp = new System.Windows.Forms.Button();
-            this.btnAdmin = new System.Windows.Forms.Button();
             this.btnContact = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnBasket = new System.Windows.Forms.Button();
@@ -227,17 +226,6 @@
             this.btnShowRegisterGrp.Text = "Register";
             this.btnShowRegisterGrp.UseVisualStyleBackColor = true;
             this.btnShowRegisterGrp.Click += new System.EventHandler(this.btnShowRegisterGrp_Click);
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Location = new System.Drawing.Point(174, 12);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(75, 23);
-            this.btnAdmin.TabIndex = 2;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Visible = false;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnContact
             // 
@@ -1845,7 +1833,6 @@
             this.Controls.Add(this.btnBasket);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.btnContact);
-            this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnShowRegisterGrp);
             this.Controls.Add(this.btnShowLoginGrp);
             this.Controls.Add(this.grpContact);
@@ -1858,6 +1845,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shoes \'R\' Us";
             this.grpLogin.ResumeLayout(false);
             this.grpLogin.PerformLayout();
@@ -1893,7 +1881,6 @@
 
         private System.Windows.Forms.Button btnShowLoginGrp;
         private System.Windows.Forms.Button btnShowRegisterGrp;
-        private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Button btnContact;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnBasket;

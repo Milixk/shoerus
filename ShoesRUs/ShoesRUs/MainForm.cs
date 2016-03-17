@@ -40,10 +40,6 @@ namespace ShoesRUs
             grpRegister.Visible = true;
         }
 
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnContact_Click(object sender, EventArgs e)
         {
@@ -66,28 +62,28 @@ namespace ShoesRUs
         private void btnLogout_Click(object sender, EventArgs e)
         {
             login.logOut();
-            btnAdmin.Visible = false;
             btnProfile.Visible = false;
             hideGrp();
-            grpMain.Visible = true;        }
+            grpMain.Visible = true;
+            btnShowLoginGrp.Visible = true;
+            btnLogout.Visible = false;
+        }
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             if (login.loggingIn(txtLoginEmail.Text, txtLoginPassword.Text) != -999)
             {
                 login.setLoggedIn(login.loggingIn(txtLoginEmail.Text, txtLoginPassword.Text));
-                grpLogin.Visible = false;
+                hideGrp();
                 btnShowRegisterGrp.Visible = false;
                 btnProfile.Visible = true;
                 btnBasket.Visible = true;
                 btnLogout.Visible = true;
-                if (login.checkAdmin() == true)
-                {
-                    btnAdmin.Visible = true;
-                }
+                btnShowLoginGrp.Visible = false;
                 MessageBox.Show("Login successfull!");
                 txtLoginEmail.Text = "";
                 txtLoginPassword.Text = "";
+                grpMain.Visible = true;
             }
             else
             {
@@ -169,6 +165,8 @@ namespace ShoesRUs
 
                                     MessageBox.Show("Registration Successful!");
                                     register.clearFields();
+                                    hideGrp();
+                                    grpMain.Visible = true;
                                 }
                             }
                             else
