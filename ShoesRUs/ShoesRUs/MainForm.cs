@@ -263,9 +263,9 @@ namespace ShoesRUs
         public void ListInsert(int ID, string price, string name, string brand)
         {
             if (imageListMain.Images.Count > ID) //checks if we have picture
-                listViewMain.Items.Add(brand + " " + name + ", £" + price, ID); //add item with name "" and picture id
+                listViewMain.Items.Add(name + ", " + brand + ", £" + price, ID); //add item with name "" and picture id
             else
-                listViewMain.Items.Add(brand + " " + name + ", £" + price, 0); //add item with name "" and placeholder picture
+                listViewMain.Items.Add(name + ", " + brand + ", £" + price, 0); //add item with name "" and placeholder picture
         }
 
         //Update the order of items based on combo box selection
@@ -393,8 +393,7 @@ namespace ShoesRUs
                 ret += " ShoeGender='Women'";
                 if (gender[2])
                     ret += " OR ShoeGender='Kids'";
-                else
-                    ret += ")";
+
             }
             else if (gender[2])
                 ret += " ShoeGender='Kids'";
@@ -727,7 +726,7 @@ namespace ShoesRUs
             grpProfileDetails.Visible = false;
             grpAddressUpdate.Visible = true;
             grpCardUpdate.Visible = false;
-            grpPurchases.Visible = true;
+            grpPurchases.Visible = false;
 
 
             try
