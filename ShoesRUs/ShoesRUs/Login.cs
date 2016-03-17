@@ -65,6 +65,7 @@ namespace ShoesRUs
             return loggedIn;
         }
 
+        //Returns the Admin state of the User
         public bool checkAdmin()
         {
             return user.admin;

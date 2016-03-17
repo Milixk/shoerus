@@ -562,7 +562,8 @@ namespace ShoesRUs
             return ret;
         }
 
-
+        //sends a message to the administrator , which is stored in the database.
+        //checks if one of the fields is empty, if so then it displays a message, asking the user to fill all the fields, except order no
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtEmail.Text) ||
@@ -572,9 +573,10 @@ namespace ShoesRUs
             }
             else
             {
-
+                //the function sendMessage is called
                 Contact contact = new Contact();
                 contact.sendMessage(txtName.Text, txtEmail.Text, txtCustNo.Text, txtOrdNo.Text, cmbCategory.SelectedItem.ToString(), txtSubj.Text, txtMessage.Text);
+                //the function checkMessage is called, which returns 1 if the message was successfully sent, or 0 if there are any errors
                 int chkMessage = contact.checkMessage(txtName.Text, txtEmail.Text, txtCustNo.Text, txtOrdNo.Text, cmbCategory.SelectedItem.ToString(), txtSubj.Text, txtMessage.Text);
                 if (chkMessage == 1)
                 {
@@ -593,12 +595,14 @@ namespace ShoesRUs
             }
         }
 
+        //clears all the fields on the "Contact" group box
         private void btnReset_Click(object sender, EventArgs e)
         {
             clearFieldsContactForm();
         }
 
-        private void clearFieldsContactForm()//function which clear all the fields to be completed (Contact group box)
+        //function which clear all the fields to be completed (Contact group box)
+        private void clearFieldsContactForm()
         {
 
             txtName.Clear();
@@ -614,8 +618,11 @@ namespace ShoesRUs
 
         OleDbConnection myConn = new OleDbConnection();
 
+        //displays the Profile Details groupbox on "My Profile" page, which includes all the
+        //information about the logged in customer. The user can edit all his personal details, except from DOB and Email address.
         private void btnViewProfileDetails_Click(object sender, EventArgs e)
         {
+            //all the other groupboxes' visibility  on "My Profile" page, except from the profile details groupbox, is set to "false" everytime this button is pressed
             grpProfileDetails.Visible = true;
             grpAddressUpdate.Visible = false;
             grpCardUpdate.Visible = false;
@@ -623,9 +630,11 @@ namespace ShoesRUs
 
             try
             {
-                myConn.ConnectionString = DatabaseConnection.dbconnect; ;
-                OleDbCommand myCmd = myConn.CreateCommand();
+                myConn.ConnectionString = DatabaseConnection.dbconnect; //creates a connection
+                OleDbCommand myCmd = myConn.CreateCommand(); //creates a command
 
+                //selects the customer title, customer DOB, customer gender, customer name, customer phone number and customer email from the "Customer" table ,
+                //where the customer ID is the logged in user's CustomerID
                 myCmd.CommandText = "Select CustomerTitle, CustomerDOB, CustomerGender, CustomerName, CustomerPhoneNo, CustomerEmail From Customer"
                                                            + " Where CustomerID = @customerID";
                 myCmd.Parameters.AddWithValue("customerID", login.user.custID);
@@ -654,6 +663,7 @@ namespace ShoesRUs
             }
         }
 
+        //updates the customer personal information to the database
         private void btnUpdateGeneralInfoProfile_Click(object sender, EventArgs e)
         {
             try
@@ -663,8 +673,12 @@ namespace ShoesRUs
 
                 OleDbCommand myCmd = myConn.CreateCommand();
 
+                //updates the customer title, gender, name, phone number, where the customer Id is the logged in user's customer ID
+
                 myCmd.CommandText = "UPDATE Customer SET CustomerTitle = @ct, CustomerGender = @cGender, CustomerName = @cName, CustomerPhoneNo = @cPhone"
                                                            + " Where CustomerID = " + login.user.custID;
+
+                //takes the information to be updated from the specific textboxes
                 myCmd.Parameters.AddWithValue("@ct", txtTitleProfile.Text);
                 myCmd.Parameters.AddWithValue("@cGender", txtGenderProfile.Text);
                 myCmd.Parameters.AddWithValue("@cName", txtNameProfile.Text);
@@ -686,12 +700,14 @@ namespace ShoesRUs
             }
         }
 
+        //Clear the Profile General Info Group Box
         private void btnClearGeneralInfo_Click(object sender, EventArgs e)
         {
             clearFieldsGenetalInfo();
         }
 
-        private void clearFieldsGenetalInfo()//function which clears all the fields in the GENERAL INFORMATION group box (My profile)
+        //function which clears all the fields in the GENERAL INFORMATION group box (My profile)
+        private void clearFieldsGenetalInfo()
         {
 
             txtTitleProfile.Clear();
@@ -704,6 +720,8 @@ namespace ShoesRUs
 
         }
 
+        //displays the Update Address groupbox on "My Profile" page, which includes all the
+        //information about the logged in customer's adress. The user can edit/change his current address
         private void btnShowUpdateAddress_Click(object sender, EventArgs e)
         {
             grpProfileDetails.Visible = false;
@@ -716,6 +734,8 @@ namespace ShoesRUs
             {
                 myConn.ConnectionString = DatabaseConnection.dbconnect; ;
                 OleDbCommand myCmd = myConn.CreateCommand();
+
+                //selects customer's house no, street, city, country, postcode from "Customer" table, where the customer ID is the user's customerID
 
                 myCmd.CommandText = "Select CustomerAddressNo, CustomerAddressStreet, CustomerAddressCity, CustomerAddressCountry, CustomerPostCode, CustomerPhoneNo From Customer"
                                                            + " Where CustomerID = @customerID";
@@ -745,6 +765,7 @@ namespace ShoesRUs
             }
         }
 
+        //by pressing this button, the customer updates the new address on the database.
         private void btnUpdateAddress_Click(object sender, EventArgs e)
         {
             try
@@ -754,8 +775,12 @@ namespace ShoesRUs
 
                 OleDbCommand myCmd = myConn.CreateCommand();
 
+                //Updates the customer address no, street, city, country, postcode where the customer ID is the logged in user's customer ID
+
                 myCmd.CommandText = "UPDATE Customer SET CustomerAddressNo = @ca, CustomerAddressStreet = @caStreet, CustomerAddressCity = @caCity, CustomerAddressCountry = @caCountry, CustomerPostCode = @caPostcode "
                                                            + " Where CustomerID = " + login.user.custID;
+
+                //the information to be updated is taken from the textboxes, where the customer inputs the details
                 myCmd.Parameters.AddWithValue("@caNo", txtHouseNoProfile.Text);
                 myCmd.Parameters.AddWithValue("@caStreet", txtStreetProfile.Text);
                 myCmd.Parameters.AddWithValue("@caCity", txtCityProfile.Text);
@@ -775,11 +800,13 @@ namespace ShoesRUs
             }
         }
 
+        //it clears all the fields, in other to allow the customer to input the information about the new address
         private void btnClearAddress_Click(object sender, EventArgs e)
         {
             clearFieldsAddress();
         }
 
+        //the function used in other to clear the fields on the "Update Address" group box
         private void clearFieldsAddress()
         {
 
@@ -790,7 +817,9 @@ namespace ShoesRUs
             txtPostcodeProfile.Clear();
 
         }
-
+        
+        //displays the Update Card Details groupbox on "My Profile" page, which includes all  
+        //the information about the logged in customer's card details. The user can add a new card details.
         private void btnShowUpdateCardDetails_Click(object sender, EventArgs e)
         {
             grpProfileDetails.Visible = false;
@@ -802,6 +831,8 @@ namespace ShoesRUs
             {
                 myConn.ConnectionString = DatabaseConnection.dbconnect; ;
                 OleDbCommand myCmd = myConn.CreateCommand();
+
+                //selects all the information about the current card from the database, where the customer ID is the user's customer ID
 
                 myCmd.CommandText = "Select  CustomerPaymentCardType, CustomerPaymentCardNo, CustomerPaymentCardCVV, CustomerPaymentCardName,CustomerPaymentCardExpDate From Customer"
                                                            + " Where CustomerID = @customerID";
@@ -830,6 +861,7 @@ namespace ShoesRUs
             }
         }
 
+        //updates the details of the new card to be added on the database
         private void btnUpdateCardDetails_Click(object sender, EventArgs e)
         {
             try
@@ -862,6 +894,7 @@ namespace ShoesRUs
             }
         }
 
+        //clear all the fields in the "update card details" groupbox
         private void btnClearCard_Click(object sender, EventArgs e)
         {
             clearFieldsCardNo();
@@ -878,6 +911,8 @@ namespace ShoesRUs
 
         }
 
+        //displays the "Purchases" group box from the "My profile" page. The customer can all the
+        //orders he placed.
         private void btnViewPurchases_Click(object sender, EventArgs e)
         {
             grpPurchases.Visible = true;
@@ -890,6 +925,8 @@ namespace ShoesRUs
                 myConn.ConnectionString = DatabaseConnection.dbconnect; ;
                 OleDbCommand myCmd = myConn.CreateCommand();
 
+                //selects the orderID and orderDate from the Orders table. It also takes the orderID and customerID from the Invoice table, and display all the
+                //orders and orders dates for the logged in customer
                 myCmd.CommandText = "SELECT Orders.OrderID, Orders.OrderDate FROM  Orders, Invoice WHERE  Invoice.OrderID=Orders.OrderID AND Invoice.CustomerID = " + login.user.custID;
 
                 MessageBox.Show(myCmd.CommandText);

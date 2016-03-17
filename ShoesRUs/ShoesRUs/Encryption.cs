@@ -8,6 +8,8 @@ using System.Security.Cryptography;
 
 namespace ShoesRUs
 {
+    //Class Encrypt accepts an input string, encrypts the string and returns the encrypted string
+
     class Encryption
     {
         private static readonly string PasswordHash = "P@@Sw0rd";

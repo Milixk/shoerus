@@ -12,6 +12,7 @@ namespace ShoesRUs
 {
     class Register
     {
+        //Object that links to the Main Form
         MainForm mForm = Application.OpenForms["MainForm"] as MainForm;
 
         public void register()
@@ -106,6 +107,7 @@ namespace ShoesRUs
             }
         }
 
+        //Clear the Registration fields
         public void clearFields()
         {
             mForm.cmbRegTitle.SelectedIndex = -1;
@@ -130,6 +132,7 @@ namespace ShoesRUs
             mForm.txtRegCaExpiry.Text = "MM/YY";
         }
 
+        //Check if the Email provided already exists on the Database
         public bool checkEmailExists(string email)
         {
             bool emailExists;
