@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnShowLoginGrp = new System.Windows.Forms.Button();
             this.btnShowRegisterGrp = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
@@ -84,16 +86,26 @@
             this.lblGender = new System.Windows.Forms.Label();
             this.lblPhoneNo = new System.Windows.Forms.Label();
             this.grpMain = new System.Windows.Forms.GroupBox();
+            this.chckListBoxMainBrand = new System.Windows.Forms.CheckedListBox();
+            this.chckListBoxMainGender = new System.Windows.Forms.CheckedListBox();
+            this.btnMainFilter = new System.Windows.Forms.Button();
+            this.txtBoxMainPriceMax = new System.Windows.Forms.TextBox();
+            this.txtBoxMainPriceMin = new System.Windows.Forms.TextBox();
+            this.txtBoxMainSearch = new System.Windows.Forms.TextBox();
+            this.cmbMainOrder = new System.Windows.Forms.ComboBox();
+            this.listViewMain = new System.Windows.Forms.ListView();
             this.grpContact = new System.Windows.Forms.GroupBox();
             this.grpProfile = new System.Windows.Forms.GroupBox();
             this.grpBasket = new System.Windows.Forms.GroupBox();
             this.grpViewProduct = new System.Windows.Forms.GroupBox();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.imageListMain = new System.Windows.Forms.ImageList(this.components);
             this.grpLogin.SuspendLayout();
             this.grpRegister.SuspendLayout();
             this.grpRegCardDetails.SuspendLayout();
             this.grpDeliveryDetails.SuspendLayout();
             this.grpRegGeneralDetails.SuspendLayout();
+            this.grpMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnShowLoginGrp
@@ -661,16 +673,109 @@
             // 
             // grpMain
             // 
-            this.grpMain.Location = new System.Drawing.Point(218, 299);
+            this.grpMain.Controls.Add(this.chckListBoxMainBrand);
+            this.grpMain.Controls.Add(this.chckListBoxMainGender);
+            this.grpMain.Controls.Add(this.btnMainFilter);
+            this.grpMain.Controls.Add(this.txtBoxMainPriceMax);
+            this.grpMain.Controls.Add(this.txtBoxMainPriceMin);
+            this.grpMain.Controls.Add(this.txtBoxMainSearch);
+            this.grpMain.Controls.Add(this.cmbMainOrder);
+            this.grpMain.Controls.Add(this.listViewMain);
+            this.grpMain.Location = new System.Drawing.Point(12, 309);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Size = new System.Drawing.Size(171, 83);
+            this.grpMain.Size = new System.Drawing.Size(464, 386);
             this.grpMain.TabIndex = 9;
             this.grpMain.TabStop = false;
-            this.grpMain.Text = "groupBox1";
+            this.grpMain.Text = "Main";
+            // 
+            // chckListBoxMainBrand
+            // 
+            this.chckListBoxMainBrand.FormattingEnabled = true;
+            this.chckListBoxMainBrand.Location = new System.Drawing.Point(374, 158);
+            this.chckListBoxMainBrand.Name = "chckListBoxMainBrand";
+            this.chckListBoxMainBrand.Size = new System.Drawing.Size(75, 139);
+            this.chckListBoxMainBrand.TabIndex = 23;
+            // 
+            // chckListBoxMainGender
+            // 
+            this.chckListBoxMainGender.FormattingEnabled = true;
+            this.chckListBoxMainGender.Items.AddRange(new object[] {
+            "Men",
+            "Women",
+            "Kids"});
+            this.chckListBoxMainGender.Location = new System.Drawing.Point(374, 103);
+            this.chckListBoxMainGender.Name = "chckListBoxMainGender";
+            this.chckListBoxMainGender.Size = new System.Drawing.Size(75, 49);
+            this.chckListBoxMainGender.TabIndex = 22;
+            // 
+            // btnMainFilter
+            // 
+            this.btnMainFilter.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMainFilter.Location = new System.Drawing.Point(374, 289);
+            this.btnMainFilter.Name = "btnMainFilter";
+            this.btnMainFilter.Size = new System.Drawing.Size(75, 23);
+            this.btnMainFilter.TabIndex = 21;
+            this.btnMainFilter.Text = "Apply Filter";
+            this.btnMainFilter.UseVisualStyleBackColor = false;
+            this.btnMainFilter.Click += new System.EventHandler(this.btnMainFilter_Click);
+            // 
+            // txtBoxMainPriceMax
+            // 
+            this.txtBoxMainPriceMax.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtBoxMainPriceMax.Location = new System.Drawing.Point(374, 77);
+            this.txtBoxMainPriceMax.Name = "txtBoxMainPriceMax";
+            this.txtBoxMainPriceMax.Size = new System.Drawing.Size(75, 20);
+            this.txtBoxMainPriceMax.TabIndex = 20;
+            this.txtBoxMainPriceMax.Text = "Max Price";
+            this.txtBoxMainPriceMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxMainPriceMax_KeyPress);
+            // 
+            // txtBoxMainPriceMin
+            // 
+            this.txtBoxMainPriceMin.Location = new System.Drawing.Point(374, 51);
+            this.txtBoxMainPriceMin.Name = "txtBoxMainPriceMin";
+            this.txtBoxMainPriceMin.Size = new System.Drawing.Size(75, 20);
+            this.txtBoxMainPriceMin.TabIndex = 19;
+            this.txtBoxMainPriceMin.Text = "Min Price";
+            this.txtBoxMainPriceMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxMainPriceMin_KeyPress);
+            // 
+            // txtBoxMainSearch
+            // 
+            this.txtBoxMainSearch.Location = new System.Drawing.Point(16, 32);
+            this.txtBoxMainSearch.Name = "txtBoxMainSearch";
+            this.txtBoxMainSearch.Size = new System.Drawing.Size(121, 20);
+            this.txtBoxMainSearch.TabIndex = 18;
+            this.txtBoxMainSearch.Text = "Search";
+            this.txtBoxMainSearch.TextChanged += new System.EventHandler(this.txtBoxMainSearch_TextChanged);
+            // 
+            // cmbMainOrder
+            // 
+            this.cmbMainOrder.FormattingEnabled = true;
+            this.cmbMainOrder.Items.AddRange(new object[] {
+            "Price Ascending",
+            "Price Descending",
+            "Alphabetical",
+            "Reversed Alphabetical"});
+            this.cmbMainOrder.Location = new System.Drawing.Point(16, 58);
+            this.cmbMainOrder.Name = "cmbMainOrder";
+            this.cmbMainOrder.Size = new System.Drawing.Size(121, 21);
+            this.cmbMainOrder.TabIndex = 17;
+            this.cmbMainOrder.Text = "Order by";
+            this.cmbMainOrder.SelectedIndexChanged += new System.EventHandler(this.cmbMainOrder_SelectedIndexChanged);
+            // 
+            // listViewMain
+            // 
+            this.listViewMain.LargeImageList = this.imageListMain;
+            this.listViewMain.Location = new System.Drawing.Point(16, 93);
+            this.listViewMain.Name = "listViewMain";
+            this.listViewMain.Size = new System.Drawing.Size(352, 261);
+            this.listViewMain.SmallImageList = this.imageListMain;
+            this.listViewMain.TabIndex = 16;
+            this.listViewMain.UseCompatibleStateImageBehavior = false;
+            this.listViewMain.Click += new System.EventHandler(this.listViewMain_Click);
             // 
             // grpContact
             // 
-            this.grpContact.Location = new System.Drawing.Point(31, 399);
+            this.grpContact.Location = new System.Drawing.Point(1114, 644);
             this.grpContact.Name = "grpContact";
             this.grpContact.Size = new System.Drawing.Size(151, 88);
             this.grpContact.TabIndex = 10;
@@ -680,7 +785,7 @@
             // 
             // grpProfile
             // 
-            this.grpProfile.Location = new System.Drawing.Point(57, 520);
+            this.grpProfile.Location = new System.Drawing.Point(722, 661);
             this.grpProfile.Name = "grpProfile";
             this.grpProfile.Size = new System.Drawing.Size(141, 83);
             this.grpProfile.TabIndex = 11;
@@ -690,7 +795,7 @@
             // 
             // grpBasket
             // 
-            this.grpBasket.Location = new System.Drawing.Point(230, 520);
+            this.grpBasket.Location = new System.Drawing.Point(895, 661);
             this.grpBasket.Name = "grpBasket";
             this.grpBasket.Size = new System.Drawing.Size(141, 83);
             this.grpBasket.TabIndex = 12;
@@ -700,7 +805,7 @@
             // 
             // grpViewProduct
             // 
-            this.grpViewProduct.Location = new System.Drawing.Point(12, 282);
+            this.grpViewProduct.Location = new System.Drawing.Point(472, 644);
             this.grpViewProduct.Name = "grpViewProduct";
             this.grpViewProduct.Size = new System.Drawing.Size(200, 100);
             this.grpViewProduct.TabIndex = 13;
@@ -719,11 +824,32 @@
             this.btnLogout.Visible = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // imageListMain
+            // 
+            this.imageListMain.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMain.ImageStream")));
+            this.imageListMain.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListMain.Images.SetKeyName(0, "0000.jpg");
+            this.imageListMain.Images.SetKeyName(1, "0001.jpg");
+            this.imageListMain.Images.SetKeyName(2, "0002.jpg");
+            this.imageListMain.Images.SetKeyName(3, "0003.jpg");
+            this.imageListMain.Images.SetKeyName(4, "0004.png");
+            this.imageListMain.Images.SetKeyName(5, "0005.jpg");
+            this.imageListMain.Images.SetKeyName(6, "0006.jpg");
+            this.imageListMain.Images.SetKeyName(7, "0007.jpg");
+            this.imageListMain.Images.SetKeyName(8, "0008.jpg");
+            this.imageListMain.Images.SetKeyName(9, "0009.jpg");
+            this.imageListMain.Images.SetKeyName(10, "0010.jpg");
+            this.imageListMain.Images.SetKeyName(11, "0011.jpeg");
+            this.imageListMain.Images.SetKeyName(12, "0012.jpg");
+            this.imageListMain.Images.SetKeyName(13, "0013.jpg");
+            this.imageListMain.Images.SetKeyName(14, "0014.jpg");
+            this.imageListMain.Images.SetKeyName(15, "0015.jpg");
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 668);
+            this.ClientSize = new System.Drawing.Size(1286, 757);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.grpViewProduct);
             this.Controls.Add(this.grpBasket);
@@ -750,6 +876,8 @@
             this.grpDeliveryDetails.PerformLayout();
             this.grpRegGeneralDetails.ResumeLayout(false);
             this.grpRegGeneralDetails.PerformLayout();
+            this.grpMain.ResumeLayout(false);
+            this.grpMain.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -817,6 +945,15 @@
         public System.Windows.Forms.TextBox txtRegAddCity;
         public System.Windows.Forms.TextBox txtRegAddStreet;
         public System.Windows.Forms.TextBox txtRegAddNo;
+        private System.Windows.Forms.CheckedListBox chckListBoxMainGender;
+        private System.Windows.Forms.Button btnMainFilter;
+        private System.Windows.Forms.TextBox txtBoxMainPriceMax;
+        private System.Windows.Forms.TextBox txtBoxMainPriceMin;
+        private System.Windows.Forms.TextBox txtBoxMainSearch;
+        private System.Windows.Forms.ComboBox cmbMainOrder;
+        private System.Windows.Forms.ListView listViewMain;
+        private System.Windows.Forms.ImageList imageListMain;
+        private System.Windows.Forms.CheckedListBox chckListBoxMainBrand;
 
     }
 }

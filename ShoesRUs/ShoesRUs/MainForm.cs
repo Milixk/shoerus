@@ -21,6 +21,7 @@ namespace ShoesRUs
         {
             InitializeComponent();
             Startup su = new Startup();
+            startupLoad();
         }
 
         //Shows the LoginForm
@@ -180,7 +181,361 @@ namespace ShoesRUs
         private void btnCancelRegister_Click(object sender, EventArgs e)
         {
             register.clearFields();
-        }        
+        }
 
+        private void btnMainFilter_Click(object sender, EventArgs e)
+        {
+            updateListView();
+        }
+
+
+        public void startupLoad()  // PETRs strartup function
+        {
+            for (int i = 0; i < chckListBoxMainGender.Items.Count; i++)  // this loop checks all the boxes in gender filter
+            {
+                chckListBoxMainGender.SetItemChecked(i, true);
+            }
+
+
+            /////////////////// NEW START ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+            updateBrands();
+            for (int i = 0; i < chckListBoxMainBrand.Items.Count; i++)  // this loop checks all the boxes in brand filter
+            {
+                chckListBoxMainBrand.SetItemChecked(i, true);
+            }
+            ////////////////// NEW END //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+            string queryString = "SELECT * FROM Shoe";
+            listViewQuery(queryString);  
+        }
+
+        public void listViewQuery(string queryString)
+        {
+            try
+            {
+
+                ListClear();
+                using (OleDbConnection dbCon = new OleDbConnection(DatabaseConnection.dbconnect))
+                {
+
+                    OleDbCommand command = new OleDbCommand(queryString, dbCon);
+                    dbCon.Open();
+                    OleDbDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ListInsert(reader.GetInt32(0), reader.GetInt32(9).ToString(), reader.GetString(11), reader.GetString(4));
+
+                    }
+                    reader.Close();
+                    dbCon.Dispose();
+                }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed to connect to data source (" + ex + ")");
+                }
+
+            }
+
+        public void ListClear()
+        {
+            listViewMain.Items.Clear();
+        }
+
+        // public function for adding shoes into listview
+        public void ListInsert(int ID, string price, string name, string brand) //   TODO add name functonality
+        {
+            if (imageListMain.Images.Count > ID) //checks if we have picture
+                listViewMain.Items.Add(brand + " " + name + ", £" + price, ID); //add item with name "" and picture id
+            else
+                listViewMain.Items.Add(brand + " " + name + ", £" + price, 0); //add item with name "" and placeholder picture
+        }
+
+        private void cmbMainOrder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateListView();
+        }
+
+        // main function, grabs query strings from everywhere, mashes them together and then calls function to display the results
+        private void updateListView()
+        {
+            string queryString = "SELECT * FROM Shoe";
+            string searchQueryString = getSearchText();
+            string filterQueryString = getFilterQuery();
+            string orderQueryString = cmbMainOrderCaseFunction();
+
+            bool search = false;
+            //bool filter = false;
+            //bool order = false;
+
+            if (searchQueryString.Length > 0)
+            {
+                queryString += searchQueryString;
+                search = true;
+            }
+
+            if (filterQueryString.Length > 0)
+            {
+                if (search)
+                    queryString += " AND";
+                else
+                    queryString += " WHERE";
+
+                queryString += filterQueryString;
+                //filter = true;
+            }
+
+            if (orderQueryString.Length > 0)
+                queryString += orderQueryString;
+
+
+
+            listViewQuery(queryString);  // show items
+        }
+
+        //get query text from txtboxmainsearch for searching
+        private string getSearchText()
+        {
+            if (txtBoxMainSearch.TextLength > 0)
+                if ("Search" != txtBoxMainSearch.Text)
+                    return " WHERE (ShoeName LIKE \"" + txtBoxMainSearch.Text + "%\")";
+
+            return "";
+        }
+
+        //get query from filters
+        private string getFilterQuery()
+        {
+
+            string ret = "";
+            string priceString = filterPrice();
+            string genderString = filterGender();
+
+            string brandString = filterBrands();
+            //bool brand = false;
+
+            bool price = false;
+            bool gender = false;
+
+            if (priceString.Length > 0)
+            {
+                price = true;
+                ret += priceString;
+            }
+
+            if (genderString.Length > 0)
+            {
+                gender = true; 
+                if (price)
+                    ret += " AND";
+                ret += genderString;
+            }
+
+            if (brandString.Length > 0)
+            {
+                //brand = true; // we dont really need this one so far
+                if (price || gender)
+                    ret += " AND";
+                ret += brandString;
+            }
+
+            return ret;
+        }
+
+        private string filterGender()
+        {
+            string ret = "";
+
+
+            if (chckListBoxMainGender.CheckedItems.Count == chckListBoxMainGender.Items.Count)
+                return "";   // all items are selected, no need to filter
+
+            bool[] gender = new bool[3];
+
+            for (int i = 0; i < chckListBoxMainGender.Items.Count; i++)  // this loop sets gender[i] true if appropriate checkbox is checked
+            {
+                if (chckListBoxMainGender.GetItemChecked(i))
+                    gender[i] = true;
+            }
+
+            ret += " (";
+
+            // ugly if statements, dont want to think too hard now
+            if (gender[0])
+            {
+                ret += " ShoeGender='Men'";
+                if (gender[1])
+                    ret += " OR ShoeGender='Women'";
+                if (gender[2])
+                    ret += " OR ShoeGender='Kids'";
+            }
+            else if (gender[1])
+            {
+                ret += " ShoeGender='Women'";
+                if (gender[2])
+                    ret += " OR ShoeGender='Kids'";
+                else
+                    ret += ")";
+            }
+            else if (gender[2])
+                ret += " ShoeGender='Kids'";
+            else return "";
+
+            ret += ")";
+            return ret;
+        }
+
+
+        private string filterPrice()
+        {
+            string min;
+            string max;
+            bool changed = false;
+
+
+            int n; // just a trash from tryParse
+            bool MinIsNumeric = int.TryParse(txtBoxMainPriceMin.Text, out n);
+            bool MaxIsNumeric = int.TryParse(txtBoxMainPriceMax.Text, out n);
+
+
+
+            if (txtBoxMainPriceMin.TextLength > 0)
+                if (MinIsNumeric)
+                {
+                    min = txtBoxMainPriceMin.Text;
+                    changed = true;
+                }
+                else
+                    min = "0";
+            else
+                min = "0";
+
+
+            if (txtBoxMainPriceMax.TextLength > 0)
+                if (MaxIsNumeric)
+                {
+                    max = txtBoxMainPriceMax.Text;
+                    changed = true;
+                }
+                else
+                    max = "9999";
+            else
+                max = "9999";
+
+
+            if (changed)
+                return " (ShoePrice BETWEEN " + min + " AND " + max + ")";
+            else
+                return "";
+        }
+
+        private string cmbMainOrderCaseFunction()
+        {
+            switch (cmbMainOrder.SelectedIndex)
+            {
+                case 0: return " ORDER BY ShoePrice ASC";  //price ascending   
+                case 1: return " ORDER BY ShoePrice DESC"; //price descending  
+                case 2: return " ORDER BY ShoeName ASC";   //name ascending  
+                case 3: return " ORDER BY ShoeName DESC";  //name descending       
+                default: return "";                        //default ID ascending
+            }
+        }
+
+        private void listViewMain_Click(object sender, EventArgs e)
+        {
+            if (listViewMain.SelectedItems.Count > 0)
+                MessageBox.Show("You clicked " + listViewMain.SelectedItems[0].ImageIndex);  // debug
+        }
+
+        private void txtBoxMainSearch_TextChanged(object sender, EventArgs e)
+        {
+            updateListView();
+        }
+
+        private void txtBoxMainPriceMin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtBoxMainPriceMax_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void updateBrands()
+        {
+            string queryString = "SELECT DISTINCT  ShoeBrand FROM Shoe";
+
+            try
+            {
+                using (OleDbConnection dbCon = new OleDbConnection(DatabaseConnection.dbconnect))
+                {
+
+                    OleDbCommand command = new OleDbCommand(queryString, dbCon);
+                    dbCon.Open();
+                    OleDbDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        chckListBoxMainBrand.Items.Add(reader.GetString(0));
+                    }
+                    reader.Close();
+                    dbCon.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to connect to data source" + ex);
+            }
+
+        }
+
+
+
+
+
+        private string filterBrands()
+        {
+            string ret = "";
+
+
+            if (chckListBoxMainBrand.CheckedItems.Count == chckListBoxMainBrand.Items.Count)
+                return "";   // all items are selected, no need to filter
+
+            string[] brand = new string[chckListBoxMainBrand.CheckedItems.Count];
+
+            int j = 0;
+            for (int i = 0; i < chckListBoxMainBrand.Items.Count; i++)  // this loop sets gender[i] true if appropriate checkbox is checked
+            {
+                if (chckListBoxMainBrand.GetItemChecked(i))
+                {
+                    brand[j] = chckListBoxMainBrand.Items[i].ToString();
+                    j++;
+                }
+            }
+
+
+            //// NO MORE UGLY IF STATEMENTS, add this to the gender selection in the future
+            ret += " (";
+            bool firsttime = true;
+            foreach (string b in brand)
+            {
+                if (!firsttime)
+                    ret += " OR";
+
+                ret += " Shoebrand='" + b + "'";
+                firsttime = false;
+            }
+            ret += ")";
+            return ret;
+        }
     }
 }
