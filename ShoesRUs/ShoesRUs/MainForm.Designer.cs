@@ -94,18 +94,114 @@
             this.txtBoxMainSearch = new System.Windows.Forms.TextBox();
             this.cmbMainOrder = new System.Windows.Forms.ComboBox();
             this.listViewMain = new System.Windows.Forms.ListView();
-            this.grpContact = new System.Windows.Forms.GroupBox();
-            this.grpProfile = new System.Windows.Forms.GroupBox();
+            this.imageListMain = new System.Windows.Forms.ImageList(this.components);
             this.grpBasket = new System.Windows.Forms.GroupBox();
             this.grpViewProduct = new System.Windows.Forms.GroupBox();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.imageListMain = new System.Windows.Forms.ImageList(this.components);
+            this.grpContact = new System.Windows.Forms.GroupBox();
+            this.lblContactUs = new System.Windows.Forms.Label();
+            this.pctQuestionMark = new System.Windows.Forms.PictureBox();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.txtMessage = new System.Windows.Forms.TextBox();
+            this.txtSubj = new System.Windows.Forms.TextBox();
+            this.txtOrdNo = new System.Windows.Forms.TextBox();
+            this.txtCustNo = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.lblSubject = new System.Windows.Forms.Label();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.lblOrdNo = new System.Windows.Forms.Label();
+            this.lblCustomerNo = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.grpProfile = new System.Windows.Forms.GroupBox();
+            this.grpPurchases = new System.Windows.Forms.GroupBox();
+            this.grpListPurchasesProfile = new System.Windows.Forms.GroupBox();
+            this.lstView = new System.Windows.Forms.ListView();
+            this.OrderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OrderDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnOKPurchasesDisplay = new System.Windows.Forms.Button();
+            this.txtIDCustomerPurchases = new System.Windows.Forms.TextBox();
+            this.lblAddIDPurchases = new System.Windows.Forms.Label();
+            this.grpCardUpdate = new System.Windows.Forms.GroupBox();
+            this.grpUpdateCardInfo = new System.Windows.Forms.GroupBox();
+            this.btnClearCard = new System.Windows.Forms.Button();
+            this.txtCardTypeProfile = new System.Windows.Forms.TextBox();
+            this.txtExpDateProfile = new System.Windows.Forms.TextBox();
+            this.btnUpdateCardDetails = new System.Windows.Forms.Button();
+            this.txtHolderProfile = new System.Windows.Forms.TextBox();
+            this.txtCVVProfile = new System.Windows.Forms.TextBox();
+            this.txtCardNoProfile = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.btnOKUpdateCardInfo = new System.Windows.Forms.Button();
+            this.txtCustomerIDCardProfile = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.grpAddressUpdate = new System.Windows.Forms.GroupBox();
+            this.grpAddressUpdateInfo = new System.Windows.Forms.GroupBox();
+            this.btnClearAddress = new System.Windows.Forms.Button();
+            this.btnUpdateAddress = new System.Windows.Forms.Button();
+            this.txtPostcodeProfile = new System.Windows.Forms.TextBox();
+            this.txtCountryProfile = new System.Windows.Forms.TextBox();
+            this.txtCityProfile = new System.Windows.Forms.TextBox();
+            this.txtStreetProfile = new System.Windows.Forms.TextBox();
+            this.txtHouseNoProfile = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnOKAddress = new System.Windows.Forms.Button();
+            this.txtAddIDAddress = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.grpProfileDetails = new System.Windows.Forms.GroupBox();
+            this.grpGeneralInfoProfile = new System.Windows.Forms.GroupBox();
+            this.btnClearGeneralInfo = new System.Windows.Forms.Button();
+            this.btnUpdateGeneralInfoProfile = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblPhoneProfile = new System.Windows.Forms.Label();
+            this.lblEmailProfile = new System.Windows.Forms.Label();
+            this.lblGenderProfile = new System.Windows.Forms.Label();
+            this.lblDOBProfile = new System.Windows.Forms.Label();
+            this.lblNameProfile = new System.Windows.Forms.Label();
+            this.txtEmailProfile = new System.Windows.Forms.TextBox();
+            this.txtGenderProfile = new System.Windows.Forms.TextBox();
+            this.txtPhoneProfile = new System.Windows.Forms.TextBox();
+            this.txtDOBProfile = new System.Windows.Forms.TextBox();
+            this.txtNameProfile = new System.Windows.Forms.TextBox();
+            this.txtTitleProfile = new System.Windows.Forms.TextBox();
+            this.btnOKGeneralInfo = new System.Windows.Forms.Button();
+            this.txtAddIDProfile = new System.Windows.Forms.TextBox();
+            this.lblAddIDProfile = new System.Windows.Forms.Label();
+            this.btnViewPurchases = new System.Windows.Forms.Button();
+            this.btnShowUpdateCardDetails = new System.Windows.Forms.Button();
+            this.btnShowUpdateAddress = new System.Windows.Forms.Button();
+            this.btnViewProfileDetails = new System.Windows.Forms.Button();
+            this.picProfile = new System.Windows.Forms.PictureBox();
             this.grpLogin.SuspendLayout();
             this.grpRegister.SuspendLayout();
             this.grpRegCardDetails.SuspendLayout();
             this.grpDeliveryDetails.SuspendLayout();
             this.grpRegGeneralDetails.SuspendLayout();
             this.grpMain.SuspendLayout();
+            this.grpContact.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctQuestionMark)).BeginInit();
+            this.grpProfile.SuspendLayout();
+            this.grpPurchases.SuspendLayout();
+            this.grpListPurchasesProfile.SuspendLayout();
+            this.grpCardUpdate.SuspendLayout();
+            this.grpUpdateCardInfo.SuspendLayout();
+            this.grpAddressUpdate.SuspendLayout();
+            this.grpAddressUpdateInfo.SuspendLayout();
+            this.grpProfileDetails.SuspendLayout();
+            this.grpGeneralInfoProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // btnShowLoginGrp
@@ -155,7 +251,7 @@
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(75, 23);
             this.btnProfile.TabIndex = 4;
-            this.btnProfile.Text = "button1";
+            this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Visible = false;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
@@ -773,25 +869,26 @@
             this.listViewMain.UseCompatibleStateImageBehavior = false;
             this.listViewMain.Click += new System.EventHandler(this.listViewMain_Click);
             // 
-            // grpContact
+            // imageListMain
             // 
-            this.grpContact.Location = new System.Drawing.Point(1114, 644);
-            this.grpContact.Name = "grpContact";
-            this.grpContact.Size = new System.Drawing.Size(151, 88);
-            this.grpContact.TabIndex = 10;
-            this.grpContact.TabStop = false;
-            this.grpContact.Text = "groupBox1";
-            this.grpContact.Visible = false;
-            // 
-            // grpProfile
-            // 
-            this.grpProfile.Location = new System.Drawing.Point(722, 661);
-            this.grpProfile.Name = "grpProfile";
-            this.grpProfile.Size = new System.Drawing.Size(141, 83);
-            this.grpProfile.TabIndex = 11;
-            this.grpProfile.TabStop = false;
-            this.grpProfile.Text = "groupBox1";
-            this.grpProfile.Visible = false;
+            this.imageListMain.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMain.ImageStream")));
+            this.imageListMain.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListMain.Images.SetKeyName(0, "0000.jpg");
+            this.imageListMain.Images.SetKeyName(1, "0001.jpg");
+            this.imageListMain.Images.SetKeyName(2, "0002.jpg");
+            this.imageListMain.Images.SetKeyName(3, "0003.jpg");
+            this.imageListMain.Images.SetKeyName(4, "0004.png");
+            this.imageListMain.Images.SetKeyName(5, "0005.jpg");
+            this.imageListMain.Images.SetKeyName(6, "0006.jpg");
+            this.imageListMain.Images.SetKeyName(7, "0007.jpg");
+            this.imageListMain.Images.SetKeyName(8, "0008.jpg");
+            this.imageListMain.Images.SetKeyName(9, "0009.jpg");
+            this.imageListMain.Images.SetKeyName(10, "0010.jpg");
+            this.imageListMain.Images.SetKeyName(11, "0011.jpeg");
+            this.imageListMain.Images.SetKeyName(12, "0012.jpg");
+            this.imageListMain.Images.SetKeyName(13, "0013.jpg");
+            this.imageListMain.Images.SetKeyName(14, "0014.jpg");
+            this.imageListMain.Images.SetKeyName(15, "0015.jpg");
             // 
             // grpBasket
             // 
@@ -815,7 +912,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(579, 12);
+            this.btnLogout.Location = new System.Drawing.Point(579, 10);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 14;
@@ -824,38 +921,840 @@
             this.btnLogout.Visible = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // imageListMain
+            // grpContact
             // 
-            this.imageListMain.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMain.ImageStream")));
-            this.imageListMain.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListMain.Images.SetKeyName(0, "0000.jpg");
-            this.imageListMain.Images.SetKeyName(1, "0001.jpg");
-            this.imageListMain.Images.SetKeyName(2, "0002.jpg");
-            this.imageListMain.Images.SetKeyName(3, "0003.jpg");
-            this.imageListMain.Images.SetKeyName(4, "0004.png");
-            this.imageListMain.Images.SetKeyName(5, "0005.jpg");
-            this.imageListMain.Images.SetKeyName(6, "0006.jpg");
-            this.imageListMain.Images.SetKeyName(7, "0007.jpg");
-            this.imageListMain.Images.SetKeyName(8, "0008.jpg");
-            this.imageListMain.Images.SetKeyName(9, "0009.jpg");
-            this.imageListMain.Images.SetKeyName(10, "0010.jpg");
-            this.imageListMain.Images.SetKeyName(11, "0011.jpeg");
-            this.imageListMain.Images.SetKeyName(12, "0012.jpg");
-            this.imageListMain.Images.SetKeyName(13, "0013.jpg");
-            this.imageListMain.Images.SetKeyName(14, "0014.jpg");
-            this.imageListMain.Images.SetKeyName(15, "0015.jpg");
+            this.grpContact.Controls.Add(this.lblContactUs);
+            this.grpContact.Controls.Add(this.pctQuestionMark);
+            this.grpContact.Controls.Add(this.btnReset);
+            this.grpContact.Controls.Add(this.btnSend);
+            this.grpContact.Controls.Add(this.cmbCategory);
+            this.grpContact.Controls.Add(this.txtMessage);
+            this.grpContact.Controls.Add(this.txtSubj);
+            this.grpContact.Controls.Add(this.txtOrdNo);
+            this.grpContact.Controls.Add(this.txtCustNo);
+            this.grpContact.Controls.Add(this.txtEmail);
+            this.grpContact.Controls.Add(this.txtName);
+            this.grpContact.Controls.Add(this.lblMessage);
+            this.grpContact.Controls.Add(this.lblSubject);
+            this.grpContact.Controls.Add(this.lblCategory);
+            this.grpContact.Controls.Add(this.lblOrdNo);
+            this.grpContact.Controls.Add(this.lblCustomerNo);
+            this.grpContact.Controls.Add(this.label3);
+            this.grpContact.Controls.Add(this.label4);
+            this.grpContact.Location = new System.Drawing.Point(0, 100);
+            this.grpContact.Name = "grpContact";
+            this.grpContact.Size = new System.Drawing.Size(1113, 492);
+            this.grpContact.TabIndex = 16;
+            this.grpContact.TabStop = false;
+            this.grpContact.Visible = false;
+            // 
+            // lblContactUs
+            // 
+            this.lblContactUs.AutoSize = true;
+            this.lblContactUs.Font = new System.Drawing.Font("Segoe WP Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContactUs.Location = new System.Drawing.Point(389, 16);
+            this.lblContactUs.Name = "lblContactUs";
+            this.lblContactUs.Size = new System.Drawing.Size(134, 26);
+            this.lblContactUs.TabIndex = 19;
+            this.lblContactUs.Text = "CONTACT US";
+            // 
+            // pctQuestionMark
+            // 
+            this.pctQuestionMark.Image = global::ShoesRUs.Properties.Resources.questionMark;
+            this.pctQuestionMark.Location = new System.Drawing.Point(750, 22);
+            this.pctQuestionMark.Name = "pctQuestionMark";
+            this.pctQuestionMark.Size = new System.Drawing.Size(254, 302);
+            this.pctQuestionMark.TabIndex = 18;
+            this.pctQuestionMark.TabStop = false;
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(455, 433);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(93, 25);
+            this.btnReset.TabIndex = 17;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(289, 433);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(93, 25);
+            this.btnSend.TabIndex = 16;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // cmbCategory
+            // 
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Items.AddRange(new object[] {
+            "Delivery",
+            "Return",
+            "Payment",
+            "Suggestion",
+            "My Account",
+            "Other"});
+            this.cmbCategory.Location = new System.Drawing.Point(245, 234);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(96, 21);
+            this.cmbCategory.TabIndex = 15;
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.Location = new System.Drawing.Point(245, 311);
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(348, 88);
+            this.txtMessage.TabIndex = 14;
+            // 
+            // txtSubj
+            // 
+            this.txtSubj.Location = new System.Drawing.Point(245, 274);
+            this.txtSubj.Name = "txtSubj";
+            this.txtSubj.Size = new System.Drawing.Size(190, 20);
+            this.txtSubj.TabIndex = 13;
+            // 
+            // txtOrdNo
+            // 
+            this.txtOrdNo.Location = new System.Drawing.Point(245, 198);
+            this.txtOrdNo.Name = "txtOrdNo";
+            this.txtOrdNo.Size = new System.Drawing.Size(190, 20);
+            this.txtOrdNo.TabIndex = 12;
+            // 
+            // txtCustNo
+            // 
+            this.txtCustNo.Location = new System.Drawing.Point(245, 164);
+            this.txtCustNo.Name = "txtCustNo";
+            this.txtCustNo.Size = new System.Drawing.Size(190, 20);
+            this.txtCustNo.TabIndex = 11;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(245, 127);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(190, 20);
+            this.txtEmail.TabIndex = 10;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(245, 90);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(190, 20);
+            this.txtName.TabIndex = 9;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(139, 311);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(56, 13);
+            this.lblMessage.TabIndex = 7;
+            this.lblMessage.Text = "Message: ";
+            // 
+            // lblSubject
+            // 
+            this.lblSubject.AutoSize = true;
+            this.lblSubject.Location = new System.Drawing.Point(139, 281);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Size = new System.Drawing.Size(46, 13);
+            this.lblSubject.TabIndex = 6;
+            this.lblSubject.Text = "Subject:";
+            // 
+            // lblCategory
+            // 
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Location = new System.Drawing.Point(139, 242);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(55, 13);
+            this.lblCategory.TabIndex = 5;
+            this.lblCategory.Text = "Category: ";
+            // 
+            // lblOrdNo
+            // 
+            this.lblOrdNo.AutoSize = true;
+            this.lblOrdNo.Location = new System.Drawing.Point(139, 205);
+            this.lblOrdNo.Name = "lblOrdNo";
+            this.lblOrdNo.Size = new System.Drawing.Size(51, 13);
+            this.lblOrdNo.TabIndex = 4;
+            this.lblOrdNo.Text = "Order no:";
+            // 
+            // lblCustomerNo
+            // 
+            this.lblCustomerNo.AutoSize = true;
+            this.lblCustomerNo.Location = new System.Drawing.Point(139, 171);
+            this.lblCustomerNo.Name = "lblCustomerNo";
+            this.lblCustomerNo.Size = new System.Drawing.Size(71, 13);
+            this.lblCustomerNo.TabIndex = 3;
+            this.lblCustomerNo.Text = "Customer No:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(139, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Email: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(139, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Name:";
+            // 
+            // grpProfile
+            // 
+            this.grpProfile.Controls.Add(this.grpPurchases);
+            this.grpProfile.Controls.Add(this.grpCardUpdate);
+            this.grpProfile.Controls.Add(this.grpAddressUpdate);
+            this.grpProfile.Controls.Add(this.grpProfileDetails);
+            this.grpProfile.Controls.Add(this.btnViewPurchases);
+            this.grpProfile.Controls.Add(this.btnShowUpdateCardDetails);
+            this.grpProfile.Controls.Add(this.btnShowUpdateAddress);
+            this.grpProfile.Controls.Add(this.btnViewProfileDetails);
+            this.grpProfile.Controls.Add(this.picProfile);
+            this.grpProfile.Location = new System.Drawing.Point(100, 100);
+            this.grpProfile.Name = "grpProfile";
+            this.grpProfile.Size = new System.Drawing.Size(1034, 545);
+            this.grpProfile.TabIndex = 17;
+            this.grpProfile.TabStop = false;
+            this.grpProfile.Visible = false;
+            // 
+            // grpPurchases
+            // 
+            this.grpPurchases.Controls.Add(this.grpListPurchasesProfile);
+            this.grpPurchases.Controls.Add(this.btnOKPurchasesDisplay);
+            this.grpPurchases.Controls.Add(this.txtIDCustomerPurchases);
+            this.grpPurchases.Controls.Add(this.lblAddIDPurchases);
+            this.grpPurchases.Location = new System.Drawing.Point(543, 231);
+            this.grpPurchases.Name = "grpPurchases";
+            this.grpPurchases.Size = new System.Drawing.Size(459, 279);
+            this.grpPurchases.TabIndex = 9;
+            this.grpPurchases.TabStop = false;
+            this.grpPurchases.Visible = false;
+            // 
+            // grpListPurchasesProfile
+            // 
+            this.grpListPurchasesProfile.Controls.Add(this.lstView);
+            this.grpListPurchasesProfile.Location = new System.Drawing.Point(11, 42);
+            this.grpListPurchasesProfile.Name = "grpListPurchasesProfile";
+            this.grpListPurchasesProfile.Size = new System.Drawing.Size(436, 227);
+            this.grpListPurchasesProfile.TabIndex = 3;
+            this.grpListPurchasesProfile.TabStop = false;
+            this.grpListPurchasesProfile.Visible = false;
+            // 
+            // lstView
+            // 
+            this.lstView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.OrderID,
+            this.OrderDate});
+            this.lstView.GridLines = true;
+            this.lstView.Location = new System.Drawing.Point(9, 16);
+            this.lstView.Name = "lstView";
+            this.lstView.Size = new System.Drawing.Size(416, 199);
+            this.lstView.TabIndex = 0;
+            this.lstView.UseCompatibleStateImageBehavior = false;
+            this.lstView.View = System.Windows.Forms.View.Details;
+            // 
+            // OrderID
+            // 
+            this.OrderID.Text = "OrderID";
+            this.OrderID.Width = 206;
+            // 
+            // OrderDate
+            // 
+            this.OrderDate.Text = "OrderDate";
+            this.OrderDate.Width = 209;
+            // 
+            // btnOKPurchasesDisplay
+            // 
+            this.btnOKPurchasesDisplay.Location = new System.Drawing.Point(329, 12);
+            this.btnOKPurchasesDisplay.Name = "btnOKPurchasesDisplay";
+            this.btnOKPurchasesDisplay.Size = new System.Drawing.Size(74, 20);
+            this.btnOKPurchasesDisplay.TabIndex = 2;
+            this.btnOKPurchasesDisplay.Text = "OK";
+            this.btnOKPurchasesDisplay.UseVisualStyleBackColor = true;
+            // 
+            // txtIDCustomerPurchases
+            // 
+            this.txtIDCustomerPurchases.Location = new System.Drawing.Point(109, 12);
+            this.txtIDCustomerPurchases.Name = "txtIDCustomerPurchases";
+            this.txtIDCustomerPurchases.Size = new System.Drawing.Size(202, 20);
+            this.txtIDCustomerPurchases.TabIndex = 1;
+            // 
+            // lblAddIDPurchases
+            // 
+            this.lblAddIDPurchases.AutoSize = true;
+            this.lblAddIDPurchases.Location = new System.Drawing.Point(31, 19);
+            this.lblAddIDPurchases.Name = "lblAddIDPurchases";
+            this.lblAddIDPurchases.Size = new System.Drawing.Size(66, 13);
+            this.lblAddIDPurchases.TabIndex = 0;
+            this.lblAddIDPurchases.Text = "Add your ID:";
+            // 
+            // grpCardUpdate
+            // 
+            this.grpCardUpdate.Controls.Add(this.grpUpdateCardInfo);
+            this.grpCardUpdate.Controls.Add(this.btnOKUpdateCardInfo);
+            this.grpCardUpdate.Controls.Add(this.txtCustomerIDCardProfile);
+            this.grpCardUpdate.Controls.Add(this.label24);
+            this.grpCardUpdate.Location = new System.Drawing.Point(646, 15);
+            this.grpCardUpdate.Name = "grpCardUpdate";
+            this.grpCardUpdate.Size = new System.Drawing.Size(296, 194);
+            this.grpCardUpdate.TabIndex = 8;
+            this.grpCardUpdate.TabStop = false;
+            this.grpCardUpdate.Visible = false;
+            // 
+            // grpUpdateCardInfo
+            // 
+            this.grpUpdateCardInfo.Controls.Add(this.btnClearCard);
+            this.grpUpdateCardInfo.Controls.Add(this.txtCardTypeProfile);
+            this.grpUpdateCardInfo.Controls.Add(this.txtExpDateProfile);
+            this.grpUpdateCardInfo.Controls.Add(this.btnUpdateCardDetails);
+            this.grpUpdateCardInfo.Controls.Add(this.txtHolderProfile);
+            this.grpUpdateCardInfo.Controls.Add(this.txtCVVProfile);
+            this.grpUpdateCardInfo.Controls.Add(this.txtCardNoProfile);
+            this.grpUpdateCardInfo.Controls.Add(this.label29);
+            this.grpUpdateCardInfo.Controls.Add(this.label28);
+            this.grpUpdateCardInfo.Controls.Add(this.label27);
+            this.grpUpdateCardInfo.Controls.Add(this.label26);
+            this.grpUpdateCardInfo.Controls.Add(this.label25);
+            this.grpUpdateCardInfo.Location = new System.Drawing.Point(3, 35);
+            this.grpUpdateCardInfo.Name = "grpUpdateCardInfo";
+            this.grpUpdateCardInfo.Size = new System.Drawing.Size(292, 149);
+            this.grpUpdateCardInfo.TabIndex = 14;
+            this.grpUpdateCardInfo.TabStop = false;
+            this.grpUpdateCardInfo.Visible = false;
+            // 
+            // btnClearCard
+            // 
+            this.btnClearCard.Location = new System.Drawing.Point(174, 121);
+            this.btnClearCard.Name = "btnClearCard";
+            this.btnClearCard.Size = new System.Drawing.Size(94, 22);
+            this.btnClearCard.TabIndex = 16;
+            this.btnClearCard.Text = "CLEAR";
+            this.btnClearCard.UseVisualStyleBackColor = true;
+            this.btnClearCard.Click += new System.EventHandler(this.btnClearCard_Click);
+            // 
+            // txtCardTypeProfile
+            // 
+            this.txtCardTypeProfile.Location = new System.Drawing.Point(75, 12);
+            this.txtCardTypeProfile.Name = "txtCardTypeProfile";
+            this.txtCardTypeProfile.Size = new System.Drawing.Size(207, 20);
+            this.txtCardTypeProfile.TabIndex = 15;
+            // 
+            // txtExpDateProfile
+            // 
+            this.txtExpDateProfile.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtExpDateProfile.Location = new System.Drawing.Point(75, 64);
+            this.txtExpDateProfile.Name = "txtExpDateProfile";
+            this.txtExpDateProfile.Size = new System.Drawing.Size(110, 20);
+            this.txtExpDateProfile.TabIndex = 14;
+            this.txtExpDateProfile.Text = "dd/mm/yyyy";
+            // 
+            // btnUpdateCardDetails
+            // 
+            this.btnUpdateCardDetails.Location = new System.Drawing.Point(58, 121);
+            this.btnUpdateCardDetails.Name = "btnUpdateCardDetails";
+            this.btnUpdateCardDetails.Size = new System.Drawing.Size(94, 22);
+            this.btnUpdateCardDetails.TabIndex = 13;
+            this.btnUpdateCardDetails.Text = "UPDATE";
+            this.btnUpdateCardDetails.UseVisualStyleBackColor = true;
+            this.btnUpdateCardDetails.Click += new System.EventHandler(this.btnUpdateCardDetails_Click);
+            // 
+            // txtHolderProfile
+            // 
+            this.txtHolderProfile.Location = new System.Drawing.Point(75, 91);
+            this.txtHolderProfile.Name = "txtHolderProfile";
+            this.txtHolderProfile.Size = new System.Drawing.Size(211, 20);
+            this.txtHolderProfile.TabIndex = 10;
+            // 
+            // txtCVVProfile
+            // 
+            this.txtCVVProfile.Location = new System.Drawing.Point(238, 64);
+            this.txtCVVProfile.Name = "txtCVVProfile";
+            this.txtCVVProfile.Size = new System.Drawing.Size(45, 20);
+            this.txtCVVProfile.TabIndex = 9;
+            // 
+            // txtCardNoProfile
+            // 
+            this.txtCardNoProfile.Location = new System.Drawing.Point(75, 36);
+            this.txtCardNoProfile.Name = "txtCardNoProfile";
+            this.txtCardNoProfile.Size = new System.Drawing.Size(208, 20);
+            this.txtCardNoProfile.TabIndex = 8;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(3, 72);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(54, 13);
+            this.label29.TabIndex = 7;
+            this.label29.Text = "Exp Date:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(2, 96);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(72, 13);
+            this.label28.TabIndex = 6;
+            this.label28.Text = "Holder Name:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(201, 67);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(31, 13);
+            this.label27.TabIndex = 5;
+            this.label27.Text = "CVV:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(2, 43);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(49, 13);
+            this.label26.TabIndex = 4;
+            this.label26.Text = "Card No:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(0, 15);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(59, 13);
+            this.label25.TabIndex = 3;
+            this.label25.Text = "Card Type:";
+            // 
+            // btnOKUpdateCardInfo
+            // 
+            this.btnOKUpdateCardInfo.Location = new System.Drawing.Point(259, 11);
+            this.btnOKUpdateCardInfo.Name = "btnOKUpdateCardInfo";
+            this.btnOKUpdateCardInfo.Size = new System.Drawing.Size(30, 19);
+            this.btnOKUpdateCardInfo.TabIndex = 2;
+            this.btnOKUpdateCardInfo.Text = "OK";
+            this.btnOKUpdateCardInfo.UseVisualStyleBackColor = true;
+            // 
+            // txtCustomerIDCardProfile
+            // 
+            this.txtCustomerIDCardProfile.Location = new System.Drawing.Point(78, 10);
+            this.txtCustomerIDCardProfile.Name = "txtCustomerIDCardProfile";
+            this.txtCustomerIDCardProfile.Size = new System.Drawing.Size(175, 20);
+            this.txtCustomerIDCardProfile.TabIndex = 1;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(66, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Add your ID:";
+            // 
+            // grpAddressUpdate
+            // 
+            this.grpAddressUpdate.Controls.Add(this.grpAddressUpdateInfo);
+            this.grpAddressUpdate.Controls.Add(this.btnOKAddress);
+            this.grpAddressUpdate.Controls.Add(this.txtAddIDAddress);
+            this.grpAddressUpdate.Controls.Add(this.label17);
+            this.grpAddressUpdate.Location = new System.Drawing.Point(181, 237);
+            this.grpAddressUpdate.Name = "grpAddressUpdate";
+            this.grpAddressUpdate.Size = new System.Drawing.Size(351, 286);
+            this.grpAddressUpdate.TabIndex = 7;
+            this.grpAddressUpdate.TabStop = false;
+            this.grpAddressUpdate.Visible = false;
+            // 
+            // grpAddressUpdateInfo
+            // 
+            this.grpAddressUpdateInfo.Controls.Add(this.btnClearAddress);
+            this.grpAddressUpdateInfo.Controls.Add(this.btnUpdateAddress);
+            this.grpAddressUpdateInfo.Controls.Add(this.txtPostcodeProfile);
+            this.grpAddressUpdateInfo.Controls.Add(this.txtCountryProfile);
+            this.grpAddressUpdateInfo.Controls.Add(this.txtCityProfile);
+            this.grpAddressUpdateInfo.Controls.Add(this.txtStreetProfile);
+            this.grpAddressUpdateInfo.Controls.Add(this.txtHouseNoProfile);
+            this.grpAddressUpdateInfo.Controls.Add(this.label22);
+            this.grpAddressUpdateInfo.Controls.Add(this.label21);
+            this.grpAddressUpdateInfo.Controls.Add(this.label20);
+            this.grpAddressUpdateInfo.Controls.Add(this.label19);
+            this.grpAddressUpdateInfo.Controls.Add(this.label18);
+            this.grpAddressUpdateInfo.Location = new System.Drawing.Point(3, 37);
+            this.grpAddressUpdateInfo.Name = "grpAddressUpdateInfo";
+            this.grpAddressUpdateInfo.Size = new System.Drawing.Size(329, 236);
+            this.grpAddressUpdateInfo.TabIndex = 16;
+            this.grpAddressUpdateInfo.TabStop = false;
+            this.grpAddressUpdateInfo.Visible = false;
+            // 
+            // btnClearAddress
+            // 
+            this.btnClearAddress.Location = new System.Drawing.Point(192, 203);
+            this.btnClearAddress.Name = "btnClearAddress";
+            this.btnClearAddress.Size = new System.Drawing.Size(112, 26);
+            this.btnClearAddress.TabIndex = 16;
+            this.btnClearAddress.Text = "CLEAR";
+            this.btnClearAddress.UseVisualStyleBackColor = true;
+            this.btnClearAddress.Click += new System.EventHandler(this.btnClearAddress_Click);
+            // 
+            // btnUpdateAddress
+            // 
+            this.btnUpdateAddress.Location = new System.Drawing.Point(55, 201);
+            this.btnUpdateAddress.Name = "btnUpdateAddress";
+            this.btnUpdateAddress.Size = new System.Drawing.Size(112, 26);
+            this.btnUpdateAddress.TabIndex = 15;
+            this.btnUpdateAddress.Text = "UPDATE";
+            this.btnUpdateAddress.UseVisualStyleBackColor = true;
+            this.btnUpdateAddress.Click += new System.EventHandler(this.btnUpdateAddress_Click);
+            // 
+            // txtPostcodeProfile
+            // 
+            this.txtPostcodeProfile.Location = new System.Drawing.Point(65, 153);
+            this.txtPostcodeProfile.Name = "txtPostcodeProfile";
+            this.txtPostcodeProfile.Size = new System.Drawing.Size(264, 20);
+            this.txtPostcodeProfile.TabIndex = 13;
+            // 
+            // txtCountryProfile
+            // 
+            this.txtCountryProfile.Location = new System.Drawing.Point(65, 118);
+            this.txtCountryProfile.Name = "txtCountryProfile";
+            this.txtCountryProfile.Size = new System.Drawing.Size(264, 20);
+            this.txtCountryProfile.TabIndex = 12;
+            // 
+            // txtCityProfile
+            // 
+            this.txtCityProfile.Location = new System.Drawing.Point(65, 86);
+            this.txtCityProfile.Name = "txtCityProfile";
+            this.txtCityProfile.Size = new System.Drawing.Size(264, 20);
+            this.txtCityProfile.TabIndex = 11;
+            // 
+            // txtStreetProfile
+            // 
+            this.txtStreetProfile.Location = new System.Drawing.Point(65, 50);
+            this.txtStreetProfile.Name = "txtStreetProfile";
+            this.txtStreetProfile.Size = new System.Drawing.Size(264, 20);
+            this.txtStreetProfile.TabIndex = 10;
+            // 
+            // txtHouseNoProfile
+            // 
+            this.txtHouseNoProfile.Location = new System.Drawing.Point(65, 15);
+            this.txtHouseNoProfile.Name = "txtHouseNoProfile";
+            this.txtHouseNoProfile.Size = new System.Drawing.Size(63, 20);
+            this.txtHouseNoProfile.TabIndex = 9;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(4, 160);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(55, 13);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "Postcode:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(4, 125);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(46, 13);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Country:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(8, 93);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(27, 13);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "City:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(8, 57);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(38, 13);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Street:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(4, 22);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(58, 13);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "House No:";
+            // 
+            // btnOKAddress
+            // 
+            this.btnOKAddress.Location = new System.Drawing.Point(249, 15);
+            this.btnOKAddress.Name = "btnOKAddress";
+            this.btnOKAddress.Size = new System.Drawing.Size(83, 20);
+            this.btnOKAddress.TabIndex = 2;
+            this.btnOKAddress.Text = "OK";
+            this.btnOKAddress.UseVisualStyleBackColor = true;
+            // 
+            // txtAddIDAddress
+            // 
+            this.txtAddIDAddress.Location = new System.Drawing.Point(83, 15);
+            this.txtAddIDAddress.Name = "txtAddIDAddress";
+            this.txtAddIDAddress.Size = new System.Drawing.Size(159, 20);
+            this.txtAddIDAddress.TabIndex = 1;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(4, 22);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(66, 13);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Add your ID:";
+            // 
+            // grpProfileDetails
+            // 
+            this.grpProfileDetails.Controls.Add(this.grpGeneralInfoProfile);
+            this.grpProfileDetails.Controls.Add(this.btnOKGeneralInfo);
+            this.grpProfileDetails.Controls.Add(this.txtAddIDProfile);
+            this.grpProfileDetails.Controls.Add(this.lblAddIDProfile);
+            this.grpProfileDetails.Location = new System.Drawing.Point(181, 29);
+            this.grpProfileDetails.Name = "grpProfileDetails";
+            this.grpProfileDetails.Size = new System.Drawing.Size(459, 202);
+            this.grpProfileDetails.TabIndex = 6;
+            this.grpProfileDetails.TabStop = false;
+            this.grpProfileDetails.Visible = false;
+            // 
+            // grpGeneralInfoProfile
+            // 
+            this.grpGeneralInfoProfile.Controls.Add(this.btnClearGeneralInfo);
+            this.grpGeneralInfoProfile.Controls.Add(this.btnUpdateGeneralInfoProfile);
+            this.grpGeneralInfoProfile.Controls.Add(this.label16);
+            this.grpGeneralInfoProfile.Controls.Add(this.lblPhoneProfile);
+            this.grpGeneralInfoProfile.Controls.Add(this.lblEmailProfile);
+            this.grpGeneralInfoProfile.Controls.Add(this.lblGenderProfile);
+            this.grpGeneralInfoProfile.Controls.Add(this.lblDOBProfile);
+            this.grpGeneralInfoProfile.Controls.Add(this.lblNameProfile);
+            this.grpGeneralInfoProfile.Controls.Add(this.txtEmailProfile);
+            this.grpGeneralInfoProfile.Controls.Add(this.txtGenderProfile);
+            this.grpGeneralInfoProfile.Controls.Add(this.txtPhoneProfile);
+            this.grpGeneralInfoProfile.Controls.Add(this.txtDOBProfile);
+            this.grpGeneralInfoProfile.Controls.Add(this.txtNameProfile);
+            this.grpGeneralInfoProfile.Controls.Add(this.txtTitleProfile);
+            this.grpGeneralInfoProfile.Location = new System.Drawing.Point(6, 40);
+            this.grpGeneralInfoProfile.Name = "grpGeneralInfoProfile";
+            this.grpGeneralInfoProfile.Size = new System.Drawing.Size(447, 156);
+            this.grpGeneralInfoProfile.TabIndex = 3;
+            this.grpGeneralInfoProfile.TabStop = false;
+            this.grpGeneralInfoProfile.Visible = false;
+            // 
+            // btnClearGeneralInfo
+            // 
+            this.btnClearGeneralInfo.Location = new System.Drawing.Point(248, 120);
+            this.btnClearGeneralInfo.Name = "btnClearGeneralInfo";
+            this.btnClearGeneralInfo.Size = new System.Drawing.Size(102, 29);
+            this.btnClearGeneralInfo.TabIndex = 15;
+            this.btnClearGeneralInfo.Text = "CLEAR";
+            this.btnClearGeneralInfo.UseVisualStyleBackColor = true;
+            this.btnClearGeneralInfo.Click += new System.EventHandler(this.btnClearGeneralInfo_Click);
+            // 
+            // btnUpdateGeneralInfoProfile
+            // 
+            this.btnUpdateGeneralInfoProfile.Location = new System.Drawing.Point(100, 121);
+            this.btnUpdateGeneralInfoProfile.Name = "btnUpdateGeneralInfoProfile";
+            this.btnUpdateGeneralInfoProfile.Size = new System.Drawing.Size(102, 29);
+            this.btnUpdateGeneralInfoProfile.TabIndex = 14;
+            this.btnUpdateGeneralInfoProfile.Text = "UPDATE";
+            this.btnUpdateGeneralInfoProfile.UseVisualStyleBackColor = true;
+            this.btnUpdateGeneralInfoProfile.Click += new System.EventHandler(this.btnUpdateGeneralInfoProfile_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(1, 22);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(30, 13);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Title:";
+            // 
+            // lblPhoneProfile
+            // 
+            this.lblPhoneProfile.AutoSize = true;
+            this.lblPhoneProfile.Location = new System.Drawing.Point(182, 57);
+            this.lblPhoneProfile.Name = "lblPhoneProfile";
+            this.lblPhoneProfile.Size = new System.Drawing.Size(58, 13);
+            this.lblPhoneProfile.TabIndex = 10;
+            this.lblPhoneProfile.Text = "Phone No:";
+            // 
+            // lblEmailProfile
+            // 
+            this.lblEmailProfile.AutoSize = true;
+            this.lblEmailProfile.Location = new System.Drawing.Point(182, 90);
+            this.lblEmailProfile.Name = "lblEmailProfile";
+            this.lblEmailProfile.Size = new System.Drawing.Size(35, 13);
+            this.lblEmailProfile.TabIndex = 9;
+            this.lblEmailProfile.Text = "Email:";
+            // 
+            // lblGenderProfile
+            // 
+            this.lblGenderProfile.AutoSize = true;
+            this.lblGenderProfile.Location = new System.Drawing.Point(1, 90);
+            this.lblGenderProfile.Name = "lblGenderProfile";
+            this.lblGenderProfile.Size = new System.Drawing.Size(45, 13);
+            this.lblGenderProfile.TabIndex = 8;
+            this.lblGenderProfile.Text = "Gender:";
+            // 
+            // lblDOBProfile
+            // 
+            this.lblDOBProfile.AutoSize = true;
+            this.lblDOBProfile.Location = new System.Drawing.Point(1, 53);
+            this.lblDOBProfile.Name = "lblDOBProfile";
+            this.lblDOBProfile.Size = new System.Drawing.Size(33, 13);
+            this.lblDOBProfile.TabIndex = 7;
+            this.lblDOBProfile.Text = "DOB:";
+            // 
+            // lblNameProfile
+            // 
+            this.lblNameProfile.AutoSize = true;
+            this.lblNameProfile.Location = new System.Drawing.Point(182, 22);
+            this.lblNameProfile.Name = "lblNameProfile";
+            this.lblNameProfile.Size = new System.Drawing.Size(41, 13);
+            this.lblNameProfile.TabIndex = 6;
+            this.lblNameProfile.Text = "Name: ";
+            // 
+            // txtEmailProfile
+            // 
+            this.txtEmailProfile.Location = new System.Drawing.Point(246, 83);
+            this.txtEmailProfile.Name = "txtEmailProfile";
+            this.txtEmailProfile.ReadOnly = true;
+            this.txtEmailProfile.Size = new System.Drawing.Size(195, 20);
+            this.txtEmailProfile.TabIndex = 5;
+            // 
+            // txtGenderProfile
+            // 
+            this.txtGenderProfile.Location = new System.Drawing.Point(52, 83);
+            this.txtGenderProfile.Name = "txtGenderProfile";
+            this.txtGenderProfile.Size = new System.Drawing.Size(102, 20);
+            this.txtGenderProfile.TabIndex = 4;
+            // 
+            // txtPhoneProfile
+            // 
+            this.txtPhoneProfile.Location = new System.Drawing.Point(246, 50);
+            this.txtPhoneProfile.Name = "txtPhoneProfile";
+            this.txtPhoneProfile.Size = new System.Drawing.Size(195, 20);
+            this.txtPhoneProfile.TabIndex = 3;
+            // 
+            // txtDOBProfile
+            // 
+            this.txtDOBProfile.Location = new System.Drawing.Point(52, 48);
+            this.txtDOBProfile.Name = "txtDOBProfile";
+            this.txtDOBProfile.ReadOnly = true;
+            this.txtDOBProfile.Size = new System.Drawing.Size(102, 20);
+            this.txtDOBProfile.TabIndex = 2;
+            // 
+            // txtNameProfile
+            // 
+            this.txtNameProfile.Location = new System.Drawing.Point(246, 15);
+            this.txtNameProfile.Name = "txtNameProfile";
+            this.txtNameProfile.Size = new System.Drawing.Size(195, 20);
+            this.txtNameProfile.TabIndex = 1;
+            // 
+            // txtTitleProfile
+            // 
+            this.txtTitleProfile.Location = new System.Drawing.Point(52, 15);
+            this.txtTitleProfile.Name = "txtTitleProfile";
+            this.txtTitleProfile.Size = new System.Drawing.Size(102, 20);
+            this.txtTitleProfile.TabIndex = 0;
+            // 
+            // btnOKGeneralInfo
+            // 
+            this.btnOKGeneralInfo.Location = new System.Drawing.Point(327, 14);
+            this.btnOKGeneralInfo.Name = "btnOKGeneralInfo";
+            this.btnOKGeneralInfo.Size = new System.Drawing.Size(85, 20);
+            this.btnOKGeneralInfo.TabIndex = 2;
+            this.btnOKGeneralInfo.Text = "OK";
+            this.btnOKGeneralInfo.UseVisualStyleBackColor = true;
+            // 
+            // txtAddIDProfile
+            // 
+            this.txtAddIDProfile.Location = new System.Drawing.Point(86, 14);
+            this.txtAddIDProfile.Name = "txtAddIDProfile";
+            this.txtAddIDProfile.Size = new System.Drawing.Size(189, 20);
+            this.txtAddIDProfile.TabIndex = 1;
+            // 
+            // lblAddIDProfile
+            // 
+            this.lblAddIDProfile.AutoSize = true;
+            this.lblAddIDProfile.Location = new System.Drawing.Point(11, 21);
+            this.lblAddIDProfile.Name = "lblAddIDProfile";
+            this.lblAddIDProfile.Size = new System.Drawing.Size(69, 13);
+            this.lblAddIDProfile.TabIndex = 0;
+            this.lblAddIDProfile.Text = "Add your ID: ";
+            // 
+            // btnViewPurchases
+            // 
+            this.btnViewPurchases.Location = new System.Drawing.Point(14, 414);
+            this.btnViewPurchases.Name = "btnViewPurchases";
+            this.btnViewPurchases.Size = new System.Drawing.Size(151, 32);
+            this.btnViewPurchases.TabIndex = 5;
+            this.btnViewPurchases.Text = "Purchases";
+            this.btnViewPurchases.UseVisualStyleBackColor = true;
+            this.btnViewPurchases.Click += new System.EventHandler(this.btnViewPurchases_Click);
+            // 
+            // btnShowUpdateCardDetails
+            // 
+            this.btnShowUpdateCardDetails.Location = new System.Drawing.Point(16, 350);
+            this.btnShowUpdateCardDetails.Name = "btnShowUpdateCardDetails";
+            this.btnShowUpdateCardDetails.Size = new System.Drawing.Size(152, 32);
+            this.btnShowUpdateCardDetails.TabIndex = 3;
+            this.btnShowUpdateCardDetails.Text = "Update card details";
+            this.btnShowUpdateCardDetails.UseVisualStyleBackColor = true;
+            this.btnShowUpdateCardDetails.Click += new System.EventHandler(this.btnShowUpdateCardDetails_Click);
+            // 
+            // btnShowUpdateAddress
+            // 
+            this.btnShowUpdateAddress.Location = new System.Drawing.Point(16, 289);
+            this.btnShowUpdateAddress.Name = "btnShowUpdateAddress";
+            this.btnShowUpdateAddress.Size = new System.Drawing.Size(152, 32);
+            this.btnShowUpdateAddress.TabIndex = 2;
+            this.btnShowUpdateAddress.Text = "Update address";
+            this.btnShowUpdateAddress.UseVisualStyleBackColor = true;
+            this.btnShowUpdateAddress.Click += new System.EventHandler(this.btnShowUpdateAddress_Click);
+            // 
+            // btnViewProfileDetails
+            // 
+            this.btnViewProfileDetails.Location = new System.Drawing.Point(16, 218);
+            this.btnViewProfileDetails.Name = "btnViewProfileDetails";
+            this.btnViewProfileDetails.Size = new System.Drawing.Size(152, 32);
+            this.btnViewProfileDetails.TabIndex = 1;
+            this.btnViewProfileDetails.Text = "View profile details";
+            this.btnViewProfileDetails.UseVisualStyleBackColor = true;
+            this.btnViewProfileDetails.Click += new System.EventHandler(this.btnViewProfileDetails_Click);
+            // 
+            // picProfile
+            // 
+            this.picProfile.Image = global::ShoesRUs.Properties.Resources.prof;
+            this.picProfile.Location = new System.Drawing.Point(17, 29);
+            this.picProfile.Name = "picProfile";
+            this.picProfile.Size = new System.Drawing.Size(151, 153);
+            this.picProfile.TabIndex = 0;
+            this.picProfile.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1286, 757);
+            this.Controls.Add(this.grpProfile);
+            this.Controls.Add(this.grpContact);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.grpViewProduct);
             this.Controls.Add(this.grpBasket);
-            this.Controls.Add(this.grpProfile);
-            this.Controls.Add(this.grpContact);
-            this.Controls.Add(this.grpMain);
             this.Controls.Add(this.grpRegister);
             this.Controls.Add(this.grpLogin);
             this.Controls.Add(this.btnSearch);
@@ -865,6 +1764,7 @@
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnShowRegisterGrp);
             this.Controls.Add(this.btnShowLoginGrp);
+            this.Controls.Add(this.grpMain);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.grpLogin.ResumeLayout(false);
@@ -878,6 +1778,26 @@
             this.grpRegGeneralDetails.PerformLayout();
             this.grpMain.ResumeLayout(false);
             this.grpMain.PerformLayout();
+            this.grpContact.ResumeLayout(false);
+            this.grpContact.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctQuestionMark)).EndInit();
+            this.grpProfile.ResumeLayout(false);
+            this.grpPurchases.ResumeLayout(false);
+            this.grpPurchases.PerformLayout();
+            this.grpListPurchasesProfile.ResumeLayout(false);
+            this.grpCardUpdate.ResumeLayout(false);
+            this.grpCardUpdate.PerformLayout();
+            this.grpUpdateCardInfo.ResumeLayout(false);
+            this.grpUpdateCardInfo.PerformLayout();
+            this.grpAddressUpdate.ResumeLayout(false);
+            this.grpAddressUpdate.PerformLayout();
+            this.grpAddressUpdateInfo.ResumeLayout(false);
+            this.grpAddressUpdateInfo.PerformLayout();
+            this.grpProfileDetails.ResumeLayout(false);
+            this.grpProfileDetails.PerformLayout();
+            this.grpGeneralInfoProfile.ResumeLayout(false);
+            this.grpGeneralInfoProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -894,8 +1814,6 @@
         private System.Windows.Forms.GroupBox grpLogin;
         private System.Windows.Forms.GroupBox grpRegister;
         private System.Windows.Forms.GroupBox grpMain;
-        private System.Windows.Forms.GroupBox grpContact;
-        private System.Windows.Forms.GroupBox grpProfile;
         private System.Windows.Forms.GroupBox grpBasket;
         private System.Windows.Forms.GroupBox grpViewProduct;
         private System.Windows.Forms.Button btnLogout;
@@ -954,6 +1872,92 @@
         private System.Windows.Forms.ListView listViewMain;
         private System.Windows.Forms.ImageList imageListMain;
         private System.Windows.Forms.CheckedListBox chckListBoxMainBrand;
+        private System.Windows.Forms.GroupBox grpContact;
+        private System.Windows.Forms.Label lblContactUs;
+        private System.Windows.Forms.PictureBox pctQuestionMark;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.ComboBox cmbCategory;
+        private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.TextBox txtSubj;
+        private System.Windows.Forms.TextBox txtOrdNo;
+        private System.Windows.Forms.TextBox txtCustNo;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Label lblSubject;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label lblOrdNo;
+        private System.Windows.Forms.Label lblCustomerNo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox grpProfile;
+        private System.Windows.Forms.GroupBox grpPurchases;
+        private System.Windows.Forms.GroupBox grpListPurchasesProfile;
+        private System.Windows.Forms.ListView lstView;
+        private System.Windows.Forms.ColumnHeader OrderID;
+        private System.Windows.Forms.ColumnHeader OrderDate;
+        private System.Windows.Forms.Button btnOKPurchasesDisplay;
+        private System.Windows.Forms.TextBox txtIDCustomerPurchases;
+        private System.Windows.Forms.Label lblAddIDPurchases;
+        private System.Windows.Forms.GroupBox grpCardUpdate;
+        private System.Windows.Forms.GroupBox grpUpdateCardInfo;
+        private System.Windows.Forms.Button btnClearCard;
+        private System.Windows.Forms.TextBox txtCardTypeProfile;
+        private System.Windows.Forms.TextBox txtExpDateProfile;
+        private System.Windows.Forms.Button btnUpdateCardDetails;
+        private System.Windows.Forms.TextBox txtHolderProfile;
+        private System.Windows.Forms.TextBox txtCVVProfile;
+        private System.Windows.Forms.TextBox txtCardNoProfile;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button btnOKUpdateCardInfo;
+        private System.Windows.Forms.TextBox txtCustomerIDCardProfile;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.GroupBox grpAddressUpdate;
+        private System.Windows.Forms.GroupBox grpAddressUpdateInfo;
+        private System.Windows.Forms.Button btnClearAddress;
+        private System.Windows.Forms.Button btnUpdateAddress;
+        private System.Windows.Forms.TextBox txtPostcodeProfile;
+        private System.Windows.Forms.TextBox txtCountryProfile;
+        private System.Windows.Forms.TextBox txtCityProfile;
+        private System.Windows.Forms.TextBox txtStreetProfile;
+        private System.Windows.Forms.TextBox txtHouseNoProfile;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btnOKAddress;
+        private System.Windows.Forms.TextBox txtAddIDAddress;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox grpProfileDetails;
+        private System.Windows.Forms.GroupBox grpGeneralInfoProfile;
+        private System.Windows.Forms.Button btnClearGeneralInfo;
+        private System.Windows.Forms.Button btnUpdateGeneralInfoProfile;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblPhoneProfile;
+        private System.Windows.Forms.Label lblEmailProfile;
+        private System.Windows.Forms.Label lblGenderProfile;
+        private System.Windows.Forms.Label lblDOBProfile;
+        private System.Windows.Forms.Label lblNameProfile;
+        private System.Windows.Forms.TextBox txtEmailProfile;
+        private System.Windows.Forms.TextBox txtGenderProfile;
+        private System.Windows.Forms.TextBox txtPhoneProfile;
+        private System.Windows.Forms.TextBox txtDOBProfile;
+        private System.Windows.Forms.TextBox txtNameProfile;
+        private System.Windows.Forms.TextBox txtTitleProfile;
+        private System.Windows.Forms.Button btnOKGeneralInfo;
+        private System.Windows.Forms.TextBox txtAddIDProfile;
+        private System.Windows.Forms.Label lblAddIDProfile;
+        private System.Windows.Forms.Button btnViewPurchases;
+        private System.Windows.Forms.Button btnShowUpdateCardDetails;
+        private System.Windows.Forms.Button btnShowUpdateAddress;
+        private System.Windows.Forms.Button btnViewProfileDetails;
+        private System.Windows.Forms.PictureBox picProfile;
 
     }
 }

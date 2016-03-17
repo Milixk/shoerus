@@ -10,7 +10,7 @@ namespace ShoesRUs
     class Login
     {
         //User Details
-        private User user;
+        public User user;
         //Logged In Status
         private bool loggedIn = false;
 

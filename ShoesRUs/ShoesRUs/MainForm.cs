@@ -537,5 +537,373 @@ namespace ShoesRUs
             ret += ")";
             return ret;
         }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtEmail.Text) ||
+               string.IsNullOrEmpty(txtSubj.Text) || string.IsNullOrEmpty(txtMessage.Text))
+            {
+                MessageBox.Show("One or more fields are empty.");
+            }
+            else
+            {
+
+                Contact contact = new Contact();
+                contact.sendMessage(txtName.Text, txtEmail.Text, txtCustNo.Text, txtOrdNo.Text, cmbCategory.SelectedItem.ToString(), txtSubj.Text, txtMessage.Text);
+                int chkMessage = contact.checkMessage(txtName.Text, txtEmail.Text, txtCustNo.Text, txtOrdNo.Text, cmbCategory.SelectedItem.ToString(), txtSubj.Text, txtMessage.Text);
+                if (chkMessage == 1)
+                {
+                    MessageBox.Show("Message successfully sent!");
+                }
+                else
+                {
+
+                    MessageBox.Show("Error when sending message!");
+
+                }
+
+                clearFieldsContactForm();
+
+
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            clearFieldsContactForm();
+        }
+
+        private void clearFieldsContactForm()//function which clear all the fields to be completed (Contact group box)
+        {
+
+            txtName.Clear();
+            txtName.Clear();
+            txtEmail.Clear();
+            txtCustNo.Clear();
+            txtOrdNo.Clear();
+            txtSubj.Clear();
+            txtMessage.Clear();
+            cmbCategory.SelectedIndex = -1;
+
+        }
+
+        OleDbConnection myConn = new OleDbConnection();
+
+        private void btnViewProfileDetails_Click(object sender, EventArgs e)
+        {
+            grpProfileDetails.Visible = true;
+            grpAddressUpdate.Visible = false;
+            grpCardUpdate.Visible = false;
+            grpPurchases.Visible = false;
+            
+            grpGeneralInfoProfile.Visible = true;
+            try
+            {
+                myConn.ConnectionString = DatabaseConnection.dbconnect; ;
+                OleDbCommand myCmd = myConn.CreateCommand();
+
+                myCmd.CommandText = "Select CustomerTitle, CustomerDOB, CustomerGender, CustomerName, CustomerPhoneNo, CustomerEmail From Customer"
+                                                           + " Where CustomerID = @customerID";
+                myCmd.Parameters.AddWithValue("customerID", login.user.custID);
+
+                myConn.Open();
+                OleDbDataReader myDR = myCmd.ExecuteReader();
+                myDR.Read();
+
+                //extract information and display through the UI
+                txtTitleProfile.Text = myDR[0].ToString();
+                txtDOBProfile.Text = myDR[1].ToString();
+                txtGenderProfile.Text = myDR[2].ToString();
+                txtNameProfile.Text = myDR[3].ToString();
+                txtPhoneProfile.Text = myDR[4].ToString();
+                txtEmailProfile.Text = myDR[5].ToString();
+
+                myConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (myConn.State == ConnectionState.Open)
+                {
+                    myConn.Close();
+                }
+            }
+        }
+
+        private void btnUpdateGeneralInfoProfile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                myConn.ConnectionString = DatabaseConnection.dbconnect;
+                myConn.Open();
+
+                OleDbCommand myCmd = myConn.CreateCommand();
+
+                myCmd.CommandText = "UPDATE Customer SET CustomerTitle = @ct, CustomerGender = @cGender, CustomerName = @cName, CustomerPhoneNo = @cPhone"
+                                                           + " Where CustomerID = " + login.user.custID;
+                myCmd.Parameters.AddWithValue("@ct", txtTitleProfile.Text);
+                myCmd.Parameters.AddWithValue("@cGender", txtGenderProfile.Text);
+                myCmd.Parameters.AddWithValue("@cName", txtNameProfile.Text);
+                myCmd.Parameters.AddWithValue("@cPhone", txtPhoneProfile.Text);
+
+
+
+                int rowsChanged = myCmd.ExecuteNonQuery();
+
+                myConn.Close();
+
+                clearFieldsGenetalInfo();
+
+                MessageBox.Show("Successfully updated! ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClearGeneralInfo_Click(object sender, EventArgs e)
+        {
+            clearFieldsGenetalInfo();
+        }
+
+        private void clearFieldsGenetalInfo()//function which clears all the fields in the GENERAL INFORMATION group box (My profile)
+        {
+
+            txtTitleProfile.Clear();
+            txtGenderProfile.Clear();
+            txtNameProfile.Clear();
+            txtPhoneProfile.Clear();
+            txtAddIDProfile.Clear();
+            txtEmailProfile.Clear();
+            txtDOBProfile.Clear();
+
+
+        }
+
+        private void btnShowUpdateAddress_Click(object sender, EventArgs e)
+        {
+            grpProfileDetails.Visible = false;
+            grpAddressUpdate.Visible = true;
+            grpCardUpdate.Visible = false;
+            grpPurchases.Visible = true;
+
+            grpAddressUpdateInfo.Visible = true;
+
+            try
+            {
+                myConn.ConnectionString = DatabaseConnection.dbconnect; ;
+                OleDbCommand myCmd = myConn.CreateCommand();
+
+                myCmd.CommandText = "Select CustomerAddressNo, CustomerAddressStreet, CustomerAddressCity, CustomerAddressCountry, CustomerPostCode, CustomerPhoneNo From Customer"
+                                                           + " Where CustomerID = @customerID";
+                myCmd.Parameters.AddWithValue("customerID", login.user.custID);
+
+                myConn.Open();
+                OleDbDataReader myDR = myCmd.ExecuteReader();
+                myDR.Read();
+
+                //extract information and display through the UI
+                txtHouseNoProfile.Text = myDR[0].ToString();
+                txtStreetProfile.Text = myDR[1].ToString();
+                txtCityProfile.Text = myDR[2].ToString();
+                txtCountryProfile.Text = myDR[3].ToString();
+                txtPostcodeProfile.Text = myDR[4].ToString();
+
+
+                myConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (myConn.State == ConnectionState.Open)
+                {
+                    myConn.Close();
+                }
+            }
+        }
+
+        private void btnUpdateAddress_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                myConn.ConnectionString = DatabaseConnection.dbconnect;
+                myConn.Open();
+
+                OleDbCommand myCmd = myConn.CreateCommand();
+
+                myCmd.CommandText = "UPDATE Customer SET CustomerAddressNo = @ca, CustomerAddressStreet = @caStreet, CustomerAddressCity = @caCity, CustomerAddressCountry = @caCountry, CustomerPostCode = @caPostcode "
+                                                           + " Where CustomerID = " + login.user.custID;
+                myCmd.Parameters.AddWithValue("@caNo", txtHouseNoProfile.Text);
+                myCmd.Parameters.AddWithValue("@caStreet", txtStreetProfile.Text);
+                myCmd.Parameters.AddWithValue("@caCity", txtCityProfile.Text);
+                myCmd.Parameters.AddWithValue("@caCountry", txtCountryProfile.Text);
+                myCmd.Parameters.AddWithValue("@caPostcode", txtPostcodeProfile.Text);
+
+
+                int rowsChanged = myCmd.ExecuteNonQuery();
+
+                myConn.Close();
+
+                MessageBox.Show("Successfully updated! ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClearAddress_Click(object sender, EventArgs e)
+        {
+            clearFieldsAddress();
+        }
+
+        private void clearFieldsAddress()
+        {
+
+            txtAddIDAddress.Clear();
+            txtHouseNoProfile.Clear();
+            txtStreetProfile.Clear();
+            txtCityProfile.Clear();
+            txtCountryProfile.Clear();
+            txtPostcodeProfile.Clear();
+
+        }
+
+        private void btnShowUpdateCardDetails_Click(object sender, EventArgs e)
+        {
+            grpProfileDetails.Visible = false;
+            grpAddressUpdate.Visible = false;
+            grpCardUpdate.Visible = true;
+            grpPurchases.Visible = false;
+
+            grpUpdateCardInfo.Visible = true;
+            try
+            {
+                myConn.ConnectionString = DatabaseConnection.dbconnect; ;
+                OleDbCommand myCmd = myConn.CreateCommand();
+
+                myCmd.CommandText = "Select  CustomerPaymentCardType, CustomerPaymentCardNo, CustomerPaymentCardCVV, CustomerPaymentCardName,CustomerPaymentCardExpDate From Customer"
+                                                           + " Where CustomerID = @customerID";
+                myCmd.Parameters.AddWithValue("customerID", login.user.custID);
+
+                myConn.Open();
+                OleDbDataReader myDR = myCmd.ExecuteReader();
+                myDR.Read();
+
+                //extract information and display through the UI
+                txtCardTypeProfile.Text = myDR[0].ToString();
+                txtCardNoProfile.Text = myDR[1].ToString();
+                txtCVVProfile.Text = myDR[2].ToString();
+                txtHolderProfile.Text = myDR[3].ToString();
+                txtExpDateProfile.Text = myDR[4].ToString();
+
+                myConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (myConn.State == ConnectionState.Open)
+                {
+                    myConn.Close();
+                }
+            }
+        }
+
+        private void btnUpdateCardDetails_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                myConn.ConnectionString = DatabaseConnection.dbconnect;
+                myConn.Open();
+
+                OleDbCommand myCmd = myConn.CreateCommand();
+
+                myCmd.CommandText = "UPDATE Customer SET CustomerPaymentCardType = @cpType , CustomerPaymentCardNo = @cpCardNo, CustomerPaymentCardCVV = @cpCVV, CustomerPaymentCardName = @cpHolder,CustomerPaymentCardExpDate = @cpExpDate"
+                                                           + " Where CustomerID = " + login.user.custID;
+                myCmd.Parameters.AddWithValue("@cpType", txtCardTypeProfile.Text);
+                myCmd.Parameters.AddWithValue("@cpCardNo", txtCardNoProfile.Text);
+                myCmd.Parameters.AddWithValue("@cpCVV", txtCVVProfile.Text);
+                myCmd.Parameters.AddWithValue("@cpHolder", txtHolderProfile.Text);
+                myCmd.Parameters.AddWithValue("@cpExpDate", txtExpDateProfile.Text);
+
+
+                int rowsChanged = myCmd.ExecuteNonQuery();
+
+                myConn.Close();
+
+                clearFieldsCardNo();
+
+                MessageBox.Show("Successfully updated! ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnClearCard_Click(object sender, EventArgs e)
+        {
+            clearFieldsCardNo();
+        }
+
+        private void clearFieldsCardNo()//function which clears all the fields in the GENERAL INFORMATION group box (My profile)
+        {
+
+            txtCustomerIDCardProfile.Clear();
+            txtCardTypeProfile.Clear();
+            txtCardNoProfile.Clear();
+            txtExpDateProfile.Clear();
+            txtCVVProfile.Clear();
+            txtHolderProfile.Clear();
+
+        }
+
+        private void btnViewPurchases_Click(object sender, EventArgs e)
+        {
+            grpPurchases.Visible = true;
+            grpProfileDetails.Visible = false;
+            grpAddressUpdate.Visible = false;
+            grpCardUpdate.Visible = false;
+
+            grpListPurchasesProfile.Visible = true;
+            try
+            {
+                myConn.ConnectionString = DatabaseConnection.dbconnect; ;
+                OleDbCommand myCmd = myConn.CreateCommand();
+
+                myCmd.CommandText = "SELECT Orders.OrderID, Orders.OrderDate FROM  Orders, Invoice WHERE  Invoice.OrderID=Orders.OrderID AND Invoice.CustomerID = " + login.user.custID;
+
+                MessageBox.Show(myCmd.CommandText);
+
+
+                myConn.Open();
+                OleDbDataReader myDR = myCmd.ExecuteReader();
+
+
+                lstView.View = View.Details;
+
+                while (myDR.Read())
+                {
+                    var item = new ListViewItem();
+                    item.Text = myDR["OrderID"].ToString();
+                    item.SubItems.Add(myDR["OrderDate"].ToString());
+
+
+                    lstView.Items.Add(item);
+                }
+
+
+                myConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (myConn.State == ConnectionState.Open)
+                {
+                    myConn.Close();
+                }
+            }
+        }
     }
 }
