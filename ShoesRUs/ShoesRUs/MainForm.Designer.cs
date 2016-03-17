@@ -36,7 +36,7 @@
             this.btnContact = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnBasket = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.grpLogin = new System.Windows.Forms.GroupBox();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -117,73 +117,56 @@
             this.label4 = new System.Windows.Forms.Label();
             this.grpProfile = new System.Windows.Forms.GroupBox();
             this.grpPurchases = new System.Windows.Forms.GroupBox();
-            this.grpListPurchasesProfile = new System.Windows.Forms.GroupBox();
             this.lstView = new System.Windows.Forms.ListView();
             this.OrderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OrderDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnOKPurchasesDisplay = new System.Windows.Forms.Button();
-            this.txtIDCustomerPurchases = new System.Windows.Forms.TextBox();
-            this.lblAddIDPurchases = new System.Windows.Forms.Label();
             this.grpCardUpdate = new System.Windows.Forms.GroupBox();
-            this.grpUpdateCardInfo = new System.Windows.Forms.GroupBox();
             this.btnClearCard = new System.Windows.Forms.Button();
             this.txtCardTypeProfile = new System.Windows.Forms.TextBox();
-            this.txtExpDateProfile = new System.Windows.Forms.TextBox();
-            this.btnUpdateCardDetails = new System.Windows.Forms.Button();
-            this.txtHolderProfile = new System.Windows.Forms.TextBox();
-            this.txtCVVProfile = new System.Windows.Forms.TextBox();
-            this.txtCardNoProfile = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.btnOKUpdateCardInfo = new System.Windows.Forms.Button();
-            this.txtCustomerIDCardProfile = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.txtExpDateProfile = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.btnUpdateCardDetails = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtHolderProfile = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtCVVProfile = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtCardNoProfile = new System.Windows.Forms.TextBox();
             this.grpAddressUpdate = new System.Windows.Forms.GroupBox();
-            this.grpAddressUpdateInfo = new System.Windows.Forms.GroupBox();
             this.btnClearAddress = new System.Windows.Forms.Button();
             this.btnUpdateAddress = new System.Windows.Forms.Button();
-            this.txtPostcodeProfile = new System.Windows.Forms.TextBox();
-            this.txtCountryProfile = new System.Windows.Forms.TextBox();
-            this.txtCityProfile = new System.Windows.Forms.TextBox();
-            this.txtStreetProfile = new System.Windows.Forms.TextBox();
             this.txtHouseNoProfile = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.txtPostcodeProfile = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.btnOKAddress = new System.Windows.Forms.Button();
-            this.txtAddIDAddress = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.txtCountryProfile = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtCityProfile = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtStreetProfile = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.grpProfileDetails = new System.Windows.Forms.GroupBox();
-            this.grpGeneralInfoProfile = new System.Windows.Forms.GroupBox();
             this.btnClearGeneralInfo = new System.Windows.Forms.Button();
             this.btnUpdateGeneralInfoProfile = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lblPhoneProfile = new System.Windows.Forms.Label();
-            this.lblEmailProfile = new System.Windows.Forms.Label();
-            this.lblGenderProfile = new System.Windows.Forms.Label();
-            this.lblDOBProfile = new System.Windows.Forms.Label();
-            this.lblNameProfile = new System.Windows.Forms.Label();
-            this.txtEmailProfile = new System.Windows.Forms.TextBox();
-            this.txtGenderProfile = new System.Windows.Forms.TextBox();
-            this.txtPhoneProfile = new System.Windows.Forms.TextBox();
-            this.txtDOBProfile = new System.Windows.Forms.TextBox();
-            this.txtNameProfile = new System.Windows.Forms.TextBox();
             this.txtTitleProfile = new System.Windows.Forms.TextBox();
-            this.btnOKGeneralInfo = new System.Windows.Forms.Button();
-            this.txtAddIDProfile = new System.Windows.Forms.TextBox();
-            this.lblAddIDProfile = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtNameProfile = new System.Windows.Forms.TextBox();
+            this.lblPhoneProfile = new System.Windows.Forms.Label();
+            this.txtDOBProfile = new System.Windows.Forms.TextBox();
+            this.lblEmailProfile = new System.Windows.Forms.Label();
+            this.txtPhoneProfile = new System.Windows.Forms.TextBox();
+            this.lblGenderProfile = new System.Windows.Forms.Label();
+            this.txtGenderProfile = new System.Windows.Forms.TextBox();
+            this.lblDOBProfile = new System.Windows.Forms.Label();
+            this.txtEmailProfile = new System.Windows.Forms.TextBox();
+            this.lblNameProfile = new System.Windows.Forms.Label();
             this.btnViewPurchases = new System.Windows.Forms.Button();
             this.btnShowUpdateCardDetails = new System.Windows.Forms.Button();
             this.btnShowUpdateAddress = new System.Windows.Forms.Button();
             this.btnViewProfileDetails = new System.Windows.Forms.Button();
             this.picProfile = new System.Windows.Forms.PictureBox();
             this.grpBasket = new System.Windows.Forms.GroupBox();
-            this.btnAddBasket = new System.Windows.Forms.Button();
             this.listViewDisplayBasket = new System.Windows.Forms.ListView();
             this.btnCheckout = new System.Windows.Forms.Button();
             this.btnClearBasket = new System.Windows.Forms.Button();
@@ -217,13 +200,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctQuestionMark)).BeginInit();
             this.grpProfile.SuspendLayout();
             this.grpPurchases.SuspendLayout();
-            this.grpListPurchasesProfile.SuspendLayout();
             this.grpCardUpdate.SuspendLayout();
-            this.grpUpdateCardInfo.SuspendLayout();
             this.grpAddressUpdate.SuspendLayout();
-            this.grpAddressUpdateInfo.SuspendLayout();
             this.grpProfileDetails.SuspendLayout();
-            this.grpGeneralInfoProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.grpBasket.SuspendLayout();
             this.grpViewProduct.SuspendLayout();
@@ -235,7 +214,7 @@
             this.btnShowLoginGrp.Name = "btnShowLoginGrp";
             this.btnShowLoginGrp.Size = new System.Drawing.Size(75, 23);
             this.btnShowLoginGrp.TabIndex = 0;
-            this.btnShowLoginGrp.Text = "button1";
+            this.btnShowLoginGrp.Text = "Login";
             this.btnShowLoginGrp.UseVisualStyleBackColor = true;
             this.btnShowLoginGrp.Click += new System.EventHandler(this.btnShowLoginGrp_Click);
             // 
@@ -245,7 +224,7 @@
             this.btnShowRegisterGrp.Name = "btnShowRegisterGrp";
             this.btnShowRegisterGrp.Size = new System.Drawing.Size(75, 23);
             this.btnShowRegisterGrp.TabIndex = 1;
-            this.btnShowRegisterGrp.Text = "button1";
+            this.btnShowRegisterGrp.Text = "Register";
             this.btnShowRegisterGrp.UseVisualStyleBackColor = true;
             this.btnShowRegisterGrp.Click += new System.EventHandler(this.btnShowRegisterGrp_Click);
             // 
@@ -266,7 +245,7 @@
             this.btnContact.Name = "btnContact";
             this.btnContact.Size = new System.Drawing.Size(75, 23);
             this.btnContact.TabIndex = 3;
-            this.btnContact.Text = "button1";
+            this.btnContact.Text = "Contact";
             this.btnContact.UseVisualStyleBackColor = true;
             this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
             // 
@@ -287,18 +266,18 @@
             this.btnBasket.Name = "btnBasket";
             this.btnBasket.Size = new System.Drawing.Size(75, 23);
             this.btnBasket.TabIndex = 5;
-            this.btnBasket.Text = "button1";
+            this.btnBasket.Text = "Basket";
             this.btnBasket.UseVisualStyleBackColor = true;
             this.btnBasket.Click += new System.EventHandler(this.btnBasket_Click);
             // 
-            // btnSearch
+            // btnHome
             // 
-            this.btnSearch.Location = new System.Drawing.Point(498, 12);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.Text = "button1";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnHome.Location = new System.Drawing.Point(498, 12);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(75, 23);
+            this.btnHome.TabIndex = 20;
+            this.btnHome.Text = "Home";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // grpLogin
             // 
@@ -307,9 +286,9 @@
             this.grpLogin.Controls.Add(this.lblEmail);
             this.grpLogin.Controls.Add(this.txtLoginPassword);
             this.grpLogin.Controls.Add(this.txtLoginEmail);
-            this.grpLogin.Location = new System.Drawing.Point(12, 72);
+            this.grpLogin.Location = new System.Drawing.Point(12, 52);
             this.grpLogin.Name = "grpLogin";
-            this.grpLogin.Size = new System.Drawing.Size(420, 195);
+            this.grpLogin.Size = new System.Drawing.Size(700, 700);
             this.grpLogin.TabIndex = 7;
             this.grpLogin.TabStop = false;
             this.grpLogin.Text = "Login";
@@ -317,7 +296,7 @@
             // 
             // btnSignIn
             // 
-            this.btnSignIn.Location = new System.Drawing.Point(279, 143);
+            this.btnSignIn.Location = new System.Drawing.Point(418, 336);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(80, 21);
             this.btnSignIn.TabIndex = 4;
@@ -328,7 +307,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(26, 88);
+            this.lblPassword.Location = new System.Drawing.Point(165, 281);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(56, 13);
             this.lblPassword.TabIndex = 3;
@@ -337,7 +316,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(26, 41);
+            this.lblEmail.Location = new System.Drawing.Point(165, 234);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.TabIndex = 2;
@@ -345,7 +324,7 @@
             // 
             // txtLoginPassword
             // 
-            this.txtLoginPassword.Location = new System.Drawing.Point(106, 85);
+            this.txtLoginPassword.Location = new System.Drawing.Point(245, 278);
             this.txtLoginPassword.Name = "txtLoginPassword";
             this.txtLoginPassword.PasswordChar = '*';
             this.txtLoginPassword.Size = new System.Drawing.Size(253, 20);
@@ -354,7 +333,7 @@
             // 
             // txtLoginEmail
             // 
-            this.txtLoginEmail.Location = new System.Drawing.Point(106, 38);
+            this.txtLoginEmail.Location = new System.Drawing.Point(245, 231);
             this.txtLoginEmail.Name = "txtLoginEmail";
             this.txtLoginEmail.Size = new System.Drawing.Size(253, 20);
             this.txtLoginEmail.TabIndex = 0;
@@ -366,9 +345,9 @@
             this.grpRegister.Controls.Add(this.grpRegCardDetails);
             this.grpRegister.Controls.Add(this.grpDeliveryDetails);
             this.grpRegister.Controls.Add(this.grpRegGeneralDetails);
-            this.grpRegister.Location = new System.Drawing.Point(450, 72);
+            this.grpRegister.Location = new System.Drawing.Point(12, 52);
             this.grpRegister.Name = "grpRegister";
-            this.grpRegister.Size = new System.Drawing.Size(636, 566);
+            this.grpRegister.Size = new System.Drawing.Size(700, 700);
             this.grpRegister.TabIndex = 8;
             this.grpRegister.TabStop = false;
             this.grpRegister.Text = "Register";
@@ -801,9 +780,9 @@
             this.grpMain.Controls.Add(this.txtBoxMainSearch);
             this.grpMain.Controls.Add(this.cmbMainOrder);
             this.grpMain.Controls.Add(this.listViewMain);
-            this.grpMain.Location = new System.Drawing.Point(12, 309);
+            this.grpMain.Location = new System.Drawing.Point(12, 52);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Size = new System.Drawing.Size(464, 386);
+            this.grpMain.Size = new System.Drawing.Size(700, 700);
             this.grpMain.TabIndex = 9;
             this.grpMain.TabStop = false;
             this.grpMain.Text = "Main";
@@ -811,9 +790,9 @@
             // chckListBoxMainBrand
             // 
             this.chckListBoxMainBrand.FormattingEnabled = true;
-            this.chckListBoxMainBrand.Location = new System.Drawing.Point(374, 158);
+            this.chckListBoxMainBrand.Location = new System.Drawing.Point(521, 126);
             this.chckListBoxMainBrand.Name = "chckListBoxMainBrand";
-            this.chckListBoxMainBrand.Size = new System.Drawing.Size(75, 139);
+            this.chckListBoxMainBrand.Size = new System.Drawing.Size(173, 154);
             this.chckListBoxMainBrand.TabIndex = 23;
             // 
             // chckListBoxMainGender
@@ -823,17 +802,17 @@
             "Men",
             "Women",
             "Kids"});
-            this.chckListBoxMainGender.Location = new System.Drawing.Point(374, 103);
+            this.chckListBoxMainGender.Location = new System.Drawing.Point(521, 71);
             this.chckListBoxMainGender.Name = "chckListBoxMainGender";
-            this.chckListBoxMainGender.Size = new System.Drawing.Size(75, 49);
+            this.chckListBoxMainGender.Size = new System.Drawing.Size(173, 49);
             this.chckListBoxMainGender.TabIndex = 22;
             // 
             // btnMainFilter
             // 
             this.btnMainFilter.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMainFilter.Location = new System.Drawing.Point(374, 289);
+            this.btnMainFilter.Location = new System.Drawing.Point(527, 298);
             this.btnMainFilter.Name = "btnMainFilter";
-            this.btnMainFilter.Size = new System.Drawing.Size(75, 23);
+            this.btnMainFilter.Size = new System.Drawing.Size(173, 23);
             this.btnMainFilter.TabIndex = 21;
             this.btnMainFilter.Text = "Apply Filter";
             this.btnMainFilter.UseVisualStyleBackColor = false;
@@ -842,27 +821,27 @@
             // txtBoxMainPriceMax
             // 
             this.txtBoxMainPriceMax.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtBoxMainPriceMax.Location = new System.Drawing.Point(374, 77);
+            this.txtBoxMainPriceMax.Location = new System.Drawing.Point(521, 45);
             this.txtBoxMainPriceMax.Name = "txtBoxMainPriceMax";
-            this.txtBoxMainPriceMax.Size = new System.Drawing.Size(75, 20);
+            this.txtBoxMainPriceMax.Size = new System.Drawing.Size(173, 20);
             this.txtBoxMainPriceMax.TabIndex = 20;
             this.txtBoxMainPriceMax.Text = "Max Price";
             this.txtBoxMainPriceMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxMainPriceMax_KeyPress);
             // 
             // txtBoxMainPriceMin
             // 
-            this.txtBoxMainPriceMin.Location = new System.Drawing.Point(374, 51);
+            this.txtBoxMainPriceMin.Location = new System.Drawing.Point(521, 19);
             this.txtBoxMainPriceMin.Name = "txtBoxMainPriceMin";
-            this.txtBoxMainPriceMin.Size = new System.Drawing.Size(75, 20);
+            this.txtBoxMainPriceMin.Size = new System.Drawing.Size(173, 20);
             this.txtBoxMainPriceMin.TabIndex = 19;
             this.txtBoxMainPriceMin.Text = "Min Price";
             this.txtBoxMainPriceMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxMainPriceMin_KeyPress);
             // 
             // txtBoxMainSearch
             // 
-            this.txtBoxMainSearch.Location = new System.Drawing.Point(16, 32);
+            this.txtBoxMainSearch.Location = new System.Drawing.Point(12, 19);
             this.txtBoxMainSearch.Name = "txtBoxMainSearch";
-            this.txtBoxMainSearch.Size = new System.Drawing.Size(121, 20);
+            this.txtBoxMainSearch.Size = new System.Drawing.Size(339, 20);
             this.txtBoxMainSearch.TabIndex = 18;
             this.txtBoxMainSearch.Text = "Search";
             this.txtBoxMainSearch.TextChanged += new System.EventHandler(this.txtBoxMainSearch_TextChanged);
@@ -875,9 +854,9 @@
             "Price Descending",
             "Alphabetical",
             "Reversed Alphabetical"});
-            this.cmbMainOrder.Location = new System.Drawing.Point(16, 58);
+            this.cmbMainOrder.Location = new System.Drawing.Point(366, 19);
             this.cmbMainOrder.Name = "cmbMainOrder";
-            this.cmbMainOrder.Size = new System.Drawing.Size(121, 21);
+            this.cmbMainOrder.Size = new System.Drawing.Size(132, 21);
             this.cmbMainOrder.TabIndex = 17;
             this.cmbMainOrder.Text = "Order by";
             this.cmbMainOrder.SelectedIndexChanged += new System.EventHandler(this.cmbMainOrder_SelectedIndexChanged);
@@ -885,9 +864,9 @@
             // listViewMain
             // 
             this.listViewMain.LargeImageList = this.imageListMain;
-            this.listViewMain.Location = new System.Drawing.Point(16, 93);
+            this.listViewMain.Location = new System.Drawing.Point(12, 45);
             this.listViewMain.Name = "listViewMain";
-            this.listViewMain.Size = new System.Drawing.Size(352, 261);
+            this.listViewMain.Size = new System.Drawing.Size(503, 639);
             this.listViewMain.SmallImageList = this.imageListMain;
             this.listViewMain.TabIndex = 16;
             this.listViewMain.UseCompatibleStateImageBehavior = false;
@@ -916,11 +895,11 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(579, 10);
+            this.btnLogout.Location = new System.Drawing.Point(579, 12);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(75, 23);
             this.btnLogout.TabIndex = 14;
-            this.btnLogout.Text = "button1";
+            this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Visible = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -945,9 +924,9 @@
             this.grpContact.Controls.Add(this.lblCustomerNo);
             this.grpContact.Controls.Add(this.label3);
             this.grpContact.Controls.Add(this.label4);
-            this.grpContact.Location = new System.Drawing.Point(0, 100);
+            this.grpContact.Location = new System.Drawing.Point(12, 52);
             this.grpContact.Name = "grpContact";
-            this.grpContact.Size = new System.Drawing.Size(1113, 492);
+            this.grpContact.Size = new System.Drawing.Size(700, 700);
             this.grpContact.TabIndex = 16;
             this.grpContact.TabStop = false;
             this.grpContact.Visible = false;
@@ -956,7 +935,7 @@
             // 
             this.lblContactUs.AutoSize = true;
             this.lblContactUs.Font = new System.Drawing.Font("Segoe WP Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContactUs.Location = new System.Drawing.Point(389, 16);
+            this.lblContactUs.Location = new System.Drawing.Point(256, 32);
             this.lblContactUs.Name = "lblContactUs";
             this.lblContactUs.Size = new System.Drawing.Size(134, 26);
             this.lblContactUs.TabIndex = 19;
@@ -965,7 +944,7 @@
             // pctQuestionMark
             // 
             this.pctQuestionMark.Image = global::ShoesRUs.Properties.Resources.questionMark;
-            this.pctQuestionMark.Location = new System.Drawing.Point(750, 22);
+            this.pctQuestionMark.Location = new System.Drawing.Point(401, 80);
             this.pctQuestionMark.Name = "pctQuestionMark";
             this.pctQuestionMark.Size = new System.Drawing.Size(254, 302);
             this.pctQuestionMark.TabIndex = 18;
@@ -973,7 +952,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(455, 433);
+            this.btnReset.Location = new System.Drawing.Point(341, 537);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(93, 25);
             this.btnReset.TabIndex = 17;
@@ -983,7 +962,7 @@
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(289, 433);
+            this.btnSend.Location = new System.Drawing.Point(175, 537);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(93, 25);
             this.btnSend.TabIndex = 16;
@@ -1001,14 +980,14 @@
             "Suggestion",
             "My Account",
             "Other"});
-            this.cmbCategory.Location = new System.Drawing.Point(245, 234);
+            this.cmbCategory.Location = new System.Drawing.Point(141, 247);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(96, 21);
             this.cmbCategory.TabIndex = 15;
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(245, 311);
+            this.txtMessage.Location = new System.Drawing.Point(131, 415);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(348, 88);
@@ -1016,35 +995,35 @@
             // 
             // txtSubj
             // 
-            this.txtSubj.Location = new System.Drawing.Point(245, 274);
+            this.txtSubj.Location = new System.Drawing.Point(141, 287);
             this.txtSubj.Name = "txtSubj";
             this.txtSubj.Size = new System.Drawing.Size(190, 20);
             this.txtSubj.TabIndex = 13;
             // 
             // txtOrdNo
             // 
-            this.txtOrdNo.Location = new System.Drawing.Point(245, 198);
+            this.txtOrdNo.Location = new System.Drawing.Point(141, 211);
             this.txtOrdNo.Name = "txtOrdNo";
             this.txtOrdNo.Size = new System.Drawing.Size(190, 20);
             this.txtOrdNo.TabIndex = 12;
             // 
             // txtCustNo
             // 
-            this.txtCustNo.Location = new System.Drawing.Point(245, 164);
+            this.txtCustNo.Location = new System.Drawing.Point(141, 177);
             this.txtCustNo.Name = "txtCustNo";
             this.txtCustNo.Size = new System.Drawing.Size(190, 20);
             this.txtCustNo.TabIndex = 11;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(245, 127);
+            this.txtEmail.Location = new System.Drawing.Point(141, 140);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(190, 20);
             this.txtEmail.TabIndex = 10;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(245, 90);
+            this.txtName.Location = new System.Drawing.Point(141, 103);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(190, 20);
             this.txtName.TabIndex = 9;
@@ -1052,7 +1031,7 @@
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(139, 311);
+            this.lblMessage.Location = new System.Drawing.Point(25, 415);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(56, 13);
             this.lblMessage.TabIndex = 7;
@@ -1061,7 +1040,7 @@
             // lblSubject
             // 
             this.lblSubject.AutoSize = true;
-            this.lblSubject.Location = new System.Drawing.Point(139, 281);
+            this.lblSubject.Location = new System.Drawing.Point(35, 294);
             this.lblSubject.Name = "lblSubject";
             this.lblSubject.Size = new System.Drawing.Size(46, 13);
             this.lblSubject.TabIndex = 6;
@@ -1070,7 +1049,7 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(139, 242);
+            this.lblCategory.Location = new System.Drawing.Point(35, 255);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(55, 13);
             this.lblCategory.TabIndex = 5;
@@ -1079,7 +1058,7 @@
             // lblOrdNo
             // 
             this.lblOrdNo.AutoSize = true;
-            this.lblOrdNo.Location = new System.Drawing.Point(139, 205);
+            this.lblOrdNo.Location = new System.Drawing.Point(35, 218);
             this.lblOrdNo.Name = "lblOrdNo";
             this.lblOrdNo.Size = new System.Drawing.Size(51, 13);
             this.lblOrdNo.TabIndex = 4;
@@ -1088,7 +1067,7 @@
             // lblCustomerNo
             // 
             this.lblCustomerNo.AutoSize = true;
-            this.lblCustomerNo.Location = new System.Drawing.Point(139, 171);
+            this.lblCustomerNo.Location = new System.Drawing.Point(35, 184);
             this.lblCustomerNo.Name = "lblCustomerNo";
             this.lblCustomerNo.Size = new System.Drawing.Size(71, 13);
             this.lblCustomerNo.TabIndex = 3;
@@ -1097,7 +1076,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(139, 134);
+            this.label3.Location = new System.Drawing.Point(35, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 2;
@@ -1106,7 +1085,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(139, 97);
+            this.label4.Location = new System.Drawing.Point(35, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 1;
@@ -1123,35 +1102,22 @@
             this.grpProfile.Controls.Add(this.btnShowUpdateAddress);
             this.grpProfile.Controls.Add(this.btnViewProfileDetails);
             this.grpProfile.Controls.Add(this.picProfile);
-            this.grpProfile.Location = new System.Drawing.Point(100, 100);
+            this.grpProfile.Location = new System.Drawing.Point(12, 52);
             this.grpProfile.Name = "grpProfile";
-            this.grpProfile.Size = new System.Drawing.Size(1034, 545);
+            this.grpProfile.Size = new System.Drawing.Size(700, 700);
             this.grpProfile.TabIndex = 17;
             this.grpProfile.TabStop = false;
             this.grpProfile.Visible = false;
             // 
             // grpPurchases
             // 
-            this.grpPurchases.Controls.Add(this.grpListPurchasesProfile);
-            this.grpPurchases.Controls.Add(this.btnOKPurchasesDisplay);
-            this.grpPurchases.Controls.Add(this.txtIDCustomerPurchases);
-            this.grpPurchases.Controls.Add(this.lblAddIDPurchases);
-            this.grpPurchases.Location = new System.Drawing.Point(543, 231);
+            this.grpPurchases.Controls.Add(this.lstView);
+            this.grpPurchases.Location = new System.Drawing.Point(191, 34);
             this.grpPurchases.Name = "grpPurchases";
             this.grpPurchases.Size = new System.Drawing.Size(459, 279);
             this.grpPurchases.TabIndex = 9;
             this.grpPurchases.TabStop = false;
             this.grpPurchases.Visible = false;
-            // 
-            // grpListPurchasesProfile
-            // 
-            this.grpListPurchasesProfile.Controls.Add(this.lstView);
-            this.grpListPurchasesProfile.Location = new System.Drawing.Point(11, 42);
-            this.grpListPurchasesProfile.Name = "grpListPurchasesProfile";
-            this.grpListPurchasesProfile.Size = new System.Drawing.Size(436, 227);
-            this.grpListPurchasesProfile.TabIndex = 3;
-            this.grpListPurchasesProfile.TabStop = false;
-            this.grpListPurchasesProfile.Visible = false;
             // 
             // lstView
             // 
@@ -1159,7 +1125,7 @@
             this.OrderID,
             this.OrderDate});
             this.lstView.GridLines = true;
-            this.lstView.Location = new System.Drawing.Point(9, 16);
+            this.lstView.Location = new System.Drawing.Point(25, 42);
             this.lstView.Name = "lstView";
             this.lstView.Size = new System.Drawing.Size(416, 199);
             this.lstView.TabIndex = 0;
@@ -1176,68 +1142,30 @@
             this.OrderDate.Text = "OrderDate";
             this.OrderDate.Width = 209;
             // 
-            // btnOKPurchasesDisplay
-            // 
-            this.btnOKPurchasesDisplay.Location = new System.Drawing.Point(329, 12);
-            this.btnOKPurchasesDisplay.Name = "btnOKPurchasesDisplay";
-            this.btnOKPurchasesDisplay.Size = new System.Drawing.Size(74, 20);
-            this.btnOKPurchasesDisplay.TabIndex = 2;
-            this.btnOKPurchasesDisplay.Text = "OK";
-            this.btnOKPurchasesDisplay.UseVisualStyleBackColor = true;
-            // 
-            // txtIDCustomerPurchases
-            // 
-            this.txtIDCustomerPurchases.Location = new System.Drawing.Point(109, 12);
-            this.txtIDCustomerPurchases.Name = "txtIDCustomerPurchases";
-            this.txtIDCustomerPurchases.Size = new System.Drawing.Size(202, 20);
-            this.txtIDCustomerPurchases.TabIndex = 1;
-            // 
-            // lblAddIDPurchases
-            // 
-            this.lblAddIDPurchases.AutoSize = true;
-            this.lblAddIDPurchases.Location = new System.Drawing.Point(31, 19);
-            this.lblAddIDPurchases.Name = "lblAddIDPurchases";
-            this.lblAddIDPurchases.Size = new System.Drawing.Size(66, 13);
-            this.lblAddIDPurchases.TabIndex = 0;
-            this.lblAddIDPurchases.Text = "Add your ID:";
-            // 
             // grpCardUpdate
             // 
-            this.grpCardUpdate.Controls.Add(this.grpUpdateCardInfo);
-            this.grpCardUpdate.Controls.Add(this.btnOKUpdateCardInfo);
-            this.grpCardUpdate.Controls.Add(this.txtCustomerIDCardProfile);
-            this.grpCardUpdate.Controls.Add(this.label24);
-            this.grpCardUpdate.Location = new System.Drawing.Point(646, 15);
+            this.grpCardUpdate.Controls.Add(this.btnClearCard);
+            this.grpCardUpdate.Controls.Add(this.txtCardTypeProfile);
+            this.grpCardUpdate.Controls.Add(this.label25);
+            this.grpCardUpdate.Controls.Add(this.txtExpDateProfile);
+            this.grpCardUpdate.Controls.Add(this.label26);
+            this.grpCardUpdate.Controls.Add(this.btnUpdateCardDetails);
+            this.grpCardUpdate.Controls.Add(this.label27);
+            this.grpCardUpdate.Controls.Add(this.txtHolderProfile);
+            this.grpCardUpdate.Controls.Add(this.label28);
+            this.grpCardUpdate.Controls.Add(this.txtCVVProfile);
+            this.grpCardUpdate.Controls.Add(this.label29);
+            this.grpCardUpdate.Controls.Add(this.txtCardNoProfile);
+            this.grpCardUpdate.Location = new System.Drawing.Point(191, 34);
             this.grpCardUpdate.Name = "grpCardUpdate";
             this.grpCardUpdate.Size = new System.Drawing.Size(296, 194);
             this.grpCardUpdate.TabIndex = 8;
             this.grpCardUpdate.TabStop = false;
             this.grpCardUpdate.Visible = false;
             // 
-            // grpUpdateCardInfo
-            // 
-            this.grpUpdateCardInfo.Controls.Add(this.btnClearCard);
-            this.grpUpdateCardInfo.Controls.Add(this.txtCardTypeProfile);
-            this.grpUpdateCardInfo.Controls.Add(this.txtExpDateProfile);
-            this.grpUpdateCardInfo.Controls.Add(this.btnUpdateCardDetails);
-            this.grpUpdateCardInfo.Controls.Add(this.txtHolderProfile);
-            this.grpUpdateCardInfo.Controls.Add(this.txtCVVProfile);
-            this.grpUpdateCardInfo.Controls.Add(this.txtCardNoProfile);
-            this.grpUpdateCardInfo.Controls.Add(this.label29);
-            this.grpUpdateCardInfo.Controls.Add(this.label28);
-            this.grpUpdateCardInfo.Controls.Add(this.label27);
-            this.grpUpdateCardInfo.Controls.Add(this.label26);
-            this.grpUpdateCardInfo.Controls.Add(this.label25);
-            this.grpUpdateCardInfo.Location = new System.Drawing.Point(3, 35);
-            this.grpUpdateCardInfo.Name = "grpUpdateCardInfo";
-            this.grpUpdateCardInfo.Size = new System.Drawing.Size(292, 149);
-            this.grpUpdateCardInfo.TabIndex = 14;
-            this.grpUpdateCardInfo.TabStop = false;
-            this.grpUpdateCardInfo.Visible = false;
-            // 
             // btnClearCard
             // 
-            this.btnClearCard.Location = new System.Drawing.Point(174, 121);
+            this.btnClearCard.Location = new System.Drawing.Point(185, 156);
             this.btnClearCard.Name = "btnClearCard";
             this.btnClearCard.Size = new System.Drawing.Size(94, 22);
             this.btnClearCard.TabIndex = 16;
@@ -1247,23 +1175,41 @@
             // 
             // txtCardTypeProfile
             // 
-            this.txtCardTypeProfile.Location = new System.Drawing.Point(75, 12);
+            this.txtCardTypeProfile.Location = new System.Drawing.Point(81, 38);
             this.txtCardTypeProfile.Name = "txtCardTypeProfile";
             this.txtCardTypeProfile.Size = new System.Drawing.Size(207, 20);
             this.txtCardTypeProfile.TabIndex = 15;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 41);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(59, 13);
+            this.label25.TabIndex = 3;
+            this.label25.Text = "Card Type:";
+            // 
             // txtExpDateProfile
             // 
             this.txtExpDateProfile.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtExpDateProfile.Location = new System.Drawing.Point(75, 64);
+            this.txtExpDateProfile.Location = new System.Drawing.Point(81, 90);
             this.txtExpDateProfile.Name = "txtExpDateProfile";
             this.txtExpDateProfile.Size = new System.Drawing.Size(110, 20);
             this.txtExpDateProfile.TabIndex = 14;
             this.txtExpDateProfile.Text = "dd/mm/yyyy";
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(8, 69);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(49, 13);
+            this.label26.TabIndex = 4;
+            this.label26.Text = "Card No:";
+            // 
             // btnUpdateCardDetails
             // 
-            this.btnUpdateCardDetails.Location = new System.Drawing.Point(58, 121);
+            this.btnUpdateCardDetails.Location = new System.Drawing.Point(33, 156);
             this.btnUpdateCardDetails.Name = "btnUpdateCardDetails";
             this.btnUpdateCardDetails.Size = new System.Drawing.Size(94, 22);
             this.btnUpdateCardDetails.TabIndex = 13;
@@ -1271,134 +1217,78 @@
             this.btnUpdateCardDetails.UseVisualStyleBackColor = true;
             this.btnUpdateCardDetails.Click += new System.EventHandler(this.btnUpdateCardDetails_Click);
             // 
-            // txtHolderProfile
-            // 
-            this.txtHolderProfile.Location = new System.Drawing.Point(75, 91);
-            this.txtHolderProfile.Name = "txtHolderProfile";
-            this.txtHolderProfile.Size = new System.Drawing.Size(211, 20);
-            this.txtHolderProfile.TabIndex = 10;
-            // 
-            // txtCVVProfile
-            // 
-            this.txtCVVProfile.Location = new System.Drawing.Point(238, 64);
-            this.txtCVVProfile.Name = "txtCVVProfile";
-            this.txtCVVProfile.Size = new System.Drawing.Size(45, 20);
-            this.txtCVVProfile.TabIndex = 9;
-            // 
-            // txtCardNoProfile
-            // 
-            this.txtCardNoProfile.Location = new System.Drawing.Point(75, 36);
-            this.txtCardNoProfile.Name = "txtCardNoProfile";
-            this.txtCardNoProfile.Size = new System.Drawing.Size(208, 20);
-            this.txtCardNoProfile.TabIndex = 8;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(3, 72);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(54, 13);
-            this.label29.TabIndex = 7;
-            this.label29.Text = "Exp Date:";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(2, 96);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(72, 13);
-            this.label28.TabIndex = 6;
-            this.label28.Text = "Holder Name:";
-            // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(201, 67);
+            this.label27.Location = new System.Drawing.Point(207, 93);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(31, 13);
             this.label27.TabIndex = 5;
             this.label27.Text = "CVV:";
             // 
-            // label26
+            // txtHolderProfile
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(2, 43);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(49, 13);
-            this.label26.TabIndex = 4;
-            this.label26.Text = "Card No:";
+            this.txtHolderProfile.Location = new System.Drawing.Point(81, 117);
+            this.txtHolderProfile.Name = "txtHolderProfile";
+            this.txtHolderProfile.Size = new System.Drawing.Size(211, 20);
+            this.txtHolderProfile.TabIndex = 10;
             // 
-            // label25
+            // label28
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(0, 15);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(59, 13);
-            this.label25.TabIndex = 3;
-            this.label25.Text = "Card Type:";
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(8, 122);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(72, 13);
+            this.label28.TabIndex = 6;
+            this.label28.Text = "Holder Name:";
             // 
-            // btnOKUpdateCardInfo
+            // txtCVVProfile
             // 
-            this.btnOKUpdateCardInfo.Location = new System.Drawing.Point(259, 11);
-            this.btnOKUpdateCardInfo.Name = "btnOKUpdateCardInfo";
-            this.btnOKUpdateCardInfo.Size = new System.Drawing.Size(30, 19);
-            this.btnOKUpdateCardInfo.TabIndex = 2;
-            this.btnOKUpdateCardInfo.Text = "OK";
-            this.btnOKUpdateCardInfo.UseVisualStyleBackColor = true;
+            this.txtCVVProfile.Location = new System.Drawing.Point(244, 90);
+            this.txtCVVProfile.Name = "txtCVVProfile";
+            this.txtCVVProfile.Size = new System.Drawing.Size(45, 20);
+            this.txtCVVProfile.TabIndex = 9;
             // 
-            // txtCustomerIDCardProfile
+            // label29
             // 
-            this.txtCustomerIDCardProfile.Location = new System.Drawing.Point(78, 10);
-            this.txtCustomerIDCardProfile.Name = "txtCustomerIDCardProfile";
-            this.txtCustomerIDCardProfile.Size = new System.Drawing.Size(175, 20);
-            this.txtCustomerIDCardProfile.TabIndex = 1;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(9, 98);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(54, 13);
+            this.label29.TabIndex = 7;
+            this.label29.Text = "Exp Date:";
             // 
-            // label24
+            // txtCardNoProfile
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 16);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(66, 13);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Add your ID:";
+            this.txtCardNoProfile.Location = new System.Drawing.Point(81, 62);
+            this.txtCardNoProfile.Name = "txtCardNoProfile";
+            this.txtCardNoProfile.Size = new System.Drawing.Size(208, 20);
+            this.txtCardNoProfile.TabIndex = 8;
             // 
             // grpAddressUpdate
             // 
-            this.grpAddressUpdate.Controls.Add(this.grpAddressUpdateInfo);
-            this.grpAddressUpdate.Controls.Add(this.btnOKAddress);
-            this.grpAddressUpdate.Controls.Add(this.txtAddIDAddress);
-            this.grpAddressUpdate.Controls.Add(this.label17);
-            this.grpAddressUpdate.Location = new System.Drawing.Point(181, 237);
+            this.grpAddressUpdate.Controls.Add(this.btnClearAddress);
+            this.grpAddressUpdate.Controls.Add(this.btnUpdateAddress);
+            this.grpAddressUpdate.Controls.Add(this.txtHouseNoProfile);
+            this.grpAddressUpdate.Controls.Add(this.txtPostcodeProfile);
+            this.grpAddressUpdate.Controls.Add(this.label18);
+            this.grpAddressUpdate.Controls.Add(this.txtCountryProfile);
+            this.grpAddressUpdate.Controls.Add(this.label19);
+            this.grpAddressUpdate.Controls.Add(this.txtCityProfile);
+            this.grpAddressUpdate.Controls.Add(this.label20);
+            this.grpAddressUpdate.Controls.Add(this.txtStreetProfile);
+            this.grpAddressUpdate.Controls.Add(this.label21);
+            this.grpAddressUpdate.Controls.Add(this.label22);
+            this.grpAddressUpdate.Location = new System.Drawing.Point(191, 34);
             this.grpAddressUpdate.Name = "grpAddressUpdate";
             this.grpAddressUpdate.Size = new System.Drawing.Size(351, 286);
             this.grpAddressUpdate.TabIndex = 7;
             this.grpAddressUpdate.TabStop = false;
             this.grpAddressUpdate.Visible = false;
             // 
-            // grpAddressUpdateInfo
-            // 
-            this.grpAddressUpdateInfo.Controls.Add(this.btnClearAddress);
-            this.grpAddressUpdateInfo.Controls.Add(this.btnUpdateAddress);
-            this.grpAddressUpdateInfo.Controls.Add(this.txtPostcodeProfile);
-            this.grpAddressUpdateInfo.Controls.Add(this.txtCountryProfile);
-            this.grpAddressUpdateInfo.Controls.Add(this.txtCityProfile);
-            this.grpAddressUpdateInfo.Controls.Add(this.txtStreetProfile);
-            this.grpAddressUpdateInfo.Controls.Add(this.txtHouseNoProfile);
-            this.grpAddressUpdateInfo.Controls.Add(this.label22);
-            this.grpAddressUpdateInfo.Controls.Add(this.label21);
-            this.grpAddressUpdateInfo.Controls.Add(this.label20);
-            this.grpAddressUpdateInfo.Controls.Add(this.label19);
-            this.grpAddressUpdateInfo.Controls.Add(this.label18);
-            this.grpAddressUpdateInfo.Location = new System.Drawing.Point(3, 37);
-            this.grpAddressUpdateInfo.Name = "grpAddressUpdateInfo";
-            this.grpAddressUpdateInfo.Size = new System.Drawing.Size(329, 236);
-            this.grpAddressUpdateInfo.TabIndex = 16;
-            this.grpAddressUpdateInfo.TabStop = false;
-            this.grpAddressUpdateInfo.Visible = false;
-            // 
             // btnClearAddress
             // 
-            this.btnClearAddress.Location = new System.Drawing.Point(192, 203);
+            this.btnClearAddress.Location = new System.Drawing.Point(186, 209);
             this.btnClearAddress.Name = "btnClearAddress";
             this.btnClearAddress.Size = new System.Drawing.Size(112, 26);
             this.btnClearAddress.TabIndex = 16;
@@ -1408,7 +1298,7 @@
             // 
             // btnUpdateAddress
             // 
-            this.btnUpdateAddress.Location = new System.Drawing.Point(55, 201);
+            this.btnUpdateAddress.Location = new System.Drawing.Point(54, 210);
             this.btnUpdateAddress.Name = "btnUpdateAddress";
             this.btnUpdateAddress.Size = new System.Drawing.Size(112, 26);
             this.btnUpdateAddress.TabIndex = 15;
@@ -1416,150 +1306,112 @@
             this.btnUpdateAddress.UseVisualStyleBackColor = true;
             this.btnUpdateAddress.Click += new System.EventHandler(this.btnUpdateAddress_Click);
             // 
-            // txtPostcodeProfile
-            // 
-            this.txtPostcodeProfile.Location = new System.Drawing.Point(65, 153);
-            this.txtPostcodeProfile.Name = "txtPostcodeProfile";
-            this.txtPostcodeProfile.Size = new System.Drawing.Size(264, 20);
-            this.txtPostcodeProfile.TabIndex = 13;
-            // 
-            // txtCountryProfile
-            // 
-            this.txtCountryProfile.Location = new System.Drawing.Point(65, 118);
-            this.txtCountryProfile.Name = "txtCountryProfile";
-            this.txtCountryProfile.Size = new System.Drawing.Size(264, 20);
-            this.txtCountryProfile.TabIndex = 12;
-            // 
-            // txtCityProfile
-            // 
-            this.txtCityProfile.Location = new System.Drawing.Point(65, 86);
-            this.txtCityProfile.Name = "txtCityProfile";
-            this.txtCityProfile.Size = new System.Drawing.Size(264, 20);
-            this.txtCityProfile.TabIndex = 11;
-            // 
-            // txtStreetProfile
-            // 
-            this.txtStreetProfile.Location = new System.Drawing.Point(65, 50);
-            this.txtStreetProfile.Name = "txtStreetProfile";
-            this.txtStreetProfile.Size = new System.Drawing.Size(264, 20);
-            this.txtStreetProfile.TabIndex = 10;
-            // 
             // txtHouseNoProfile
             // 
-            this.txtHouseNoProfile.Location = new System.Drawing.Point(65, 15);
+            this.txtHouseNoProfile.Location = new System.Drawing.Point(64, 24);
             this.txtHouseNoProfile.Name = "txtHouseNoProfile";
             this.txtHouseNoProfile.Size = new System.Drawing.Size(63, 20);
             this.txtHouseNoProfile.TabIndex = 9;
             // 
-            // label22
+            // txtPostcodeProfile
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(4, 160);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(55, 13);
-            this.label22.TabIndex = 7;
-            this.label22.Text = "Postcode:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(4, 125);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(46, 13);
-            this.label21.TabIndex = 6;
-            this.label21.Text = "Country:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(8, 93);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(27, 13);
-            this.label20.TabIndex = 5;
-            this.label20.Text = "City:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(8, 57);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(38, 13);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "Street:";
+            this.txtPostcodeProfile.Location = new System.Drawing.Point(64, 162);
+            this.txtPostcodeProfile.Name = "txtPostcodeProfile";
+            this.txtPostcodeProfile.Size = new System.Drawing.Size(264, 20);
+            this.txtPostcodeProfile.TabIndex = 13;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(4, 22);
+            this.label18.Location = new System.Drawing.Point(3, 31);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 13);
             this.label18.TabIndex = 3;
             this.label18.Text = "House No:";
             // 
-            // btnOKAddress
+            // txtCountryProfile
             // 
-            this.btnOKAddress.Location = new System.Drawing.Point(249, 15);
-            this.btnOKAddress.Name = "btnOKAddress";
-            this.btnOKAddress.Size = new System.Drawing.Size(83, 20);
-            this.btnOKAddress.TabIndex = 2;
-            this.btnOKAddress.Text = "OK";
-            this.btnOKAddress.UseVisualStyleBackColor = true;
+            this.txtCountryProfile.Location = new System.Drawing.Point(64, 127);
+            this.txtCountryProfile.Name = "txtCountryProfile";
+            this.txtCountryProfile.Size = new System.Drawing.Size(264, 20);
+            this.txtCountryProfile.TabIndex = 12;
             // 
-            // txtAddIDAddress
+            // label19
             // 
-            this.txtAddIDAddress.Location = new System.Drawing.Point(83, 15);
-            this.txtAddIDAddress.Name = "txtAddIDAddress";
-            this.txtAddIDAddress.Size = new System.Drawing.Size(159, 20);
-            this.txtAddIDAddress.TabIndex = 1;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(7, 66);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(38, 13);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Street:";
             // 
-            // label17
+            // txtCityProfile
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(4, 22);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(66, 13);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Add your ID:";
+            this.txtCityProfile.Location = new System.Drawing.Point(64, 95);
+            this.txtCityProfile.Name = "txtCityProfile";
+            this.txtCityProfile.Size = new System.Drawing.Size(264, 20);
+            this.txtCityProfile.TabIndex = 11;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(7, 102);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(27, 13);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "City:";
+            // 
+            // txtStreetProfile
+            // 
+            this.txtStreetProfile.Location = new System.Drawing.Point(64, 59);
+            this.txtStreetProfile.Name = "txtStreetProfile";
+            this.txtStreetProfile.Size = new System.Drawing.Size(264, 20);
+            this.txtStreetProfile.TabIndex = 10;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(3, 134);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(46, 13);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Country:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(3, 169);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(55, 13);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "Postcode:";
             // 
             // grpProfileDetails
             // 
-            this.grpProfileDetails.Controls.Add(this.grpGeneralInfoProfile);
-            this.grpProfileDetails.Controls.Add(this.btnOKGeneralInfo);
-            this.grpProfileDetails.Controls.Add(this.txtAddIDProfile);
-            this.grpProfileDetails.Controls.Add(this.lblAddIDProfile);
-            this.grpProfileDetails.Location = new System.Drawing.Point(181, 29);
+            this.grpProfileDetails.Controls.Add(this.btnClearGeneralInfo);
+            this.grpProfileDetails.Controls.Add(this.btnUpdateGeneralInfoProfile);
+            this.grpProfileDetails.Controls.Add(this.txtTitleProfile);
+            this.grpProfileDetails.Controls.Add(this.label16);
+            this.grpProfileDetails.Controls.Add(this.txtNameProfile);
+            this.grpProfileDetails.Controls.Add(this.lblPhoneProfile);
+            this.grpProfileDetails.Controls.Add(this.txtDOBProfile);
+            this.grpProfileDetails.Controls.Add(this.lblEmailProfile);
+            this.grpProfileDetails.Controls.Add(this.txtPhoneProfile);
+            this.grpProfileDetails.Controls.Add(this.lblGenderProfile);
+            this.grpProfileDetails.Controls.Add(this.txtGenderProfile);
+            this.grpProfileDetails.Controls.Add(this.lblDOBProfile);
+            this.grpProfileDetails.Controls.Add(this.txtEmailProfile);
+            this.grpProfileDetails.Controls.Add(this.lblNameProfile);
+            this.grpProfileDetails.Location = new System.Drawing.Point(191, 34);
             this.grpProfileDetails.Name = "grpProfileDetails";
             this.grpProfileDetails.Size = new System.Drawing.Size(459, 202);
             this.grpProfileDetails.TabIndex = 6;
             this.grpProfileDetails.TabStop = false;
             this.grpProfileDetails.Visible = false;
             // 
-            // grpGeneralInfoProfile
-            // 
-            this.grpGeneralInfoProfile.Controls.Add(this.btnClearGeneralInfo);
-            this.grpGeneralInfoProfile.Controls.Add(this.btnUpdateGeneralInfoProfile);
-            this.grpGeneralInfoProfile.Controls.Add(this.label16);
-            this.grpGeneralInfoProfile.Controls.Add(this.lblPhoneProfile);
-            this.grpGeneralInfoProfile.Controls.Add(this.lblEmailProfile);
-            this.grpGeneralInfoProfile.Controls.Add(this.lblGenderProfile);
-            this.grpGeneralInfoProfile.Controls.Add(this.lblDOBProfile);
-            this.grpGeneralInfoProfile.Controls.Add(this.lblNameProfile);
-            this.grpGeneralInfoProfile.Controls.Add(this.txtEmailProfile);
-            this.grpGeneralInfoProfile.Controls.Add(this.txtGenderProfile);
-            this.grpGeneralInfoProfile.Controls.Add(this.txtPhoneProfile);
-            this.grpGeneralInfoProfile.Controls.Add(this.txtDOBProfile);
-            this.grpGeneralInfoProfile.Controls.Add(this.txtNameProfile);
-            this.grpGeneralInfoProfile.Controls.Add(this.txtTitleProfile);
-            this.grpGeneralInfoProfile.Location = new System.Drawing.Point(6, 40);
-            this.grpGeneralInfoProfile.Name = "grpGeneralInfoProfile";
-            this.grpGeneralInfoProfile.Size = new System.Drawing.Size(447, 156);
-            this.grpGeneralInfoProfile.TabIndex = 3;
-            this.grpGeneralInfoProfile.TabStop = false;
-            this.grpGeneralInfoProfile.Visible = false;
-            // 
             // btnClearGeneralInfo
             // 
-            this.btnClearGeneralInfo.Location = new System.Drawing.Point(248, 120);
+            this.btnClearGeneralInfo.Location = new System.Drawing.Point(252, 130);
             this.btnClearGeneralInfo.Name = "btnClearGeneralInfo";
             this.btnClearGeneralInfo.Size = new System.Drawing.Size(102, 29);
             this.btnClearGeneralInfo.TabIndex = 15;
@@ -1569,7 +1421,7 @@
             // 
             // btnUpdateGeneralInfoProfile
             // 
-            this.btnUpdateGeneralInfoProfile.Location = new System.Drawing.Point(100, 121);
+            this.btnUpdateGeneralInfoProfile.Location = new System.Drawing.Point(106, 130);
             this.btnUpdateGeneralInfoProfile.Name = "btnUpdateGeneralInfoProfile";
             this.btnUpdateGeneralInfoProfile.Size = new System.Drawing.Size(102, 29);
             this.btnUpdateGeneralInfoProfile.TabIndex = 14;
@@ -1577,128 +1429,103 @@
             this.btnUpdateGeneralInfoProfile.UseVisualStyleBackColor = true;
             this.btnUpdateGeneralInfoProfile.Click += new System.EventHandler(this.btnUpdateGeneralInfoProfile_Click);
             // 
+            // txtTitleProfile
+            // 
+            this.txtTitleProfile.Location = new System.Drawing.Point(58, 24);
+            this.txtTitleProfile.Name = "txtTitleProfile";
+            this.txtTitleProfile.Size = new System.Drawing.Size(102, 20);
+            this.txtTitleProfile.TabIndex = 0;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(1, 22);
+            this.label16.Location = new System.Drawing.Point(7, 31);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(30, 13);
             this.label16.TabIndex = 11;
             this.label16.Text = "Title:";
             // 
+            // txtNameProfile
+            // 
+            this.txtNameProfile.Location = new System.Drawing.Point(252, 24);
+            this.txtNameProfile.Name = "txtNameProfile";
+            this.txtNameProfile.Size = new System.Drawing.Size(195, 20);
+            this.txtNameProfile.TabIndex = 1;
+            // 
             // lblPhoneProfile
             // 
             this.lblPhoneProfile.AutoSize = true;
-            this.lblPhoneProfile.Location = new System.Drawing.Point(182, 57);
+            this.lblPhoneProfile.Location = new System.Drawing.Point(188, 66);
             this.lblPhoneProfile.Name = "lblPhoneProfile";
             this.lblPhoneProfile.Size = new System.Drawing.Size(58, 13);
             this.lblPhoneProfile.TabIndex = 10;
             this.lblPhoneProfile.Text = "Phone No:";
             // 
-            // lblEmailProfile
-            // 
-            this.lblEmailProfile.AutoSize = true;
-            this.lblEmailProfile.Location = new System.Drawing.Point(182, 90);
-            this.lblEmailProfile.Name = "lblEmailProfile";
-            this.lblEmailProfile.Size = new System.Drawing.Size(35, 13);
-            this.lblEmailProfile.TabIndex = 9;
-            this.lblEmailProfile.Text = "Email:";
-            // 
-            // lblGenderProfile
-            // 
-            this.lblGenderProfile.AutoSize = true;
-            this.lblGenderProfile.Location = new System.Drawing.Point(1, 90);
-            this.lblGenderProfile.Name = "lblGenderProfile";
-            this.lblGenderProfile.Size = new System.Drawing.Size(45, 13);
-            this.lblGenderProfile.TabIndex = 8;
-            this.lblGenderProfile.Text = "Gender:";
-            // 
-            // lblDOBProfile
-            // 
-            this.lblDOBProfile.AutoSize = true;
-            this.lblDOBProfile.Location = new System.Drawing.Point(1, 53);
-            this.lblDOBProfile.Name = "lblDOBProfile";
-            this.lblDOBProfile.Size = new System.Drawing.Size(33, 13);
-            this.lblDOBProfile.TabIndex = 7;
-            this.lblDOBProfile.Text = "DOB:";
-            // 
-            // lblNameProfile
-            // 
-            this.lblNameProfile.AutoSize = true;
-            this.lblNameProfile.Location = new System.Drawing.Point(182, 22);
-            this.lblNameProfile.Name = "lblNameProfile";
-            this.lblNameProfile.Size = new System.Drawing.Size(41, 13);
-            this.lblNameProfile.TabIndex = 6;
-            this.lblNameProfile.Text = "Name: ";
-            // 
-            // txtEmailProfile
-            // 
-            this.txtEmailProfile.Location = new System.Drawing.Point(246, 83);
-            this.txtEmailProfile.Name = "txtEmailProfile";
-            this.txtEmailProfile.ReadOnly = true;
-            this.txtEmailProfile.Size = new System.Drawing.Size(195, 20);
-            this.txtEmailProfile.TabIndex = 5;
-            // 
-            // txtGenderProfile
-            // 
-            this.txtGenderProfile.Location = new System.Drawing.Point(52, 83);
-            this.txtGenderProfile.Name = "txtGenderProfile";
-            this.txtGenderProfile.Size = new System.Drawing.Size(102, 20);
-            this.txtGenderProfile.TabIndex = 4;
-            // 
-            // txtPhoneProfile
-            // 
-            this.txtPhoneProfile.Location = new System.Drawing.Point(246, 50);
-            this.txtPhoneProfile.Name = "txtPhoneProfile";
-            this.txtPhoneProfile.Size = new System.Drawing.Size(195, 20);
-            this.txtPhoneProfile.TabIndex = 3;
-            // 
             // txtDOBProfile
             // 
-            this.txtDOBProfile.Location = new System.Drawing.Point(52, 48);
+            this.txtDOBProfile.Location = new System.Drawing.Point(58, 57);
             this.txtDOBProfile.Name = "txtDOBProfile";
             this.txtDOBProfile.ReadOnly = true;
             this.txtDOBProfile.Size = new System.Drawing.Size(102, 20);
             this.txtDOBProfile.TabIndex = 2;
             // 
-            // txtNameProfile
+            // lblEmailProfile
             // 
-            this.txtNameProfile.Location = new System.Drawing.Point(246, 15);
-            this.txtNameProfile.Name = "txtNameProfile";
-            this.txtNameProfile.Size = new System.Drawing.Size(195, 20);
-            this.txtNameProfile.TabIndex = 1;
+            this.lblEmailProfile.AutoSize = true;
+            this.lblEmailProfile.Location = new System.Drawing.Point(188, 99);
+            this.lblEmailProfile.Name = "lblEmailProfile";
+            this.lblEmailProfile.Size = new System.Drawing.Size(35, 13);
+            this.lblEmailProfile.TabIndex = 9;
+            this.lblEmailProfile.Text = "Email:";
             // 
-            // txtTitleProfile
+            // txtPhoneProfile
             // 
-            this.txtTitleProfile.Location = new System.Drawing.Point(52, 15);
-            this.txtTitleProfile.Name = "txtTitleProfile";
-            this.txtTitleProfile.Size = new System.Drawing.Size(102, 20);
-            this.txtTitleProfile.TabIndex = 0;
+            this.txtPhoneProfile.Location = new System.Drawing.Point(252, 59);
+            this.txtPhoneProfile.Name = "txtPhoneProfile";
+            this.txtPhoneProfile.Size = new System.Drawing.Size(195, 20);
+            this.txtPhoneProfile.TabIndex = 3;
             // 
-            // btnOKGeneralInfo
+            // lblGenderProfile
             // 
-            this.btnOKGeneralInfo.Location = new System.Drawing.Point(327, 14);
-            this.btnOKGeneralInfo.Name = "btnOKGeneralInfo";
-            this.btnOKGeneralInfo.Size = new System.Drawing.Size(85, 20);
-            this.btnOKGeneralInfo.TabIndex = 2;
-            this.btnOKGeneralInfo.Text = "OK";
-            this.btnOKGeneralInfo.UseVisualStyleBackColor = true;
+            this.lblGenderProfile.AutoSize = true;
+            this.lblGenderProfile.Location = new System.Drawing.Point(7, 99);
+            this.lblGenderProfile.Name = "lblGenderProfile";
+            this.lblGenderProfile.Size = new System.Drawing.Size(45, 13);
+            this.lblGenderProfile.TabIndex = 8;
+            this.lblGenderProfile.Text = "Gender:";
             // 
-            // txtAddIDProfile
+            // txtGenderProfile
             // 
-            this.txtAddIDProfile.Location = new System.Drawing.Point(86, 14);
-            this.txtAddIDProfile.Name = "txtAddIDProfile";
-            this.txtAddIDProfile.Size = new System.Drawing.Size(189, 20);
-            this.txtAddIDProfile.TabIndex = 1;
+            this.txtGenderProfile.Location = new System.Drawing.Point(58, 92);
+            this.txtGenderProfile.Name = "txtGenderProfile";
+            this.txtGenderProfile.Size = new System.Drawing.Size(102, 20);
+            this.txtGenderProfile.TabIndex = 4;
             // 
-            // lblAddIDProfile
+            // lblDOBProfile
             // 
-            this.lblAddIDProfile.AutoSize = true;
-            this.lblAddIDProfile.Location = new System.Drawing.Point(11, 21);
-            this.lblAddIDProfile.Name = "lblAddIDProfile";
-            this.lblAddIDProfile.Size = new System.Drawing.Size(69, 13);
-            this.lblAddIDProfile.TabIndex = 0;
-            this.lblAddIDProfile.Text = "Add your ID: ";
+            this.lblDOBProfile.AutoSize = true;
+            this.lblDOBProfile.Location = new System.Drawing.Point(7, 62);
+            this.lblDOBProfile.Name = "lblDOBProfile";
+            this.lblDOBProfile.Size = new System.Drawing.Size(33, 13);
+            this.lblDOBProfile.TabIndex = 7;
+            this.lblDOBProfile.Text = "DOB:";
+            // 
+            // txtEmailProfile
+            // 
+            this.txtEmailProfile.Location = new System.Drawing.Point(252, 92);
+            this.txtEmailProfile.Name = "txtEmailProfile";
+            this.txtEmailProfile.ReadOnly = true;
+            this.txtEmailProfile.Size = new System.Drawing.Size(195, 20);
+            this.txtEmailProfile.TabIndex = 5;
+            // 
+            // lblNameProfile
+            // 
+            this.lblNameProfile.AutoSize = true;
+            this.lblNameProfile.Location = new System.Drawing.Point(188, 31);
+            this.lblNameProfile.Name = "lblNameProfile";
+            this.lblNameProfile.Size = new System.Drawing.Size(41, 13);
+            this.lblNameProfile.TabIndex = 6;
+            this.lblNameProfile.Text = "Name: ";
             // 
             // btnViewPurchases
             // 
@@ -1751,35 +1578,25 @@
             // 
             // grpBasket
             // 
-            this.grpBasket.Controls.Add(this.btnAddBasket);
             this.grpBasket.Controls.Add(this.listViewDisplayBasket);
             this.grpBasket.Controls.Add(this.btnCheckout);
             this.grpBasket.Controls.Add(this.btnClearBasket);
             this.grpBasket.Controls.Add(this.btnClearItem);
             this.grpBasket.Controls.Add(this.lstBasket);
-            this.grpBasket.Location = new System.Drawing.Point(600, 500);
+            this.grpBasket.Location = new System.Drawing.Point(12, 52);
             this.grpBasket.Name = "grpBasket";
-            this.grpBasket.Size = new System.Drawing.Size(528, 267);
+            this.grpBasket.Size = new System.Drawing.Size(700, 700);
             this.grpBasket.TabIndex = 18;
             this.grpBasket.TabStop = false;
-            this.grpBasket.Text = "groupBox1";
+            this.grpBasket.Text = "Basket";
             this.grpBasket.Visible = false;
-            // 
-            // btnAddBasket
-            // 
-            this.btnAddBasket.Location = new System.Drawing.Point(433, 198);
-            this.btnAddBasket.Name = "btnAddBasket";
-            this.btnAddBasket.Size = new System.Drawing.Size(77, 35);
-            this.btnAddBasket.TabIndex = 21;
-            this.btnAddBasket.Text = "Add to basket";
-            this.btnAddBasket.UseVisualStyleBackColor = true;
             // 
             // listViewDisplayBasket
             // 
             this.listViewDisplayBasket.LargeImageList = this.imageListMain;
             this.listViewDisplayBasket.Location = new System.Drawing.Point(6, 19);
             this.listViewDisplayBasket.Name = "listViewDisplayBasket";
-            this.listViewDisplayBasket.Size = new System.Drawing.Size(195, 121);
+            this.listViewDisplayBasket.Size = new System.Drawing.Size(231, 193);
             this.listViewDisplayBasket.SmallImageList = this.imageListMain;
             this.listViewDisplayBasket.TabIndex = 20;
             this.listViewDisplayBasket.UseCompatibleStateImageBehavior = false;
@@ -1787,9 +1604,9 @@
             // 
             // btnCheckout
             // 
-            this.btnCheckout.Location = new System.Drawing.Point(268, 164);
+            this.btnCheckout.Location = new System.Drawing.Point(486, 554);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(92, 55);
+            this.btnCheckout.Size = new System.Drawing.Size(208, 139);
             this.btnCheckout.TabIndex = 18;
             this.btnCheckout.Text = "Proceed to Checkout";
             this.btnCheckout.UseVisualStyleBackColor = true;
@@ -1797,9 +1614,9 @@
             // 
             // btnClearBasket
             // 
-            this.btnClearBasket.Location = new System.Drawing.Point(18, 164);
+            this.btnClearBasket.Location = new System.Drawing.Point(6, 554);
             this.btnClearBasket.Name = "btnClearBasket";
-            this.btnClearBasket.Size = new System.Drawing.Size(98, 55);
+            this.btnClearBasket.Size = new System.Drawing.Size(189, 139);
             this.btnClearBasket.TabIndex = 18;
             this.btnClearBasket.Text = "Clear Basket";
             this.btnClearBasket.UseVisualStyleBackColor = true;
@@ -1807,9 +1624,9 @@
             // 
             // btnClearItem
             // 
-            this.btnClearItem.Location = new System.Drawing.Point(122, 164);
+            this.btnClearItem.Location = new System.Drawing.Point(212, 554);
             this.btnClearItem.Name = "btnClearItem";
-            this.btnClearItem.Size = new System.Drawing.Size(92, 55);
+            this.btnClearItem.Size = new System.Drawing.Size(181, 139);
             this.btnClearItem.TabIndex = 17;
             this.btnClearItem.Text = "Clear Item";
             this.btnClearItem.UseVisualStyleBackColor = true;
@@ -1820,7 +1637,7 @@
             this.lstBasket.FormattingEnabled = true;
             this.lstBasket.Location = new System.Drawing.Point(244, 19);
             this.lstBasket.Name = "lstBasket";
-            this.lstBasket.Size = new System.Drawing.Size(171, 121);
+            this.lstBasket.Size = new System.Drawing.Size(450, 524);
             this.lstBasket.TabIndex = 15;
             this.lstBasket.SelectedIndexChanged += new System.EventHandler(this.lstBasket_SelectedIndexChanged);
             // 
@@ -1842,19 +1659,19 @@
             this.grpViewProduct.Controls.Add(this.lblBrand);
             this.grpViewProduct.Controls.Add(this.lblShoeName);
             this.grpViewProduct.Controls.Add(this.listViewDisplayProduct);
-            this.grpViewProduct.Location = new System.Drawing.Point(0, 151);
+            this.grpViewProduct.Location = new System.Drawing.Point(12, 52);
             this.grpViewProduct.Name = "grpViewProduct";
-            this.grpViewProduct.Size = new System.Drawing.Size(592, 455);
+            this.grpViewProduct.Size = new System.Drawing.Size(700, 700);
             this.grpViewProduct.TabIndex = 19;
             this.grpViewProduct.TabStop = false;
-            this.grpViewProduct.Text = "groupBox1";
+            this.grpViewProduct.Text = "Product";
             this.grpViewProduct.Visible = false;
             // 
             // btnBasketAdd
             // 
-            this.btnBasketAdd.Location = new System.Drawing.Point(386, 322);
+            this.btnBasketAdd.Location = new System.Drawing.Point(455, 535);
             this.btnBasketAdd.Name = "btnBasketAdd";
-            this.btnBasketAdd.Size = new System.Drawing.Size(98, 55);
+            this.btnBasketAdd.Size = new System.Drawing.Size(239, 158);
             this.btnBasketAdd.TabIndex = 22;
             this.btnBasketAdd.Text = "Add to Basket";
             this.btnBasketAdd.UseVisualStyleBackColor = true;
@@ -1862,57 +1679,71 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(348, 257);
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(327, 478);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtPrice.Size = new System.Drawing.Size(350, 47);
             this.txtPrice.TabIndex = 35;
             // 
             // txtGender
             // 
-            this.txtGender.Location = new System.Drawing.Point(348, 151);
+            this.txtGender.Enabled = false;
+            this.txtGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.Location = new System.Drawing.Point(327, 239);
             this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(100, 20);
+            this.txtGender.Size = new System.Drawing.Size(350, 47);
             this.txtGender.TabIndex = 34;
             // 
             // txtMaterial
             // 
-            this.txtMaterial.Location = new System.Drawing.Point(348, 191);
+            this.txtMaterial.Enabled = false;
+            this.txtMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaterial.Location = new System.Drawing.Point(327, 315);
             this.txtMaterial.Name = "txtMaterial";
-            this.txtMaterial.Size = new System.Drawing.Size(100, 20);
+            this.txtMaterial.Size = new System.Drawing.Size(350, 47);
             this.txtMaterial.TabIndex = 33;
             // 
             // txtColour
             // 
-            this.txtColour.Location = new System.Drawing.Point(348, 226);
+            this.txtColour.Enabled = false;
+            this.txtColour.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtColour.Location = new System.Drawing.Point(327, 397);
             this.txtColour.Name = "txtColour";
-            this.txtColour.Size = new System.Drawing.Size(100, 20);
+            this.txtColour.Size = new System.Drawing.Size(350, 47);
             this.txtColour.TabIndex = 32;
             // 
             // txtShoeType
             // 
-            this.txtShoeType.Location = new System.Drawing.Point(348, 120);
+            this.txtShoeType.Enabled = false;
+            this.txtShoeType.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtShoeType.Location = new System.Drawing.Point(327, 162);
             this.txtShoeType.Name = "txtShoeType";
-            this.txtShoeType.Size = new System.Drawing.Size(100, 20);
+            this.txtShoeType.Size = new System.Drawing.Size(350, 47);
             this.txtShoeType.TabIndex = 31;
             // 
             // txtBrand
             // 
-            this.txtBrand.Location = new System.Drawing.Point(348, 81);
+            this.txtBrand.Enabled = false;
+            this.txtBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBrand.Location = new System.Drawing.Point(327, 88);
             this.txtBrand.Name = "txtBrand";
-            this.txtBrand.Size = new System.Drawing.Size(100, 20);
+            this.txtBrand.Size = new System.Drawing.Size(350, 47);
             this.txtBrand.TabIndex = 30;
             // 
             // txtShoeName
             // 
-            this.txtShoeName.Location = new System.Drawing.Point(348, 45);
+            this.txtShoeName.Enabled = false;
+            this.txtShoeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtShoeName.Location = new System.Drawing.Point(327, 25);
             this.txtShoeName.Name = "txtShoeName";
-            this.txtShoeName.Size = new System.Drawing.Size(100, 20);
+            this.txtShoeName.Size = new System.Drawing.Size(350, 47);
             this.txtShoeName.TabIndex = 29;
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(268, 264);
+            this.lblPrice.Location = new System.Drawing.Point(276, 497);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(31, 13);
             this.lblPrice.TabIndex = 28;
@@ -1921,7 +1752,7 @@
             // lblMaterial
             // 
             this.lblMaterial.AutoSize = true;
-            this.lblMaterial.Location = new System.Drawing.Point(265, 198);
+            this.lblMaterial.Location = new System.Drawing.Point(276, 333);
             this.lblMaterial.Name = "lblMaterial";
             this.lblMaterial.Size = new System.Drawing.Size(44, 13);
             this.lblMaterial.TabIndex = 27;
@@ -1930,7 +1761,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(265, 151);
+            this.label5.Location = new System.Drawing.Point(273, 260);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 26;
@@ -1939,7 +1770,7 @@
             // lblShoeType
             // 
             this.lblShoeType.AutoSize = true;
-            this.lblShoeType.Location = new System.Drawing.Point(265, 117);
+            this.lblShoeType.Location = new System.Drawing.Point(262, 176);
             this.lblShoeType.Name = "lblShoeType";
             this.lblShoeType.Size = new System.Drawing.Size(59, 13);
             this.lblShoeType.TabIndex = 25;
@@ -1948,7 +1779,7 @@
             // lblShoeColour
             // 
             this.lblShoeColour.AutoSize = true;
-            this.lblShoeColour.Location = new System.Drawing.Point(265, 229);
+            this.lblShoeColour.Location = new System.Drawing.Point(276, 416);
             this.lblShoeColour.Name = "lblShoeColour";
             this.lblShoeColour.Size = new System.Drawing.Size(37, 13);
             this.lblShoeColour.TabIndex = 24;
@@ -1957,7 +1788,7 @@
             // lblBrand
             // 
             this.lblBrand.AutoSize = true;
-            this.lblBrand.Location = new System.Drawing.Point(265, 81);
+            this.lblBrand.Location = new System.Drawing.Point(269, 108);
             this.lblBrand.Name = "lblBrand";
             this.lblBrand.Size = new System.Drawing.Size(35, 13);
             this.lblBrand.TabIndex = 23;
@@ -1966,7 +1797,7 @@
             // lblShoeName
             // 
             this.lblShoeName.AutoSize = true;
-            this.lblShoeName.Location = new System.Drawing.Point(265, 45);
+            this.lblShoeName.Location = new System.Drawing.Point(258, 41);
             this.lblShoeName.Name = "lblShoeName";
             this.lblShoeName.Size = new System.Drawing.Size(63, 13);
             this.lblShoeName.TabIndex = 22;
@@ -2008,24 +1839,26 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 757);
-            this.Controls.Add(this.grpViewProduct);
-            this.Controls.Add(this.grpBasket);
-            this.Controls.Add(this.grpProfile);
-            this.Controls.Add(this.grpContact);
+            this.ClientSize = new System.Drawing.Size(727, 757);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.grpRegister);
-            this.Controls.Add(this.grpLogin);
-            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnBasket);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.btnContact);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnShowRegisterGrp);
             this.Controls.Add(this.btnShowLoginGrp);
+            this.Controls.Add(this.grpContact);
+            this.Controls.Add(this.grpRegister);
+            this.Controls.Add(this.grpLogin);
             this.Controls.Add(this.grpMain);
+            this.Controls.Add(this.grpViewProduct);
+            this.Controls.Add(this.grpBasket);
+            this.Controls.Add(this.grpProfile);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Shoes \'R\' Us";
             this.grpLogin.ResumeLayout(false);
             this.grpLogin.PerformLayout();
             this.grpRegister.ResumeLayout(false);
@@ -2042,20 +1875,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctQuestionMark)).EndInit();
             this.grpProfile.ResumeLayout(false);
             this.grpPurchases.ResumeLayout(false);
-            this.grpPurchases.PerformLayout();
-            this.grpListPurchasesProfile.ResumeLayout(false);
             this.grpCardUpdate.ResumeLayout(false);
             this.grpCardUpdate.PerformLayout();
-            this.grpUpdateCardInfo.ResumeLayout(false);
-            this.grpUpdateCardInfo.PerformLayout();
             this.grpAddressUpdate.ResumeLayout(false);
             this.grpAddressUpdate.PerformLayout();
-            this.grpAddressUpdateInfo.ResumeLayout(false);
-            this.grpAddressUpdateInfo.PerformLayout();
             this.grpProfileDetails.ResumeLayout(false);
             this.grpProfileDetails.PerformLayout();
-            this.grpGeneralInfoProfile.ResumeLayout(false);
-            this.grpGeneralInfoProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             this.grpBasket.ResumeLayout(false);
             this.grpViewProduct.ResumeLayout(false);
@@ -2072,7 +1897,7 @@
         private System.Windows.Forms.Button btnContact;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnBasket;
-        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.GroupBox grpLogin;
         private System.Windows.Forms.GroupBox grpRegister;
         private System.Windows.Forms.GroupBox grpMain;
@@ -2153,15 +1978,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox grpProfile;
         private System.Windows.Forms.GroupBox grpPurchases;
-        private System.Windows.Forms.GroupBox grpListPurchasesProfile;
         private System.Windows.Forms.ListView lstView;
         private System.Windows.Forms.ColumnHeader OrderID;
         private System.Windows.Forms.ColumnHeader OrderDate;
-        private System.Windows.Forms.Button btnOKPurchasesDisplay;
-        private System.Windows.Forms.TextBox txtIDCustomerPurchases;
-        private System.Windows.Forms.Label lblAddIDPurchases;
         private System.Windows.Forms.GroupBox grpCardUpdate;
-        private System.Windows.Forms.GroupBox grpUpdateCardInfo;
         private System.Windows.Forms.Button btnClearCard;
         private System.Windows.Forms.TextBox txtCardTypeProfile;
         private System.Windows.Forms.TextBox txtExpDateProfile;
@@ -2174,11 +1994,7 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button btnOKUpdateCardInfo;
-        private System.Windows.Forms.TextBox txtCustomerIDCardProfile;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox grpAddressUpdate;
-        private System.Windows.Forms.GroupBox grpAddressUpdateInfo;
         private System.Windows.Forms.Button btnClearAddress;
         private System.Windows.Forms.Button btnUpdateAddress;
         private System.Windows.Forms.TextBox txtPostcodeProfile;
@@ -2191,11 +2007,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button btnOKAddress;
-        private System.Windows.Forms.TextBox txtAddIDAddress;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox grpProfileDetails;
-        private System.Windows.Forms.GroupBox grpGeneralInfoProfile;
         private System.Windows.Forms.Button btnClearGeneralInfo;
         private System.Windows.Forms.Button btnUpdateGeneralInfoProfile;
         private System.Windows.Forms.Label label16;
@@ -2210,16 +2022,12 @@
         private System.Windows.Forms.TextBox txtDOBProfile;
         private System.Windows.Forms.TextBox txtNameProfile;
         private System.Windows.Forms.TextBox txtTitleProfile;
-        private System.Windows.Forms.Button btnOKGeneralInfo;
-        private System.Windows.Forms.TextBox txtAddIDProfile;
-        private System.Windows.Forms.Label lblAddIDProfile;
         private System.Windows.Forms.Button btnViewPurchases;
         private System.Windows.Forms.Button btnShowUpdateCardDetails;
         private System.Windows.Forms.Button btnShowUpdateAddress;
         private System.Windows.Forms.Button btnViewProfileDetails;
         private System.Windows.Forms.PictureBox picProfile;
         private System.Windows.Forms.GroupBox grpBasket;
-        private System.Windows.Forms.Button btnAddBasket;
         private System.Windows.Forms.ListView listViewDisplayBasket;
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.Button btnClearBasket;

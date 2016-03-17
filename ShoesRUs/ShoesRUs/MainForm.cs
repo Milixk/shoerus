@@ -30,11 +30,13 @@ namespace ShoesRUs
         //Shows the LoginForm
         private void btnShowLoginGrp_Click(object sender, EventArgs e)
         {
+            hideGrp();
             grpLogin.Visible = true;
         }
 
         private void btnShowRegisterGrp_Click(object sender, EventArgs e)
         {
+            hideGrp();
             grpRegister.Visible = true;
         }
 
@@ -45,23 +47,29 @@ namespace ShoesRUs
 
         private void btnContact_Click(object sender, EventArgs e)
         {
+            hideGrp();
             grpContact.Visible = true;
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
+            hideGrp();
             grpProfile.Visible = true;
         }
 
         private void btnBasket_Click(object sender, EventArgs e)
         {
+            hideGrp();
             grpBasket.Visible = true;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-
-        }
+            login.logOut();
+            btnAdmin.Visible = false;
+            btnProfile.Visible = false;
+            hideGrp();
+            grpMain.Visible = true;        }
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
@@ -450,7 +458,7 @@ namespace ShoesRUs
         {
             if (listViewMain.SelectedItems.Count > 0)
             {
-                MessageBox.Show("You clicked " + listViewMain.SelectedItems[0].ImageIndex);  // debug
+                hideGrp();
                 grpViewProduct.Visible = true;
                 Populate(listViewMain.SelectedItems[0].ImageIndex);
             }
@@ -602,8 +610,7 @@ namespace ShoesRUs
             grpAddressUpdate.Visible = false;
             grpCardUpdate.Visible = false;
             grpPurchases.Visible = false;
-            
-            grpGeneralInfoProfile.Visible = true;
+
             try
             {
                 myConn.ConnectionString = DatabaseConnection.dbconnect; ;
@@ -681,7 +688,6 @@ namespace ShoesRUs
             txtGenderProfile.Clear();
             txtNameProfile.Clear();
             txtPhoneProfile.Clear();
-            txtAddIDProfile.Clear();
             txtEmailProfile.Clear();
             txtDOBProfile.Clear();
 
@@ -695,7 +701,6 @@ namespace ShoesRUs
             grpCardUpdate.Visible = false;
             grpPurchases.Visible = true;
 
-            grpAddressUpdateInfo.Visible = true;
 
             try
             {
@@ -768,7 +773,6 @@ namespace ShoesRUs
         private void clearFieldsAddress()
         {
 
-            txtAddIDAddress.Clear();
             txtHouseNoProfile.Clear();
             txtStreetProfile.Clear();
             txtCityProfile.Clear();
@@ -784,7 +788,6 @@ namespace ShoesRUs
             grpCardUpdate.Visible = true;
             grpPurchases.Visible = false;
 
-            grpUpdateCardInfo.Visible = true;
             try
             {
                 myConn.ConnectionString = DatabaseConnection.dbconnect; ;
@@ -857,7 +860,6 @@ namespace ShoesRUs
         private void clearFieldsCardNo()//function which clears all the fields in the GENERAL INFORMATION group box (My profile)
         {
 
-            txtCustomerIDCardProfile.Clear();
             txtCardTypeProfile.Clear();
             txtCardNoProfile.Clear();
             txtExpDateProfile.Clear();
@@ -873,7 +875,6 @@ namespace ShoesRUs
             grpAddressUpdate.Visible = false;
             grpCardUpdate.Visible = false;
 
-            grpListPurchasesProfile.Visible = true;
             try
             {
                 myConn.ConnectionString = DatabaseConnection.dbconnect; ;
@@ -919,6 +920,7 @@ namespace ShoesRUs
 
             basket.Add(listViewDisplayProduct.Items[0].ImageIndex);
 
+            MessageBox.Show("Added item to basket.");
         }
 
         private void btnClearItem_Click(object sender, EventArgs e)
@@ -1015,6 +1017,23 @@ namespace ShoesRUs
             }
         }
 
-        
+        private void hideGrp()
+        {
+            grpMain.Visible = false;
+            grpLogin.Visible = false;
+            grpRegister.Visible = false;
+            grpBasket.Visible = false;
+            grpContact.Visible = false;
+            grpProfile.Visible = false;
+            grpViewProduct.Visible = false;
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            hideGrp();
+            grpMain.Visible = true;
+        }
+
+
     }
 }
