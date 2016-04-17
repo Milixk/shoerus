@@ -71,6 +71,7 @@ namespace ShoesRUs
             grpMain.Visible = true;
             btnShowLoginGrp.Visible = true;
             btnLogout.Visible = false;
+            btnRegister.Visible = true;
         }
 
         //If the user details are correct, store user details in the Login Object, clear the login form and navigate back to Main
